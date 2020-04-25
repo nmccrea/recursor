@@ -17,7 +17,7 @@ import {
 
 const DATA_URL = "https://data.miamigov.com/resource/ub3m-qgg5.json"
 
-const Idle = () => {
+const FetchButton = () => {
   const dispatch = useDispatch()
   return (
     <button onClick={() => dispatch(fetchData(DATA_URL))}>Fetch Data!</button>
@@ -26,7 +26,7 @@ const Idle = () => {
 
 const Loading = () => <p>Loading...</p>
 
-const Success = () => {
+const Data = () => {
   const data = useSelector(getData)
   return (
     <>
@@ -37,9 +37,9 @@ const Success = () => {
 }
 
 const STATUS_TO_ELEMENT = {
-  [Status.Idle]: <Idle />,
-  [Status.Loading]: <Loading />,
-  [Status.Success]: <Success />,
+  [Status.Idle]: <FetchButton />,
+  [Status.Pending]: <Loading />,
+  [Status.Fulfilled]: <Data />,
 }
 
 const CityOfMiamiBudget = () => {

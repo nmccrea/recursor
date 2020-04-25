@@ -4,14 +4,19 @@
  * TODO: doc
  */
 
-import { RootState, AppThunk } from "./store"
-import { createSlice, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
+import { RootState } from "./store"
+import {
+  createAsyncThunk,
+  createSlice,
+  CaseReducer,
+  PayloadAction,
+} from "@reduxjs/toolkit"
 
 // State
 enum Status {
   Idle = "idle",
-  Loading = "loading",
-  Success = "success",
+  Pending = "pending",
+  Fulfilled = "fulfilled",
 }
 
 interface CityOfMiamiBudgetState {
@@ -22,20 +27,37 @@ interface CityOfMiamiBudgetState {
 const INITIAL_STATE: CityOfMiamiBudgetState = { status: Status.Idle }
 
 // Case Reducers
-const fetchDataRequest: CaseReducer<CityOfMiamiBudgetState, PayloadAction> = (
+const fetchDataPending: CaseReducer<CityOfMiamiBudgetState, PayloadAction> = (
   previousState
 ) => ({
   ...previousState,
-  status: Status.Loading,
+  status: Status.Pending,
 })
 
-const fetchDataSuccess: CaseReducer<
+const fetchDataFulfilled: CaseReducer<
   CityOfMiamiBudgetState,
   PayloadAction<object>
 > = (previousState, action) => ({
   ...previousState,
-  status: Status.Success,
+  status: Status.Fulfilled,
   data: action.payload,
+})
+
+// Async Thunks
+const fetchData = createAsyncThunk("fetchData", async (url: string) => {
+  const response = await fetch(url)
+  return await response.json()
+})
+
+// Slice
+const { reducer } = createSlice({
+  name: "cityOfMiamiBudget",
+  initialState: INITIAL_STATE,
+  reducers: {},
+  extraReducers: {
+    [fetchData.pending.type]: fetchDataPending,
+    [fetchData.fulfilled.type]: fetchDataFulfilled,
+  },
 })
 
 // Selectors
@@ -44,24 +66,6 @@ const getStatus = (state: RootState) =>
 
 const getData = (state: RootState) =>
   (state.cityOfMiamiBudget && state.cityOfMiamiBudget.data) || undefined
-
-// Slice
-const { actions, reducer } = createSlice({
-  name: "cityOfMiamiBudget",
-  initialState: INITIAL_STATE,
-  reducers: {
-    fetchDataRequest,
-    fetchDataSuccess,
-  },
-})
-
-// Async Thunks
-const fetchData = (url: string): AppThunk => async (dispatch) => {
-  dispatch(actions.fetchDataRequest())
-  const response = await fetch(url)
-  const data = await response.json()
-  dispatch(actions.fetchDataSuccess(data))
-}
 
 export default reducer
 export { fetchData, getStatus, getData, Status }
