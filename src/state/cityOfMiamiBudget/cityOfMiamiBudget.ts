@@ -4,7 +4,6 @@
  * TODO: doc
  */
 
-import { RootState } from "../store"
 import {
   createAsyncThunk,
   createSlice,
@@ -60,12 +59,5 @@ const { reducer } = createSlice({
   },
 })
 
-// Selectors
-const getStatus = (state: RootState) =>
-  (state.cityOfMiamiBudget && state.cityOfMiamiBudget.status) || undefined
-
-const getData = (state: RootState) =>
-  (state.cityOfMiamiBudget && state.cityOfMiamiBudget.data) || undefined
-
 export default reducer
-export { fetchData, getStatus, getData, Status }
+export { fetchData, Status }

@@ -8,12 +8,8 @@ import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { useDispatch, useSelector } from "react-redux"
-import {
-  fetchData,
-  getStatus,
-  getData,
-  Status,
-} from "../state/cityOfMiamiBudget/cityOfMiamiBudget"
+import { fetchData, Status } from "../state/cityOfMiamiBudget/cityOfMiamiBudget"
+import { getStatus, getData } from "../state/cityOfMiamiBudget/selectors"
 
 const DATA_URL = "https://data.miamigov.com/resource/ub3m-qgg5.json"
 
