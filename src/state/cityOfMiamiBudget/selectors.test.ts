@@ -1,8 +1,8 @@
-import { Status } from "./slice"
+import { Status } from "./reducer"
 import { getStatus, getData } from "./selectors"
 
 describe("getStatus", () => {
-  test("it should return the value of the status field", () => {
+  it("should return the value of the status field", () => {
     const result = getStatus({
       cityOfMiamiBudget: { status: Status.Fulfilled },
     })
@@ -12,7 +12,7 @@ describe("getStatus", () => {
 })
 
 describe("getData", () => {
-  test("it should return the value of the data field", () => {
+  it("should return the value of the data field", () => {
     const data: object = { a: "apples", b: "bananas", c: "cornbread" }
 
     const result = getData({

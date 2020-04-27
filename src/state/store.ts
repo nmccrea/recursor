@@ -6,7 +6,7 @@
 import { Action } from "redux"
 import { ThunkAction } from "redux-thunk"
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
-import cityOfMiamiBudget from "./cityOfMiamiBudget/reducers"
+import cityOfMiamiBudget from "./cityOfMiamiBudget/reducer"
 
 const rootReducer = combineReducers({ cityOfMiamiBudget })
 const store = configureStore({ reducer: rootReducer })
