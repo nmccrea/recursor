@@ -4,7 +4,7 @@
  * TODO: doc
  */
 
-import { RootState } from "./store"
+import { RootState } from "../store"
 import {
   createAsyncThunk,
   createSlice,

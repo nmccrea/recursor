@@ -13,7 +13,7 @@ import {
   getStatus,
   getData,
   Status,
-} from "../state/cityOfMiamiBudget"
+} from "../state/cityOfMiamiBudget/cityOfMiamiBudget"
 
 const DATA_URL = "https://data.miamigov.com/resource/ub3m-qgg5.json"
 

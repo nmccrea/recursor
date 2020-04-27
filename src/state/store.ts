@@ -4,7 +4,7 @@
  */
 
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
-import cityOfMiamiBudget from "./cityOfMiamiBudget"
+import cityOfMiamiBudget from "./cityOfMiamiBudget/cityOfMiamiBudget"
 
 const rootReducer = combineReducers({ cityOfMiamiBudget })
 const store = configureStore({ reducer: rootReducer })
