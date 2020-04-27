@@ -4,49 +4,22 @@
  * TODO: doc
  */
 
-import {
-  createAsyncThunk,
-  createSlice,
-  CaseReducer,
-  PayloadAction,
-} from "@reduxjs/toolkit"
+import { createSlice } from "@reduxjs/toolkit"
+import { fetchData, fetchDataPending, fetchDataFulfilled } from "./async"
 
 // State
-enum Status {
+export enum Status {
   Idle = "idle",
   Pending = "pending",
   Fulfilled = "fulfilled",
 }
 
-interface CityOfMiamiBudgetState {
+export interface CityOfMiamiBudgetState {
   status: Status
   data?: object
 }
 
 const INITIAL_STATE: CityOfMiamiBudgetState = { status: Status.Idle }
-
-// Case Reducers
-const fetchDataPending: CaseReducer<CityOfMiamiBudgetState, PayloadAction> = (
-  previousState
-) => ({
-  ...previousState,
-  status: Status.Pending,
-})
-
-const fetchDataFulfilled: CaseReducer<
-  CityOfMiamiBudgetState,
-  PayloadAction<object>
-> = (previousState, action) => ({
-  ...previousState,
-  status: Status.Fulfilled,
-  data: action.payload,
-})
-
-// Async Thunks
-const fetchData = createAsyncThunk("fetchData", async (url: string) => {
-  const response = await fetch(url)
-  return await response.json()
-})
 
 // Slice
 const { reducer } = createSlice({
@@ -60,4 +33,3 @@ const { reducer } = createSlice({
 })
 
 export default reducer
-export { fetchData, Status }
