@@ -9,7 +9,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchData } from "../state/cityOfMiamiBudget/async"
-import { Status } from "../state/cityOfMiamiBudget/slice"
+import { Status } from "../state/cityOfMiamiBudget/reducers"
 import { getStatus, getData } from "../state/cityOfMiamiBudget/selectors"
 
 const DATA_URL = "https://data.miamigov.com/resource/ub3m-qgg5.json"

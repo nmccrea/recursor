@@ -4,29 +4,14 @@
  * TODO: doc
  */
 
-import { CityOfMiamiBudgetState, Status } from "./slice"
-import { createAsyncThunk, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
+import { AppThunk } from "../store"
+import { fetchDataStart, fetchDataSuccess } from "./actions"
 
-// Case Reducers
-const fetchDataPending: CaseReducer<CityOfMiamiBudgetState, PayloadAction> = (
-  previousState
-) => ({
-  ...previousState,
-  status: Status.Pending,
-})
-
-const fetchDataFulfilled: CaseReducer<
-  CityOfMiamiBudgetState,
-  PayloadAction<object>
-> = (previousState, action) => ({
-  ...previousState,
-  status: Status.Fulfilled,
-  data: action.payload,
-})
-
-const fetchData = createAsyncThunk("fetchData", async (url: string) => {
+const fetchData = (url: string): AppThunk => async (dispatch) => {
+  dispatch(fetchDataStart())
   const response = await fetch(url)
-  return await response.json()
-})
+  const data = await response.json()
+  dispatch(fetchDataSuccess(data))
+}
 
-export { fetchData, fetchDataPending, fetchDataFulfilled }
+export { fetchData }
