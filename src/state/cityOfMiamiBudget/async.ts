@@ -4,7 +4,7 @@
  * TODO: doc
  */
 
-import { CityOfMiamiBudgetState, Status } from "./cityOfMiamiBudget"
+import { CityOfMiamiBudgetState, Status } from "./slice"
 import { createAsyncThunk, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
 
 // Case Reducers
