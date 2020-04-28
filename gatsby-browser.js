@@ -1,1 +1,1 @@
-export { wrapWithReduxProvider as wrapRootElement } from "./src/wrapWithReduxProvider"
+export { wrapWithReduxProvider as wrapRootElement } from "./src/state/wrapWithReduxProvider"
