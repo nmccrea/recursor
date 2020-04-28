@@ -1,7 +1,7 @@
 import configureMockStore from "redux-mock-store"
 import fetchMock from "fetch-mock"
 import thunk from "redux-thunk"
-import { Status } from "./reducer"
+import { Status } from "./types"
 import { fetchDataStart, fetchDataSuccess } from "./actions"
 import { fetchData } from "./async"
 

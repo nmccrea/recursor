@@ -1,4 +1,4 @@
-import { Status } from "./reducer"
+import { Status } from "./types"
 import { getStatus, getData } from "./selectors"
 
 describe("getStatus", () => {

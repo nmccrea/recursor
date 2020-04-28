@@ -1,4 +1,5 @@
-import reducer, { Status } from "./reducer"
+import { Status } from "./types"
+import reducer from "./reducer"
 import { fetchDataStart, fetchDataSuccess } from "./actions"
 
 describe("reducer", () => {

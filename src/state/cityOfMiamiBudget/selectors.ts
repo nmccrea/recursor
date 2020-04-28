@@ -6,10 +6,22 @@
 
 import { RootState } from "../store"
 
-const getStatus = (state: RootState) =>
-  (state.cityOfMiamiBudget && state.cityOfMiamiBudget.status) || undefined
+/**
+ * Gets the current status.
+ *
+ * @param state The current state of the slice.
+ *
+ * @returns The current value of the `status` field.
+ */
+const getStatus = (state: RootState) => state.cityOfMiamiBudget.status
 
-const getData = (state: RootState) =>
-  (state.cityOfMiamiBudget && state.cityOfMiamiBudget.data) || undefined
+/**
+ * Gets the current data object.
+ *
+ * @param state The current state of the slice.
+ *
+ * @returns The current data object.
+ */
+const getData = (state: RootState) => state.cityOfMiamiBudget.data
 
 export { getStatus, getData }

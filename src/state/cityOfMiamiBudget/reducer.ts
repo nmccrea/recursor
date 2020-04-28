@@ -5,19 +5,8 @@
  */
 
 import { createReducer, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
+import { CityOfMiamiBudgetState, Status } from "./types"
 import { fetchDataStart, fetchDataSuccess } from "./actions"
-
-// State
-export enum Status {
-  Idle = "idle",
-  Pending = "pending",
-  Fulfilled = "fulfilled",
-}
-
-export interface CityOfMiamiBudgetState {
-  status: Status
-  data?: object
-}
 
 const INITIAL_STATE: CityOfMiamiBudgetState = { status: Status.Idle }
 
