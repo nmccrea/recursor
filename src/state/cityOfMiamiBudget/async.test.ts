@@ -1,6 +1,7 @@
 import configureMockStore from "redux-mock-store"
 import fetchMock from "fetch-mock"
 import thunk from "redux-thunk"
+import { AppThunkDispatch } from "../store"
 import { Status } from "./types"
 import { fetchDataStart, fetchDataSuccess } from "./actions"
 import { fetchData } from "./async"
@@ -21,11 +22,7 @@ describe("fetchData()", () => {
       const store = mockStore({ status: Status.Idle })
 
       const action = fetchData("/test-url.json")
-      // TODO: Type this statement correctly.
-      // `dispatch` expects an action with a `type` field but `ThunkAction`
-      // does not have one.
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      await store.dispatch<any>(action)
+      await (store.dispatch as AppThunkDispatch)(action)
 
       expect(store.getActions()).toEqual([
         fetchDataStart(),

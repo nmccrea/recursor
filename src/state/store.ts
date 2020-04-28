@@ -4,7 +4,7 @@
  */
 
 import { Action } from "redux"
-import { ThunkAction } from "redux-thunk"
+import { ThunkAction, ThunkDispatch } from "redux-thunk"
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
 import cityOfMiamiBudget from "./cityOfMiamiBudget/reducer"
 
@@ -13,8 +13,13 @@ const store = configureStore({ reducer: rootReducer })
 
 export default store
 export type RootState = ReturnType<typeof rootReducer>
-export type AppThunk<ReturnType = void> = ThunkAction<
+export type AppThunkAction<ReturnType = void> = ThunkAction<
   ReturnType,
+  RootState,
+  unknown,
+  Action<string>
+>
+export type AppThunkDispatch<ReturnType = void> = ThunkDispatch<
   RootState,
   unknown,
   Action<string>
