@@ -6,12 +6,12 @@
 
 import { createReducer, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
 import { CityOfMiamiBudgetState, Status } from "./types"
-import { fetchDataStart, fetchDataSuccess } from "./actions"
+import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
 const INITIAL_STATE: CityOfMiamiBudgetState = { status: Status.Idle }
 
 // Case Reducers
-const fetchDataStartReducer: CaseReducer<
+const fetchDatasetStartReducer: CaseReducer<
   CityOfMiamiBudgetState,
   PayloadAction
 > = (previousState) => ({
@@ -19,7 +19,7 @@ const fetchDataStartReducer: CaseReducer<
   status: Status.Pending,
 })
 
-const fetchDataSuccessReducer: CaseReducer<
+const fetchDatasetSuccessReducer: CaseReducer<
   CityOfMiamiBudgetState,
   PayloadAction<object>
 > = (previousState, action) => ({
@@ -30,8 +30,8 @@ const fetchDataSuccessReducer: CaseReducer<
 
 // Reducer
 const reducer = createReducer(INITIAL_STATE, {
-  [fetchDataStart.type]: fetchDataStartReducer,
-  [fetchDataSuccess.type]: fetchDataSuccessReducer,
+  [fetchDatasetStart.type]: fetchDatasetStartReducer,
+  [fetchDatasetSuccess.type]: fetchDatasetSuccessReducer,
 })
 
 export default reducer

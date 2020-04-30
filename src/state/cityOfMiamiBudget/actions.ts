@@ -6,8 +6,8 @@
 
 import { createAction } from "@reduxjs/toolkit"
 
-const fetchDataStart = createAction("FETCH_DATA/start")
+const fetchDatasetStart = createAction("FETCH_DATA/start")
 
-const fetchDataSuccess = createAction<object>("FETCH_DATA/success")
+const fetchDatasetSuccess = createAction<object>("FETCH_DATA/success")
 
-export { fetchDataStart, fetchDataSuccess }
+export { fetchDatasetStart, fetchDatasetSuccess }

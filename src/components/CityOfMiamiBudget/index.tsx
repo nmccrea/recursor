@@ -6,7 +6,7 @@
 
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { fetchData } from "../../state/cityOfMiamiBudget/async"
+import { fetchDataset } from "../../state/cityOfMiamiBudget/async"
 import { Status } from "../../state/cityOfMiamiBudget/types"
 import { getStatus, getData } from "../../state/cityOfMiamiBudget/selectors"
 
@@ -31,7 +31,7 @@ const ELEMENT_FOR_STATUS = {
 const CityOfMiamiBudget = () => {
   const status = useSelector(getStatus)
   if (status === Status.Idle) {
-    useDispatch()(fetchData(DATA_URL))
+    useDispatch()(fetchDataset(DATA_URL))
   }
   return ELEMENT_FOR_STATUS[status]
 }

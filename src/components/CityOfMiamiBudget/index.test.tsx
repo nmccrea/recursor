@@ -45,7 +45,7 @@ describe("<CityOfMiamiBudget />", () => {
     const mockThunk = jest.fn()
     jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Idle)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
-    jest.spyOn(asyncActions, "fetchData").mockReturnValue(mockThunk)
+    jest.spyOn(asyncActions, "fetchDataset").mockReturnValue(mockThunk)
 
     render(<CityOfMiamiBudget />)
 

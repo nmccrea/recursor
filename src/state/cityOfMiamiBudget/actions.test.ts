@@ -1,21 +1,21 @@
-import { fetchDataStart, fetchDataSuccess } from "./actions"
+import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
-describe("fetchDataStart()", () => {
+describe("fetchDatasetStart()", () => {
   it("should return an action object to start the fetch", () => {
-    const result = fetchDataStart()
+    const result = fetchDatasetStart()
 
     expect(result).toEqual({
-      type: fetchDataStart.type,
+      type: fetchDatasetStart.type,
     })
   })
 })
 
-describe("fetchDataSuccess()", () => {
+describe("fetchDatasetSuccess()", () => {
   it("should return success action containing the fetched data", () => {
-    const result = fetchDataSuccess({ a: "apples", b: "bananas" })
+    const result = fetchDatasetSuccess({ a: "apples", b: "bananas" })
 
     expect(result).toEqual({
-      type: fetchDataSuccess.type,
+      type: fetchDatasetSuccess.type,
       payload: { a: "apples", b: "bananas" },
     })
   })

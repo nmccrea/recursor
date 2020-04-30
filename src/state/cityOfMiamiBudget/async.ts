@@ -5,13 +5,13 @@
  */
 
 import { AppThunkAction } from "../store"
-import { fetchDataStart, fetchDataSuccess } from "./actions"
+import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
-const fetchData = (url: string): AppThunkAction => async (dispatch) => {
-  dispatch(fetchDataStart())
+const fetchDataset = (url: string): AppThunkAction => async (dispatch) => {
+  dispatch(fetchDatasetStart())
   const response = await fetch(url)
   const data = await response.json()
-  dispatch(fetchDataSuccess(data))
+  dispatch(fetchDatasetSuccess(data))
 }
 
-export { fetchData }
+export { fetchDataset }
