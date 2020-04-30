@@ -3,7 +3,7 @@ import * as reactRedux from "react-redux"
 import { render } from "@testing-library/react"
 import { Status } from "../../state/cityOfMiamiBudget/types"
 import * as asyncActions from "../../state/cityOfMiamiBudget/async"
-import CityOfMiamiBudget from "./CityOfMiamiBudget"
+import CityOfMiamiBudget from "."
 
 describe("<CityOfMiamiBudget />", () => {
   it("renders correctly when status is idle", () => {
