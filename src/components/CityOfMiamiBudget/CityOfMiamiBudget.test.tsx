@@ -1,8 +1,8 @@
 import React from "react"
 import * as reactRedux from "react-redux"
 import { render } from "@testing-library/react"
-import { Status } from "../state/cityOfMiamiBudget/types"
-import * as asyncActions from "../state/cityOfMiamiBudget/async"
+import { Status } from "../../state/cityOfMiamiBudget/types"
+import * as asyncActions from "../../state/cityOfMiamiBudget/async"
 import CityOfMiamiBudget from "./CityOfMiamiBudget"
 
 describe("<CityOfMiamiBudget />", () => {
