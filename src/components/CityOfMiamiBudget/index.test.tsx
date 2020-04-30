@@ -6,6 +6,10 @@ import * as asyncActions from "../../state/cityOfMiamiBudget/async"
 import CityOfMiamiBudget from "."
 
 describe("<CityOfMiamiBudget />", () => {
+  afterEach(() => {
+    jest.restoreAllMocks()
+  })
+
   it("renders correctly when status is idle", () => {
     jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Idle)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
