@@ -11,13 +11,7 @@ exports[`<CityOfMiamiBudget /> renders correctly when status is fulfilled 1`] = 
 </div>
 `;
 
-exports[`<CityOfMiamiBudget /> renders correctly when status is idle 1`] = `
-<div>
-  <button>
-    Fetch Data!
-  </button>
-</div>
-`;
+exports[`<CityOfMiamiBudget /> renders correctly when status is idle 1`] = `<div />`;
 
 exports[`<CityOfMiamiBudget /> renders correctly when status is pending 1`] = `
 <div>

@@ -1,6 +1,6 @@
 import React from "react"
 import * as reactRedux from "react-redux"
-import { render, act, fireEvent, getByText } from "@testing-library/react"
+import { render } from "@testing-library/react"
 import { Status } from "../state/cityOfMiamiBudget/types"
 import * as asyncActions from "../state/cityOfMiamiBudget/async"
 import CityOfMiamiBudget from "./CityOfMiamiBudget"
@@ -36,19 +36,35 @@ describe("<CityOfMiamiBudget />", () => {
     expect(container).toMatchSnapshot()
   })
 
-  it("dispatches the data fetch when the fetch button is clicked", () => {
+  it("dispatches the data fetch if the status is idle", () => {
     const mockDispatch = jest.fn()
     const mockThunk = jest.fn()
     jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Idle)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
-    jest.spyOn(asyncActions, "fetchData").mockImplementation(() => mockThunk)
-    const { container } = render(<CityOfMiamiBudget />)
-    const button = getByText(container, "Fetch Data!")
+    jest.spyOn(asyncActions, "fetchData").mockReturnValue(mockThunk)
 
-    act(() => {
-      fireEvent.click(button)
-    })
+    render(<CityOfMiamiBudget />)
 
     expect(mockDispatch).toHaveBeenCalledWith(mockThunk)
+  })
+
+  it("does not dispatch the data fetch if the status is pending", () => {
+    const mockDispatch = jest.fn()
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Pending)
+    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
+
+    render(<CityOfMiamiBudget />)
+
+    expect(mockDispatch).not.toHaveBeenCalled()
+  })
+
+  it("does not dispatch the data fetch if the status is fulfilled", () => {
+    const mockDispatch = jest.fn()
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Fulfilled)
+    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
+
+    render(<CityOfMiamiBudget />)
+
+    expect(mockDispatch).not.toHaveBeenCalled()
   })
 })

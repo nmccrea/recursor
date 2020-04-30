@@ -12,15 +12,6 @@ import { getStatus, getData } from "../state/cityOfMiamiBudget/selectors"
 
 const DATA_URL = "https://data.miamigov.com/resource/ub3m-qgg5.json"
 
-const FetchButton = () => {
-  const dispatch = useDispatch()
-  return (
-    <button onClick={() => dispatch(fetchData(DATA_URL))}>Fetch Data!</button>
-  )
-}
-
-const Loading = () => <p>Loading...</p>
-
 const Data = () => {
   const data = useSelector(getData)
   return (
@@ -32,13 +23,16 @@ const Data = () => {
 }
 
 const ELEMENT_FOR_STATUS = {
-  [Status.Idle]: <FetchButton />,
-  [Status.Pending]: <Loading />,
+  [Status.Idle]: null,
+  [Status.Pending]: <p>Loading...</p>,
   [Status.Fulfilled]: <Data />,
 }
 
 const CityOfMiamiBudget = () => {
   const status = useSelector(getStatus)
+  if (status === Status.Idle) {
+    useDispatch()(fetchData(DATA_URL))
+  }
   return ELEMENT_FOR_STATUS[status]
 }
 
