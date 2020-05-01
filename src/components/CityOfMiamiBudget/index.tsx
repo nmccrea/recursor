@@ -6,12 +6,12 @@
 
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { fetchDataset } from "../../state/cityOfMiamiBudget/async"
+import { fetchDataset } from "../../state/datasets/async"
 import {
   selectorForStatus,
   selectorForData,
-} from "../../state/cityOfMiamiBudget/selectors"
-import { DatasetId, Status } from "../../state/cityOfMiamiBudget/types"
+} from "../../state/datasets/selectors"
+import { DatasetId, Status } from "../../state/datasets/types"
 
 const DATASET_ID: DatasetId = "cityOfMiami/budget/revenue"
 const DATA_URL = "https://data.miamigov.com/resource/ub3m-qgg5.json"

@@ -6,9 +6,9 @@
 import { Action } from "redux"
 import { ThunkAction, ThunkDispatch } from "redux-thunk"
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
-import cityOfMiamiBudget from "./cityOfMiamiBudget/reducer"
+import datasets from "./datasets/reducer"
 
-const rootReducer = combineReducers({ cityOfMiamiBudget })
+const rootReducer = combineReducers({ datasets })
 const store = configureStore({ reducer: rootReducer })
 
 export default store

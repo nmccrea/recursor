@@ -4,7 +4,7 @@ import { selectorForStatus, selectorForData } from "./selectors"
 describe("selectorForStatus()", () => {
   it("returns a selector that selects the status for the indicated dataset", () => {
     const testState = {
-      cityOfMiamiBudget: {
+      datasets: {
         index: {
           a: { status: Status.Idle },
           b: { status: Status.Pending },
@@ -29,7 +29,7 @@ describe("selectorForStatus()", () => {
 describe("selectorForData()", () => {
   it("returns a selector that selects the data for the indicated dataset", () => {
     const testState = {
-      cityOfMiamiBudget: {
+      datasets: {
         index: {
           a: { status: Status.Idle },
           b: { status: Status.Pending },

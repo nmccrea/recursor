@@ -5,13 +5,13 @@
  */
 
 import { createReducer, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
-import { DatasetId, FetchResult, Status, CityOfMiamiBudgetState } from "./types"
+import { Datasets, DatasetId, FetchResult, Status } from "./types"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
-const INITIAL_STATE: CityOfMiamiBudgetState = { index: {} }
+const INITIAL_STATE: Datasets = { index: {} }
 
 const fetchDatasetStartReducer: CaseReducer<
-  CityOfMiamiBudgetState,
+  Datasets,
   PayloadAction<DatasetId>
 > = (previousState, action) => ({
   ...previousState,
@@ -22,7 +22,7 @@ const fetchDatasetStartReducer: CaseReducer<
 })
 
 const fetchDatasetSuccessReducer: CaseReducer<
-  CityOfMiamiBudgetState,
+  Datasets,
   PayloadAction<FetchResult>
 > = (previousState, action) => ({
   ...previousState,

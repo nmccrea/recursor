@@ -8,7 +8,7 @@ import { createSelector } from "@reduxjs/toolkit"
 import { RootState } from "../store"
 import { DatasetId } from "./types"
 
-const getIndex = (state: RootState) => state.cityOfMiamiBudget.index
+const getIndex = (state: RootState) => state.datasets.index
 
 const selectorForDatasetState = (datasetId: DatasetId) =>
   createSelector(getIndex, (index) => index[datasetId])

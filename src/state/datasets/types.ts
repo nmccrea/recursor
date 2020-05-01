@@ -1,13 +1,13 @@
-export interface CityOfMiamiBudgetState {
-  index: DatasetIndex
-}
-
 export type Dataset = object
 
 export type DatasetId = string
 
 export interface DatasetIndex {
   [dataset: string]: DatasetState
+}
+
+export interface Datasets {
+  index: DatasetIndex
 }
 
 export type DatasetState = {
