@@ -5,9 +5,10 @@
  */
 
 import { createAction } from "@reduxjs/toolkit"
+import { DatasetId, FetchResult } from "./types"
 
-const fetchDatasetStart = createAction("FETCH_DATA/start")
+const fetchDatasetStart = createAction<DatasetId>("FETCH_DATA/start")
 
-const fetchDatasetSuccess = createAction<object>("FETCH_DATA/success")
+const fetchDatasetSuccess = createAction<FetchResult>("FETCH_DATA/success")
 
 export { fetchDatasetStart, fetchDatasetSuccess }

@@ -21,12 +21,15 @@ describe("fetchDataset()", () => {
       })
       const store = mockStore({ status: Status.Idle })
 
-      const action = fetchDataset("/test-url.json")
+      const action = fetchDataset("/test-url.json", "test/dataset/id")
       await (store.dispatch as AppThunkDispatch)(action)
 
       expect(store.getActions()).toEqual([
-        fetchDatasetStart(),
-        fetchDatasetSuccess({ a: "apples", b: "bananas" }),
+        fetchDatasetStart("test/dataset/id"),
+        fetchDatasetSuccess({
+          datasetId: "test/dataset/id",
+          data: { a: "apples", b: "bananas" },
+        }),
       ])
     })
   })

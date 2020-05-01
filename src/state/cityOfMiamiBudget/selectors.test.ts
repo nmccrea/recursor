@@ -1,24 +1,52 @@
 import { Status } from "./types"
-import { getStatus, getData } from "./selectors"
+import { selectorForStatus, selectorForData } from "./selectors"
 
-describe("getStatus", () => {
-  it("should return the value of the status field", () => {
-    const result = getStatus({
-      cityOfMiamiBudget: { status: Status.Fulfilled },
-    })
+describe("selectorForStatus()", () => {
+  it("returns a selector that selects the status for the indicated dataset", () => {
+    const testState = {
+      cityOfMiamiBudget: {
+        index: {
+          a: { status: Status.Idle },
+          b: { status: Status.Pending },
+          c: {
+            status: Status.Fulfilled,
+            data: { x: "x", y: "y" },
+          },
+        },
+      },
+    }
 
-    expect(result).toBe(Status.Fulfilled)
+    const results = [
+      selectorForStatus("a")(testState),
+      selectorForStatus("b")(testState),
+      selectorForStatus("c")(testState),
+    ]
+
+    expect(results).toEqual([Status.Idle, Status.Pending, Status.Fulfilled])
   })
 })
 
-describe("getData", () => {
-  it("should return the value of the data field", () => {
-    const data: object = { a: "apples", b: "bananas", c: "cornbread" }
+describe("selectorForData()", () => {
+  it("returns a selector that selects the data for the indicated dataset", () => {
+    const testState = {
+      cityOfMiamiBudget: {
+        index: {
+          a: { status: Status.Idle },
+          b: { status: Status.Pending },
+          c: {
+            status: Status.Fulfilled,
+            data: { x: "x", y: "y" },
+          },
+        },
+      },
+    }
 
-    const result = getData({
-      cityOfMiamiBudget: { data, status: Status.Fulfilled },
-    })
+    const results = [
+      selectorForData("a")(testState),
+      selectorForData("b")(testState),
+      selectorForData("c")(testState),
+    ]
 
-    expect(result).toBe(data)
+    expect(results).toEqual([undefined, undefined, { x: "x", y: "y" }])
   })
 })

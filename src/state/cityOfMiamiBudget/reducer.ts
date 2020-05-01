@@ -5,27 +5,34 @@
  */
 
 import { createReducer, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
-import { CityOfMiamiBudgetState, Status } from "./types"
+import { DatasetId, FetchResult, Status, CityOfMiamiBudgetState } from "./types"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
-const INITIAL_STATE: CityOfMiamiBudgetState = { status: Status.Idle }
+const INITIAL_STATE: CityOfMiamiBudgetState = { index: {} }
 
-// Case Reducers
 const fetchDatasetStartReducer: CaseReducer<
   CityOfMiamiBudgetState,
-  PayloadAction
-> = (previousState) => ({
+  PayloadAction<DatasetId>
+> = (previousState, action) => ({
   ...previousState,
-  status: Status.Pending,
+  index: {
+    ...previousState.index,
+    [action.payload]: { status: Status.Pending },
+  },
 })
 
 const fetchDatasetSuccessReducer: CaseReducer<
   CityOfMiamiBudgetState,
-  PayloadAction<object>
+  PayloadAction<FetchResult>
 > = (previousState, action) => ({
   ...previousState,
-  status: Status.Fulfilled,
-  data: action.payload,
+  index: {
+    ...previousState.index,
+    [action.payload.datasetId]: {
+      status: Status.Fulfilled,
+      data: action.payload.data,
+    },
+  },
 })
 
 // Reducer

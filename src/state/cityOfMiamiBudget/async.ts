@@ -4,14 +4,18 @@
  * TODO: doc
  */
 
-import { AppThunkAction } from "../store"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
+import { AppThunkAction } from "../store"
+import { DatasetId } from "./types"
 
-const fetchDataset = (url: string): AppThunkAction => async (dispatch) => {
-  dispatch(fetchDatasetStart())
+const fetchDataset = (
+  url: string,
+  datasetId: DatasetId
+): AppThunkAction => async (dispatch) => {
+  dispatch(fetchDatasetStart(datasetId))
   const response = await fetch(url)
   const data = await response.json()
-  dispatch(fetchDatasetSuccess(data))
+  dispatch(fetchDatasetSuccess({ datasetId, data }))
 }
 
 export { fetchDataset }

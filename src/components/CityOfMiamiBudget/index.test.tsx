@@ -40,6 +40,18 @@ describe("<CityOfMiamiBudget />", () => {
     expect(container).toMatchSnapshot()
   })
 
+  it("dispatches the data fetch if the status is undefined", () => {
+    const mockDispatch = jest.fn()
+    const mockThunk = jest.fn()
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(undefined)
+    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
+    jest.spyOn(asyncActions, "fetchDataset").mockReturnValue(mockThunk)
+
+    render(<CityOfMiamiBudget />)
+
+    expect(mockDispatch).toHaveBeenCalledWith(mockThunk)
+  })
+
   it("dispatches the data fetch if the status is idle", () => {
     const mockDispatch = jest.fn()
     const mockThunk = jest.fn()

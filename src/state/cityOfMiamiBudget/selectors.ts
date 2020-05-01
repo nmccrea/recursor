@@ -4,24 +4,25 @@
  * TODO: doc
  */
 
+import { createSelector } from "@reduxjs/toolkit"
 import { RootState } from "../store"
+import { DatasetId } from "./types"
 
-/**
- * Gets the current status.
- *
- * @param state The current state of the slice.
- *
- * @returns The current value of the `status` field.
- */
-const getStatus = (state: RootState) => state.cityOfMiamiBudget.status
+const getIndex = (state: RootState) => state.cityOfMiamiBudget.index
 
-/**
- * Gets the current data object.
- *
- * @param state The current state of the slice.
- *
- * @returns The current data object.
- */
-const getData = (state: RootState) => state.cityOfMiamiBudget.data
+const selectorForDatasetState = (datasetId: DatasetId) =>
+  createSelector(getIndex, (index) => index[datasetId])
 
-export { getStatus, getData }
+const selectorForStatus = (datasetId: DatasetId) =>
+  createSelector(
+    selectorForDatasetState(datasetId),
+    (datasetState) => (datasetState && datasetState.status) || undefined
+  )
+
+const selectorForData = (datasetId: DatasetId) =>
+  createSelector(
+    selectorForDatasetState(datasetId),
+    (datasetState) => (datasetState && datasetState.data) || undefined
+  )
+
+export { selectorForStatus, selectorForData }
