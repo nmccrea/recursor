@@ -1,7 +1,7 @@
 import React from "react"
 import * as reactRedux from "react-redux"
 import { render } from "@testing-library/react"
-import { Status } from "../../state/datasets/types"
+import { AsyncState } from "../../state/datasets/types"
 import * as asyncActions from "../../state/datasets/async"
 import CityOfMiamiBudget from "."
 
@@ -11,7 +11,7 @@ describe("<CityOfMiamiBudget />", () => {
   })
 
   it("renders correctly when status is idle", () => {
-    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Idle)
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(AsyncState.Idle)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
 
     const { container } = render(<CityOfMiamiBudget />)
@@ -20,7 +20,7 @@ describe("<CityOfMiamiBudget />", () => {
   })
 
   it("renders correctly when status is pending", () => {
-    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Pending)
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(AsyncState.Pending)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
 
     const { container } = render(<CityOfMiamiBudget />)
@@ -31,7 +31,7 @@ describe("<CityOfMiamiBudget />", () => {
   it("renders correctly when status is fulfilled", () => {
     jest
       .spyOn(reactRedux, "useSelector")
-      .mockReturnValueOnce(Status.Fulfilled)
+      .mockReturnValueOnce(AsyncState.Fulfilled)
       .mockReturnValueOnce({ a: "apples", b: "bananas" })
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
 
@@ -55,7 +55,7 @@ describe("<CityOfMiamiBudget />", () => {
   it("dispatches the data fetch if the status is idle", () => {
     const mockDispatch = jest.fn()
     const mockThunk = jest.fn()
-    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Idle)
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(AsyncState.Idle)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
     jest.spyOn(asyncActions, "fetchDataset").mockReturnValue(mockThunk)
 
@@ -66,7 +66,7 @@ describe("<CityOfMiamiBudget />", () => {
 
   it("does not dispatch the data fetch if the status is pending", () => {
     const mockDispatch = jest.fn()
-    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Pending)
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(AsyncState.Pending)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
 
     render(<CityOfMiamiBudget />)
@@ -76,7 +76,7 @@ describe("<CityOfMiamiBudget />", () => {
 
   it("does not dispatch the data fetch if the status is fulfilled", () => {
     const mockDispatch = jest.fn()
-    jest.spyOn(reactRedux, "useSelector").mockReturnValue(Status.Fulfilled)
+    jest.spyOn(reactRedux, "useSelector").mockReturnValue(AsyncState.Fulfilled)
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
 
     render(<CityOfMiamiBudget />)

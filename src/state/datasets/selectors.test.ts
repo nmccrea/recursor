@@ -1,15 +1,17 @@
-import { Status } from "./types"
-import { selectorForStatus, selectorForData } from "./selectors"
+import { AsyncState } from "./types"
+import { selectorForAsyncState, selectorForData } from "./selectors"
 
-describe("selectorForStatus()", () => {
-  it("returns a selector that selects the status for the indicated dataset", () => {
+describe("selectorForAsyncState()", () => {
+  it("returns a selector that selects the async state for the indicated dataset", () => {
     const testState = {
       datasets: {
-        index: {
-          a: { status: Status.Idle },
-          b: { status: Status.Pending },
+        ids: ["a", "b", "c"],
+        entities: {
+          a: { id: "a", asyncState: AsyncState.Idle },
+          b: { id: "b", asyncState: AsyncState.Pending },
           c: {
-            status: Status.Fulfilled,
+            id: "c",
+            asyncState: AsyncState.Fulfilled,
             data: { x: "x", y: "y" },
           },
         },
@@ -17,12 +19,16 @@ describe("selectorForStatus()", () => {
     }
 
     const results = [
-      selectorForStatus("a")(testState),
-      selectorForStatus("b")(testState),
-      selectorForStatus("c")(testState),
+      selectorForAsyncState("a")(testState),
+      selectorForAsyncState("b")(testState),
+      selectorForAsyncState("c")(testState),
     ]
 
-    expect(results).toEqual([Status.Idle, Status.Pending, Status.Fulfilled])
+    expect(results).toEqual([
+      AsyncState.Idle,
+      AsyncState.Pending,
+      AsyncState.Fulfilled,
+    ])
   })
 })
 
@@ -30,11 +36,13 @@ describe("selectorForData()", () => {
   it("returns a selector that selects the data for the indicated dataset", () => {
     const testState = {
       datasets: {
-        index: {
-          a: { status: Status.Idle },
-          b: { status: Status.Pending },
+        ids: ["a", "b", "c"],
+        entities: {
+          a: { id: "a", asyncState: AsyncState.Idle },
+          b: { id: "b", asyncState: AsyncState.Pending },
           c: {
-            status: Status.Fulfilled,
+            id: "c",
+            asyncState: AsyncState.Fulfilled,
             data: { x: "x", y: "y" },
           },
         },

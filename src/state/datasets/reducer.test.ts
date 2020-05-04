@@ -1,64 +1,82 @@
-import { Status } from "./types"
+import { AsyncState } from "./types"
 import reducer from "./reducer"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
 describe("reducer", () => {
   it("should return the correct initial state", () => {
-    const result = reducer(undefined, { type: "" })
+    const initialState = reducer(undefined, { type: "" })
 
-    expect(result).toEqual({ index: {} })
+    expect(initialState).toEqual({ ids: [], entities: {} })
   })
 
   describe("`fetchDatasetStart` action", () => {
-    it("transitions from uninitialized to the pending status", () => {
-      const previousState = { index: {} }
-      const action = fetchDatasetStart("test/dataset/id")
+    it("transitions from uninitialized to the pending async state", () => {
+      const previousState = { ids: [], entities: {} }
+      const action = fetchDatasetStart("test/dataset")
 
-      const result = reducer(previousState, action)
+      const nextState = reducer(previousState, action)
 
-      expect(result).toEqual({
-        index: {
-          "test/dataset/id": { status: Status.Pending },
+      expect(nextState).toEqual({
+        ids: ["test/dataset"],
+        entities: {
+          "test/dataset": {
+            id: "test/dataset",
+            asyncState: AsyncState.Pending,
+          },
         },
       })
     })
 
-    it("transitions from the idle status to the pending status", () => {
+    it("transitions from the idle async state to the pending async state", () => {
       const previousState = {
-        index: {
-          "test/dataset/id": { status: Status.Idle },
+        ids: ["test/dataset"],
+        entities: {
+          "test/dataset": {
+            id: "test/dataset",
+            asyncState: AsyncState.Idle,
+          },
         },
       }
-      const action = fetchDatasetStart("test/dataset/id")
+      const action = fetchDatasetStart("test/dataset")
 
-      const result = reducer(previousState, action)
+      const nextState = reducer(previousState, action)
 
-      expect(result).toEqual({
-        index: {
-          "test/dataset/id": { status: Status.Pending },
+      expect(nextState).toEqual({
+        ids: ["test/dataset"],
+        entities: {
+          "test/dataset": {
+            id: "test/dataset",
+            asyncState: AsyncState.Pending,
+          },
         },
       })
     })
   })
 
   describe("`fetchDatasetSuccess` action", () => {
-    it("transitions from the pending status to the fulfilled status, including the data", () => {
+    it("transitions from the pending async state to the fulfilled async state, including the data", () => {
       const previousState = {
-        index: {
-          "test/dataset/id": { status: Status.Pending },
+        ids: ["test/dataset"],
+        entities: {
+          "test/dataset": {
+            id: "test/dataset",
+            asyncState: AsyncState.Pending,
+          },
         },
       }
       const action = fetchDatasetSuccess({
-        datasetId: "test/dataset/id",
+        id: "test/dataset",
         data: { a: "apples", b: "bananas" },
       })
 
-      const result = reducer(previousState, action)
+      const nextState = reducer(previousState, action)
 
-      expect(result).toEqual({
-        index: {
-          "test/dataset/id": {
-            status: Status.Fulfilled,
+      expect(nextState).toEqual({
+        ids: ["test/dataset"],
+        entities: {
+          "test/dataset": {
+            id: "test/dataset",
+            asyncState: AsyncState.Fulfilled,
             data: { a: "apples", b: "bananas" },
           },
         },

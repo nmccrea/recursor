@@ -5,37 +5,30 @@
  */
 
 import { createReducer, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
-import { Datasets, DatasetId, FetchResult, Status } from "./types"
+import { DatasetId, FetchResult, AsyncState } from "./types"
+import entityAdapter, { Datasets } from "./entityAdapter"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
-const INITIAL_STATE: Datasets = { index: {} }
+const INITIAL_STATE = entityAdapter.getInitialState()
 
 const fetchDatasetStartReducer: CaseReducer<
   Datasets,
   PayloadAction<DatasetId>
-> = (previousState, action) => ({
-  ...previousState,
-  index: {
-    ...previousState.index,
-    [action.payload]: { status: Status.Pending },
-  },
-})
+> = (previousState, action) =>
+  entityAdapter.upsertOne(previousState, {
+    id: action.payload,
+    asyncState: AsyncState.Pending,
+  })
 
 const fetchDatasetSuccessReducer: CaseReducer<
   Datasets,
   PayloadAction<FetchResult>
-> = (previousState, action) => ({
-  ...previousState,
-  index: {
-    ...previousState.index,
-    [action.payload.datasetId]: {
-      status: Status.Fulfilled,
-      data: action.payload.data,
-    },
-  },
-})
+> = (previousState, action) =>
+  entityAdapter.upsertOne(previousState, {
+    ...action.payload,
+    asyncState: AsyncState.Fulfilled,
+  })
 
-// Reducer
 const reducer = createReducer(INITIAL_STATE, {
   [fetchDatasetStart.type]: fetchDatasetStartReducer,
   [fetchDatasetSuccess.type]: fetchDatasetSuccessReducer,

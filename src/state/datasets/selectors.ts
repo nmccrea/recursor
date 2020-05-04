@@ -7,22 +7,23 @@
 import { createSelector } from "@reduxjs/toolkit"
 import { RootState } from "../store"
 import { DatasetId } from "./types"
+import entityAdapter from "./entityAdapter"
 
-const getIndex = (state: RootState) => state.datasets.index
+const selectDatasets = (state: RootState) => state.datasets
 
-const selectorForDatasetState = (datasetId: DatasetId) =>
-  createSelector(getIndex, (index) => index[datasetId])
+const selectorForDataset = (datasetId: DatasetId) => (state: RootState) =>
+  entityAdapter.getSelectors(selectDatasets).selectById(state, datasetId)
 
-const selectorForStatus = (datasetId: DatasetId) =>
+const selectorForAsyncState = (datasetId: DatasetId) =>
   createSelector(
-    selectorForDatasetState(datasetId),
-    (datasetState) => (datasetState && datasetState.status) || undefined
+    selectorForDataset(datasetId),
+    (dataset) => (dataset && dataset.asyncState) || undefined
   )
 
 const selectorForData = (datasetId: DatasetId) =>
   createSelector(
-    selectorForDatasetState(datasetId),
-    (datasetState) => (datasetState && datasetState.data) || undefined
+    selectorForDataset(datasetId),
+    (dataset) => (dataset && dataset.data) || undefined
   )
 
-export { selectorForStatus, selectorForData }
+export { selectorForAsyncState, selectorForData }

@@ -2,7 +2,7 @@ import configureMockStore from "redux-mock-store"
 import fetchMock from "fetch-mock"
 import thunk from "redux-thunk"
 import { AppThunkDispatch } from "../store"
-import { Status } from "./types"
+import { AsyncState } from "./types"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 import { fetchDataset } from "./async"
 
@@ -19,15 +19,15 @@ describe("fetchDataset()", () => {
       fetchMock.getOnce("/test-url.json", {
         body: { a: "apples", b: "bananas" },
       })
-      const store = mockStore({ status: Status.Idle })
+      const store = mockStore({ status: AsyncState.Idle })
 
-      const action = fetchDataset("/test-url.json", "test/dataset/id")
+      const action = fetchDataset("/test-url.json", "test/dataset")
       await (store.dispatch as AppThunkDispatch)(action)
 
       expect(store.getActions()).toEqual([
-        fetchDatasetStart("test/dataset/id"),
+        fetchDatasetStart("test/dataset"),
         fetchDatasetSuccess({
-          datasetId: "test/dataset/id",
+          id: "test/dataset",
           data: { a: "apples", b: "bananas" },
         }),
       ])

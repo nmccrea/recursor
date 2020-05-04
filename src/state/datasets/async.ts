@@ -15,7 +15,7 @@ const fetchDataset = (
   dispatch(fetchDatasetStart(datasetId))
   const response = await fetch(url)
   const data = await response.json()
-  dispatch(fetchDatasetSuccess({ datasetId, data }))
+  dispatch(fetchDatasetSuccess({ id: datasetId, data }))
 }
 
 export { fetchDataset }
