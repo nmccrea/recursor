@@ -1,9 +1,3 @@
-/**
- * TODO: type
- * TODO: test
- * TODO: doc
- */
-
 import { createAction } from "@reduxjs/toolkit"
 import { DatasetId, FetchResult } from "./types"
 

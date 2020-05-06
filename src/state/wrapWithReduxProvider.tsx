@@ -1,5 +1,5 @@
 /**
- * Implements Gatsby's `wrapRootElement` API.
+ * Implements Gatsby's `wrapRootElement` API to enable `react-redux` in the browser.
  * @packageDocumentation
  */
 
@@ -10,6 +10,10 @@ import store from "./store"
 interface Arg {
   element: React.ReactNode
 }
+
+/**
+ * Wraps an element in a `react-redux` `<Provider />` supplying the application's Redux store.
+ */
 export const wrapWithReduxProvider = ({ element }: Arg) => (
   <ReduxProvider store={store}>{element}</ReduxProvider>
 )

@@ -1,9 +1,3 @@
-/**
- * TODO: type
- * TODO: test
- * TODO: doc
- */
-
 import React from "react"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchDataset } from "../../state/datasets/async"
@@ -35,7 +29,7 @@ const ELEMENT_FOR_ASYNC_STATE = {
 const CityOfMiamiBudget = () => {
   const asyncState = useSelector(selectorForAsyncState(DATASET_ID))
   if (asyncState === undefined || asyncState === AsyncState.Idle)
-    useDispatch()(fetchDataset(DATA_URL, DATASET_ID))
+    useDispatch()(fetchDataset(DATASET_ID, DATA_URL))
   return (asyncState && ELEMENT_FOR_ASYNC_STATE[asyncState]) || null
 }
 

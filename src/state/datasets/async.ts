@@ -1,16 +1,13 @@
-/**
- * TODO: type
- * TODO: test
- * TODO: doc
- */
-
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 import { AppThunkAction } from "../store"
 import { DatasetId } from "./types"
 
+/**
+ * Fetches the data for the identified dataset from the given URL.
+ */
 const fetchDataset = (
-  url: string,
-  datasetId: DatasetId
+  datasetId: DatasetId,
+  url: string
 ): AppThunkAction => async (dispatch) => {
   dispatch(fetchDatasetStart(datasetId))
   const response = await fetch(url)

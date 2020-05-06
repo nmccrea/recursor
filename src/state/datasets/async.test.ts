@@ -21,7 +21,7 @@ describe("fetchDataset()", () => {
       })
       const store = mockStore({ status: AsyncState.Idle })
 
-      const action = fetchDataset("/test-url.json", "test/dataset")
+      const action = fetchDataset("test/dataset", "/test-url.json")
       await (store.dispatch as AppThunkDispatch)(action)
 
       expect(store.getActions()).toEqual([

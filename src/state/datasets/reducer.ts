@@ -1,16 +1,16 @@
-/**
- * TODO: type
- * TODO: test
- * TODO: doc
- */
-
 import { createReducer, CaseReducer, PayloadAction } from "@reduxjs/toolkit"
 import { DatasetId, FetchResult, AsyncState } from "./types"
 import entityAdapter, { Datasets } from "./entityAdapter"
 import { fetchDatasetStart, fetchDatasetSuccess } from "./actions"
 
+/**
+ * The initialization state for the `datasets` slice.
+ */
 const INITIAL_STATE = entityAdapter.getInitialState()
 
+/**
+ * Transitions the `asyncState` of the identified dataset to pending.
+ */
 const fetchDatasetStartReducer: CaseReducer<
   Datasets,
   PayloadAction<DatasetId>
@@ -20,6 +20,9 @@ const fetchDatasetStartReducer: CaseReducer<
     asyncState: AsyncState.Pending,
   })
 
+/**
+ * Upserts the fetched data for the identified dataset, and transitions the `asyncState` to fulfilled.
+ */
 const fetchDatasetSuccessReducer: CaseReducer<
   Datasets,
   PayloadAction<FetchResult>
