@@ -1,57 +1,95 @@
 import React from "react"
 
-type Angle = number
+type Translation = number
 type Scale = number
+type Angle = number
 type Depth = number
 type Color = string
 
-interface Seed {
-  angle: Angle
+interface Transformation {
+  translation: Translation
   scale: Scale
-  color: Color
+  angle: Angle
+}
+
+interface RecursionBehavior {
   maxDepth: Depth
+  color: Color
+  transformation: Transformation
 }
 
-type Seeds = Array<Seed>
-
-interface TreeProps extends Seed {
+interface RecursionProps extends RecursionBehavior {
   currentDepth: Depth
-  seeds: Seeds
 }
 
-const TreeFractalRecursion = ({
+const RECURSION_BEHAVIORS: Array<RecursionBehavior> = [
+  {
+    maxDepth: 2,
+    color: "red",
+    transformation: { translation: 0.6, scale: 0.4, angle: -Math.PI / 3 },
+  },
+  {
+    maxDepth: 3,
+    color: "green",
+    transformation: { translation: 1, scale: 0.5, angle: -Math.PI / 6 },
+  },
+  {
+    maxDepth: 4,
+    color: "blue",
+    transformation: { translation: 1, scale: 0.8, angle: 1 },
+  },
+]
+
+/**
+ * TODO: doc
+ */
+const styleFor = ({ translation, angle, scale }: Transformation) => ({
+  transformOrigin: "center bottom",
+  transform: [
+    `translateY(-${100 * translation}%)`,
+    `scale(${scale})`,
+    `rotate(${angle}rad)`,
+  ].join(" "),
+})
+
+const Recursion = ({
   currentDepth,
   maxDepth,
-  angle,
-  scale,
   color,
-  seeds,
-}: TreeProps) => {
+  transformation,
+}: RecursionProps) => {
   if (currentDepth >= maxDepth) return null
   return (
     <div
-      className="tree"
+      className={`tree depth-${currentDepth}`}
       style={{
         position: "absolute",
         inset: 0,
         backgroundColor: color,
-        transformOrigin: "center bottom",
-        transform: `translateY(-${
-          (currentDepth && 100) || 0
-        }%) scale(${scale}) rotate(${angle}rad)`,
+        ...styleFor(transformation),
       }}
     >
-      {seeds.map((seed, index) => (
-        <TreeFractalRecursion
-          {...seed}
+      {RECURSION_BEHAVIORS.map((recursionBehavior, index) => (
+        <Recursion
+          {...recursionBehavior}
           currentDepth={currentDepth + 1}
-          seeds={seeds}
-          key={`${index}/${color}`}
+          key={`${index}`}
         />
       ))}
     </div>
   )
 }
+
+const Root = () => (
+  <div style={{ width: "10px", height: "200px", position: "relative" }}>
+    <Recursion
+      currentDepth={0}
+      maxDepth={Infinity}
+      color="black"
+      transformation={{ translation: 0, scale: 1, angle: 0 }}
+    />
+  </div>
+)
 
 const TreeFractal = () => (
   <div
@@ -64,35 +102,7 @@ const TreeFractal = () => (
       alignItems: "flex-end",
     }}
   >
-    <div style={{ width: "10px", height: "200px", position: "relative" }}>
-      <TreeFractalRecursion
-        angle={0}
-        scale={1}
-        color="black"
-        maxDepth={1}
-        currentDepth={0}
-        seeds={[
-          {
-            angle: -Math.PI / 3,
-            scale: 0.4,
-            maxDepth: 3,
-            color: "rgba(255, 0, 0, 1.0)",
-          },
-          {
-            angle: -Math.PI / 6,
-            scale: 0.5,
-            maxDepth: 3,
-            color: "rgba(0, 255, 0, 1.0)",
-          },
-          {
-            angle: 1,
-            scale: 0.8,
-            maxDepth: 8,
-            color: "rgba(0, 0, 255, 1.0)",
-          },
-        ]}
-      />
-    </div>
+    <Root />
   </div>
 )
 
