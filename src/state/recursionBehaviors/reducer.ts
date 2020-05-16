@@ -2,15 +2,7 @@ import { createReducer } from "@reduxjs/toolkit"
 import recursionBehaviors from "./recursionBehaviors"
 import { setTranslation, setScale, setAngle, setDepth } from "./actions"
 
-/**
- * TODO: doc
- */
-const INITIAL_STATE = recursionBehaviors.getInitialState()
-
-/**
- * TODO: doc
- */
-const reducer = createReducer(INITIAL_STATE, (builder) =>
+const reducer = createReducer(recursionBehaviors.getInitialState(), (builder) =>
   builder
     .addCase(setTranslation, recursionBehaviors.updateOne)
     .addCase(setScale, recursionBehaviors.updateOne)
