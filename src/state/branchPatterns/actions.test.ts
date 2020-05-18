@@ -8,7 +8,7 @@ import {
 } from "./actions"
 
 describe("addOne()", () => {
-  it("returns an action object for adding a new recursion behavior", () => {
+  it("returns an action object for adding a new branch pattern", () => {
     const action = addOne({
       color: "blue",
       translation: 0.891,
@@ -31,7 +31,7 @@ describe("addOne()", () => {
 })
 
 describe("removeOne()", () => {
-  it("returns an action object for removing an existing recursion behavior", () => {
+  it("returns an action object for removing an existing branch pattern", () => {
     const action = removeOne("test/subject")
 
     expect(action).toEqual({
@@ -42,7 +42,7 @@ describe("removeOne()", () => {
 })
 
 describe("setTranslation()", () => {
-  it("returns an action object for setting the identified recursion behavior's transformation translation", () => {
+  it("returns an action object for setting the identified branch pattern's transformation translation", () => {
     const action = setTranslation("test/translation", 0.54321)
 
     expect(action).toEqual({
@@ -56,7 +56,7 @@ describe("setTranslation()", () => {
 })
 
 describe("setScale()", () => {
-  it("returns an action object for setting the identified recursion behavior's transformation scale", () => {
+  it("returns an action object for setting the identified branch pattern's transformation scale", () => {
     const action = setScale("test/scale", Math.PI / 1.2345)
 
     expect(action).toEqual({
@@ -70,7 +70,7 @@ describe("setScale()", () => {
 })
 
 describe("setAngle()", () => {
-  it("returns an action object for setting the identified recursion behavior's transformation angle", () => {
+  it("returns an action object for setting the identified branch pattern's transformation angle", () => {
     const action = setAngle("test/angle", Math.PI / 1.2345)
 
     expect(action).toEqual({
@@ -84,7 +84,7 @@ describe("setAngle()", () => {
 })
 
 describe("setDepth()", () => {
-  it("returns an action object for setting the identified recursion behavior's recursion depth", () => {
+  it("returns an action object for setting the identified branch pattern's recursion depth", () => {
     const action = setDepth("test/depth", Math.PI / 1.2345)
 
     expect(action).toEqual({

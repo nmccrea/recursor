@@ -6,9 +6,9 @@
 import { Action } from "redux"
 import { ThunkAction, ThunkDispatch } from "redux-thunk"
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
-import recursionBehaviors from "./recursionBehaviors/reducer"
+import branchPatterns from "./branchPatterns/reducer"
 
-const rootReducer = combineReducers({ recursionBehaviors })
+const rootReducer = combineReducers({ branchPatterns })
 const store = configureStore({ reducer: rootReducer })
 
 export default store

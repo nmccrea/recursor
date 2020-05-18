@@ -1,7 +1,7 @@
 import {
   selectAll,
   selectIds,
-  selectorForRecursionBehavior,
+  selectorForBranchPattern,
   selectorForTranslation,
   selectorForScale,
   selectorForAngle,
@@ -9,9 +9,9 @@ import {
 } from "./selectors"
 
 describe("selectAll()", () => {
-  it("returns a list of all existing recursion behaviors, ordered according to the `ids` state", () => {
+  it("returns a list of all existing branch patterns, ordered according to the `ids` state", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/a", "test/c", "test/b"],
         entities: {
           "test/a": {
@@ -74,9 +74,9 @@ describe("selectAll()", () => {
 })
 
 describe("selectIds()", () => {
-  it("returns the ordered list of IDs of all existing recursion behaviors", () => {
+  it("returns the ordered list of IDs of all existing branch patterns", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/a", "test/b", "test/c"],
         entities: {
           "test/a": {
@@ -113,10 +113,10 @@ describe("selectIds()", () => {
   })
 })
 
-describe("selectorForRecursionBehavior()", () => {
-  it("returns a selector which returns the identified recursion behavior", () => {
+describe("selectorForBranchPattern()", () => {
+  it("returns a selector which returns the identified branch pattern", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -139,7 +139,7 @@ describe("selectorForRecursionBehavior()", () => {
       },
     }
 
-    const result = selectorForRecursionBehavior("test/subject")(state)
+    const result = selectorForBranchPattern("test/subject")(state)
 
     expect(result).toEqual({
       id: "test/subject",
@@ -153,9 +153,9 @@ describe("selectorForRecursionBehavior()", () => {
 })
 
 describe("selectorForTranslation()", () => {
-  it("returns a selector which returns the identified recursion behavior's translation", () => {
+  it("returns a selector which returns the identified branch pattern's translation", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -185,9 +185,9 @@ describe("selectorForTranslation()", () => {
 })
 
 describe("selectorForScale()", () => {
-  it("returns a selector which returns the identified recursion behavior's scale", () => {
+  it("returns a selector which returns the identified branch pattern's scale", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -217,9 +217,9 @@ describe("selectorForScale()", () => {
 })
 
 describe("selectorForAngle()", () => {
-  it("returns a selector which returns the identified recursion behavior's angle", () => {
+  it("returns a selector which returns the identified branch pattern's angle", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -249,9 +249,9 @@ describe("selectorForAngle()", () => {
 })
 
 describe("selectorForDepth()", () => {
-  it("returns a selector which returns the identified recursion behavior's depth", () => {
+  it("returns a selector which returns the identified branch pattern's depth", () => {
     const state = {
-      recursionBehaviors: {
+      branchPatterns: {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {

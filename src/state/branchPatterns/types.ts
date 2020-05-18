@@ -10,12 +10,12 @@ export interface Transformation {
   angle: Angle
 }
 
-export type RecursionBehaviorId = Nominal<string, "RecursionBehaviorId">
+export type BranchPatternId = Nominal<string, "BranchPatternId">
 
-export interface RecursionBehavior extends Transformation {
-  id: RecursionBehaviorId
+export interface BranchPattern extends Transformation {
+  id: BranchPatternId
   depth: Depth
   color: Color
 }
 
-export type NewRecursionBehavior = Omit<RecursionBehavior, "id">
+export type NewBranchPattern = Omit<BranchPattern, "id">
