@@ -1,11 +1,115 @@
 import reducer from "./reducer"
-import { setTranslation, setScale, setAngle, setDepth } from "./actions"
+import {
+  addOne,
+  removeOne,
+  setTranslation,
+  setScale,
+  setAngle,
+  setDepth,
+} from "./actions"
+
+jest.mock("@reduxjs/toolkit", () => ({
+  ...jest.requireActual("@reduxjs/toolkit"),
+  nanoid: () => "fake-nanoid-unique-id",
+}))
 
 describe("reducer", () => {
   it("has the correct initial state", () => {
     const initialState = reducer(undefined, { type: "" })
 
     expect(initialState).toEqual({ ids: [], entities: {} })
+  })
+
+  describe("`addOne()` action", () => {
+    it("creates a unique id for the given recursion behavior and adds it to the list", () => {
+      const previousState = {
+        ids: ["test/control"],
+        entities: {
+          "test/control": {
+            id: "test/control",
+            color: "red",
+            translation: 0.8,
+            scale: 0.5,
+            angle: -Math.PI / 4,
+            depth: 7,
+          },
+        },
+      }
+      const action = addOne({
+        color: "blue",
+        translation: 0.234,
+        scale: 0.623,
+        angle: 2.622 * Math.PI,
+        depth: 4,
+      })
+
+      const nextState = reducer(previousState, action)
+
+      expect(nextState).toEqual({
+        ids: ["test/control", "fake-nanoid-unique-id"],
+        entities: {
+          "test/control": {
+            id: "test/control",
+            color: "red",
+            translation: 0.8,
+            scale: 0.5,
+            angle: -Math.PI / 4,
+            depth: 7,
+          },
+          "fake-nanoid-unique-id": {
+            id: "fake-nanoid-unique-id",
+            color: "blue",
+            translation: 0.234,
+            scale: 0.623,
+            angle: 2.622 * Math.PI,
+            depth: 4,
+          },
+        },
+      })
+    })
+  })
+
+  describe("`removeOne()` action", () => {
+    it("removes the identified recursion behavior from the list", () => {
+      const previousState = {
+        ids: ["test/subject", "test/control"],
+        entities: {
+          "test/subject": {
+            id: "test/subject",
+            color: "blue",
+            translation: 0.234,
+            scale: 0.623,
+            angle: 2.622 * Math.PI,
+            depth: 4,
+          },
+          "test/control": {
+            id: "test/control",
+            color: "red",
+            translation: 0.8,
+            scale: 0.5,
+            angle: -Math.PI / 4,
+            depth: 7,
+          },
+        },
+      }
+      const action = removeOne("test/subject")
+
+      const nextState = reducer(previousState, action)
+
+      expect(nextState).toEqual({
+        ids: ["test/control"],
+        entities: {
+          "test/control": {
+            id: "test/control",
+            color: "red",
+            translation: 0.8,
+            scale: 0.5,
+            angle: -Math.PI / 4,
+            depth: 7,
+          },
+        },
+      })
+    })
   })
 
   describe("`setTranslation` action", () => {
