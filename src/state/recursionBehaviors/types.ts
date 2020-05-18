@@ -17,3 +17,5 @@ export interface RecursionBehavior extends Transformation {
   depth: Depth
   color: Color
 }
+
+export type NewRecursionBehavior = Omit<RecursionBehavior, "id">

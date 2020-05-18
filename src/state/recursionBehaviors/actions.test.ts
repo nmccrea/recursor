@@ -1,4 +1,45 @@
-import { setTranslation, setScale, setAngle, setDepth } from "./actions"
+import {
+  addOne,
+  removeOne,
+  setTranslation,
+  setScale,
+  setAngle,
+  setDepth,
+} from "./actions"
+
+describe("addOne()", () => {
+  it("returns an action object for adding a new recursion behavior", () => {
+    const action = addOne({
+      color: "blue",
+      translation: 0.891,
+      scale: 0.687,
+      angle: 0.343 * Math.PI,
+      depth: 5,
+    })
+
+    expect(action).toEqual({
+      type: addOne.type,
+      payload: {
+        color: "blue",
+        translation: 0.891,
+        scale: 0.687,
+        angle: 0.343 * Math.PI,
+        depth: 5,
+      },
+    })
+  })
+})
+
+describe("removeOne()", () => {
+  it("returns an action object for removing an existing recursion behavior", () => {
+    const action = removeOne("test/subject")
+
+    expect(action).toEqual({
+      type: removeOne.type,
+      payload: "test/subject",
+    })
+  })
+})
 
 describe("setTranslation()", () => {
   it("returns an action object for setting the identified recursion behavior's transformation translation", () => {

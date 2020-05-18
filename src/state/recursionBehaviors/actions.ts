@@ -1,5 +1,32 @@
 import { createAction } from "@reduxjs/toolkit"
-import { RecursionBehaviorId, Translation, Scale, Angle, Depth } from "./types"
+import {
+  NewRecursionBehavior,
+  RecursionBehaviorId,
+  Translation,
+  Scale,
+  Angle,
+  Depth,
+} from "./types"
+
+/**
+ * Creates an action containing a new recursion behavior to be added to the list of recursion behaviors.
+ *
+ * @param recursionBehavior - The new recursion behavior.
+ *
+ * @returns A payload action whose payload is the new recursion behavior to add.
+ */
+const addOne = createAction<NewRecursionBehavior>("recursionBehavior/ADD_ONE")
+
+/**
+ * Creates an action identifying an existing recursion behavior to be destroyed.
+ *
+ * @param recursionBehaviorId - The ID of the recursion behavior to remove.
+ *
+ * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.removeOne()` API.
+ */
+const removeOne = createAction<RecursionBehaviorId>(
+  "recursionBehavior/REMOVE_ONE"
+)
 
 /**
  * Creates an action representing a change to the identified recursion behavior's translation.
@@ -10,7 +37,7 @@ import { RecursionBehaviorId, Translation, Scale, Angle, Depth } from "./types"
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
 const setTranslation = createAction(
-  "treeFractal/SET_TRANSLATION",
+  "recursionBehavior/SET_TRANSLATION",
   (id: RecursionBehaviorId, translation: Translation) => ({
     payload: {
       id,
@@ -28,7 +55,7 @@ const setTranslation = createAction(
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
 const setScale = createAction(
-  "treeFractal/SET_SCALE",
+  "recursionBehavior/SET_SCALE",
   (id: RecursionBehaviorId, scale: Scale) => ({
     payload: {
       id,
@@ -46,7 +73,7 @@ const setScale = createAction(
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
 const setAngle = createAction(
-  "treeFractal/SET_ANGLE",
+  "recursionBehavior/SET_ANGLE",
   (id: RecursionBehaviorId, angle: Angle) => ({
     payload: {
       id,
@@ -64,7 +91,7 @@ const setAngle = createAction(
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
 const setDepth = createAction(
-  "treeFractal/SET_DEPTH",
+  "recursionBehavior/SET_DEPTH",
   (id: RecursionBehaviorId, depth: Depth) => ({
     payload: {
       id,
@@ -73,4 +100,4 @@ const setDepth = createAction(
   })
 )
 
-export { setTranslation, setScale, setAngle, setDepth }
+export { addOne, removeOne, setTranslation, setScale, setAngle, setDepth }
