@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Branch /> correctly renders the tree with the appropriate depth 1`] = `
+<div>
+  <div
+    class="tree test/a depth-1"
+    style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+  >
+    <div
+      class="tree test/a depth-2"
+      style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+    >
+      <div
+        class="tree test/a depth-3"
+        style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+      />
+    </div>
+    <div
+      class="tree test/b depth-2"
+      style="position: absolute; inset: 0; background-color: red; transform-origin: center bottom; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
+    >
+      <div
+        class="tree test/a depth-3"
+        style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Branch /> renders nothing when the \`currentDepth\` is equal to the given branch pattern's depth 1`] = `<div />`;
