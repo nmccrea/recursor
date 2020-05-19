@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TreeFractal /> renders correctly 1`] = `
+<div>
+  <div
+    style="width: 95vw; height: 70vh; display: flex; justify-content: center; align-items: flex-end;"
+  >
+    <div
+      style="width: 10px; height: 200px; position: relative;"
+    >
+      <div
+        class="tree trunk depth-1"
+        style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-100%) scale(1) rotate(0rad);"
+      >
+        <div
+          class="tree test/a depth-2"
+          style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+        >
+          <div
+            class="tree test/a depth-3"
+            style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          />
+        </div>
+        <div
+          class="tree test/b depth-2"
+          style="position: absolute; inset: 0; background-color: red; transform-origin: center bottom; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
+        >
+          <div
+            class="tree test/a depth-3"
+            style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
