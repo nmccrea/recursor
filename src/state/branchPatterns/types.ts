@@ -6,9 +6,7 @@ export type Angle = Nominal<number, "Angle">
 export type Depth = Nominal<number, "Depth">
 export type Color = Nominal<string, "Color">
 
-export type BranchPatternId = Nominal<EntityId, "BranchPatternId">
-
-export interface NewBranchPattern {
+export interface BranchPatternInputs {
   translation: Translation
   scale: Scale
   angle: Angle
@@ -16,6 +14,8 @@ export interface NewBranchPattern {
   color: Color
 }
 
-export interface BranchPattern extends NewBranchPattern {
+export type BranchPatternId = Nominal<EntityId, "BranchPatternId">
+
+export interface BranchPattern extends BranchPatternInputs {
   id: BranchPatternId
 }

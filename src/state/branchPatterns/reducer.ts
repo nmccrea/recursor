@@ -8,14 +8,14 @@ import {
   setAngle,
   setDepth,
 } from "./actions"
-import { NewBranchPattern } from "./types"
+import { BranchPatternInputs } from "./types"
 
 /**
  * A case reducer which creates a unique ID for the given new branch pattern before adding it to the list.
  */
 const addOneWithUniqueId = (
   previousState: BranchPatterns,
-  action: PayloadAction<NewBranchPattern>
+  action: PayloadAction<BranchPatternInputs>
 ): BranchPatterns => {
   const branchPattern = action.payload
   return branchPatterns.addOne(previousState, {

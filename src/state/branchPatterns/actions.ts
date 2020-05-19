@@ -1,6 +1,6 @@
 import { createAction } from "@reduxjs/toolkit"
 import {
-  NewBranchPattern,
+  BranchPatternInputs,
   BranchPatternId,
   Translation,
   Scale,
@@ -15,7 +15,7 @@ import {
  *
  * @returns A payload action whose payload is the new branch pattern to add.
  */
-const addOne = createAction<NewBranchPattern>("branchPattern/ADD_ONE")
+const addOne = createAction<BranchPatternInputs>("branchPattern/ADD_ONE")
 
 /**
  * Creates an action identifying an existing branch pattern to be destroyed.
