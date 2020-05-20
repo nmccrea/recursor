@@ -55,7 +55,7 @@ const selectorForTranslation: BranchPatternSelectorCreator<Translation> = (
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
-  return (branchPattern && branchPattern.translation) || undefined
+  return branchPattern?.translation
 }
 
 /**
@@ -71,7 +71,7 @@ const selectorForScale: BranchPatternSelectorCreator<Scale> = (id) => (
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
-  return (branchPattern && branchPattern.scale) || undefined
+  return branchPattern?.scale
 }
 
 /**
@@ -87,7 +87,7 @@ const selectorForAngle: BranchPatternSelectorCreator<Angle> = (id) => (
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
-  return (branchPattern && branchPattern.angle) || undefined
+  return branchPattern?.angle
 }
 
 /**
@@ -103,7 +103,7 @@ const selectorForDepth: BranchPatternSelectorCreator<Depth> = (id) => (
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
-  return (branchPattern && branchPattern.depth) || undefined
+  return branchPattern?.depth
 }
 
 export {

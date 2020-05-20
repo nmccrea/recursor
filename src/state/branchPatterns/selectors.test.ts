@@ -8,7 +8,7 @@ import {
   selectorForDepth,
 } from "./selectors"
 
-describe("selectAll()", () => {
+describe("`selectAll()`", () => {
   it("returns a list of all existing branch patterns, ordered according to the `ids` state", () => {
     const state = {
       branchPatterns: {
@@ -73,7 +73,7 @@ describe("selectAll()", () => {
   })
 })
 
-describe("selectIds()", () => {
+describe("`selectIds()`", () => {
   it("returns the ordered list of IDs of all existing branch patterns", () => {
     const state = {
       branchPatterns: {
@@ -113,169 +113,267 @@ describe("selectIds()", () => {
   })
 })
 
-describe("selectorForBranchPattern()", () => {
-  it("returns a selector which returns the identified branch pattern", () => {
-    const state = {
-      branchPatterns: {
-        ids: ["test/subject", "test/control"],
-        entities: {
-          "test/subject": {
-            id: "test/subject",
-            color: "blue",
-            translation: 1,
-            scale: 0.7,
-            angle: Math.PI / 3,
-            depth: 5,
-          },
-          "test/control": {
-            id: "test/control",
-            color: "red",
-            translation: 0.8,
-            scale: 0.5,
-            angle: -Math.PI / 4,
-            depth: 7,
+describe("`selectorForBranchPattern()`", () => {
+  describe("returned selector", () => {
+    it("returns the identified branch pattern", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject", "test/control"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+            "test/control": {
+              id: "test/control",
+              color: "red",
+              translation: 0.8,
+              scale: 0.5,
+              angle: -Math.PI / 4,
+              depth: 7,
+            },
           },
         },
-      },
-    }
+      }
 
-    const result = selectorForBranchPattern("test/subject")(state)
+      const result = selectorForBranchPattern("test/subject")(state)
 
-    expect(result).toEqual({
-      id: "test/subject",
-      color: "blue",
-      translation: 1,
-      scale: 0.7,
-      angle: Math.PI / 3,
-      depth: 5,
+      expect(result).toEqual({
+        id: "test/subject",
+        color: "blue",
+        translation: 1,
+        scale: 0.7,
+        angle: Math.PI / 3,
+        depth: 5,
+      })
     })
   })
 })
 
-describe("selectorForTranslation()", () => {
-  it("returns a selector which returns the identified branch pattern's translation", () => {
-    const state = {
-      branchPatterns: {
-        ids: ["test/subject", "test/control"],
-        entities: {
-          "test/subject": {
-            id: "test/subject",
-            color: "blue",
-            translation: 1,
-            scale: 0.7,
-            angle: Math.PI / 3,
-            depth: 5,
-          },
-          "test/control": {
-            id: "test/control",
-            color: "red",
-            translation: 0.8,
-            scale: 0.5,
-            angle: -Math.PI / 4,
-            depth: 7,
+describe("`selectorForTranslation()`", () => {
+  describe("returned selector", () => {
+    it("returns the identified branch pattern's translation", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject", "test/control"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+            "test/control": {
+              id: "test/control",
+              color: "red",
+              translation: 0.8,
+              scale: 0.5,
+              angle: -Math.PI / 4,
+              depth: 7,
+            },
           },
         },
-      },
-    }
+      }
 
-    const result = selectorForTranslation("test/subject")(state)
+      const result = selectorForTranslation("test/subject")(state)
 
-    expect(result).toEqual(1)
+      expect(result).toEqual(1)
+    })
+
+    it("preserves the numeric value of `0`", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 0,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+          },
+        },
+      }
+
+      const result = selectorForTranslation("test/subject")(state)
+
+      expect(result).toEqual(0)
+    })
   })
 })
 
-describe("selectorForScale()", () => {
-  it("returns a selector which returns the identified branch pattern's scale", () => {
-    const state = {
-      branchPatterns: {
-        ids: ["test/subject", "test/control"],
-        entities: {
-          "test/subject": {
-            id: "test/subject",
-            color: "blue",
-            translation: 1,
-            scale: 0.7,
-            angle: Math.PI / 3,
-            depth: 5,
-          },
-          "test/control": {
-            id: "test/control",
-            color: "red",
-            translation: 0.8,
-            scale: 0.5,
-            angle: -Math.PI / 4,
-            depth: 7,
+describe("`selectorForScale()`", () => {
+  describe("returned selector", () => {
+    it("returns the identified branch pattern's scale", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject", "test/control"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+            "test/control": {
+              id: "test/control",
+              color: "red",
+              translation: 0.8,
+              scale: 0.5,
+              angle: -Math.PI / 4,
+              depth: 7,
+            },
           },
         },
-      },
-    }
+      }
 
-    const result = selectorForScale("test/subject")(state)
+      const result = selectorForScale("test/subject")(state)
 
-    expect(result).toEqual(0.7)
+      expect(result).toEqual(0.7)
+    })
+
+    it("preserves the numeric value of `0`", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+          },
+        },
+      }
+
+      const result = selectorForScale("test/subject")(state)
+
+      expect(result).toEqual(0)
+    })
   })
 })
 
-describe("selectorForAngle()", () => {
-  it("returns a selector which returns the identified branch pattern's angle", () => {
-    const state = {
-      branchPatterns: {
-        ids: ["test/subject", "test/control"],
-        entities: {
-          "test/subject": {
-            id: "test/subject",
-            color: "blue",
-            translation: 1,
-            scale: 0.7,
-            angle: Math.PI / 3,
-            depth: 5,
-          },
-          "test/control": {
-            id: "test/control",
-            color: "red",
-            translation: 0.8,
-            scale: 0.5,
-            angle: -Math.PI / 4,
-            depth: 7,
+describe("`selectorForAngle()`", () => {
+  describe("returned selector", () => {
+    it("returns the identified branch pattern's angle", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject", "test/control"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+            "test/control": {
+              id: "test/control",
+              color: "red",
+              translation: 0.8,
+              scale: 0.5,
+              angle: -Math.PI / 4,
+              depth: 7,
+            },
           },
         },
-      },
-    }
+      }
 
-    const result = selectorForAngle("test/subject")(state)
+      const result = selectorForAngle("test/subject")(state)
 
-    expect(result).toEqual(Math.PI / 3)
+      expect(result).toEqual(Math.PI / 3)
+    })
+
+    it("preserves the numeric value of `0`", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: 0,
+              depth: 5,
+            },
+          },
+        },
+      }
+
+      const result = selectorForAngle("test/subject")(state)
+
+      expect(result).toEqual(0)
+    })
   })
 })
 
-describe("selectorForDepth()", () => {
-  it("returns a selector which returns the identified branch pattern's depth", () => {
-    const state = {
-      branchPatterns: {
-        ids: ["test/subject", "test/control"],
-        entities: {
-          "test/subject": {
-            id: "test/subject",
-            color: "blue",
-            translation: 1,
-            scale: 0.7,
-            angle: Math.PI / 3,
-            depth: 5,
-          },
-          "test/control": {
-            id: "test/control",
-            color: "red",
-            translation: 0.8,
-            scale: 0.5,
-            angle: -Math.PI / 4,
-            depth: 7,
+describe("`selectorForDepth()`", () => {
+  describe("returned selector", () => {
+    it("returns the identified branch pattern's depth", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject", "test/control"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 5,
+            },
+            "test/control": {
+              id: "test/control",
+              color: "red",
+              translation: 0.8,
+              scale: 0.5,
+              angle: -Math.PI / 4,
+              depth: 7,
+            },
           },
         },
-      },
-    }
+      }
 
-    const result = selectorForDepth("test/subject")(state)
+      const result = selectorForDepth("test/subject")(state)
 
-    expect(result).toEqual(5)
+      expect(result).toEqual(5)
+    })
+
+    it("preserves the numeric value of `0`", () => {
+      const state = {
+        branchPatterns: {
+          ids: ["test/subject"],
+          entities: {
+            "test/subject": {
+              id: "test/subject",
+              color: "blue",
+              translation: 1,
+              scale: 0.7,
+              angle: Math.PI / 3,
+              depth: 0,
+            },
+          },
+        },
+      }
+
+      const result = selectorForDepth("test/subject")(state)
+
+      expect(result).toEqual(0)
+    })
   })
 })
