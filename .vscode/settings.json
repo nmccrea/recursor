@@ -1,3 +1,4 @@
 {
-  "eslint.lintTask.options": "--ext js,jsx,ts,tsx src"
+  "eslint.lintTask.options": "--ext js,jsx,ts,tsx src",
+  "workbench.tree.indent": 20
 }
