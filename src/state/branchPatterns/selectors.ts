@@ -1,6 +1,18 @@
 import { RootState } from "../store"
 import branchPatterns from "./branchPatterns"
-import { BranchPatternId } from "./types"
+import { Selector } from "../store"
+import {
+  BranchPattern,
+  BranchPatternId,
+  Translation,
+  Scale,
+  Angle,
+  Depth,
+} from "./types"
+
+export type BranchPatternSelectorCreator<ReturnType> = (
+  branchPatternId: BranchPatternId
+) => Selector<ReturnType>
 
 /**
  * Selects the branch patterns slice of the given state tree.
@@ -25,7 +37,9 @@ const selectIds = branchPatterns.getSelectors(selectBranchPatterns).selectIds
  *
  * @returns A selector which selects the identified branch pattern when called.
  */
-const selectorForBranchPattern = (id: BranchPatternId) => (state: RootState) =>
+const selectorForBranchPattern: BranchPatternSelectorCreator<BranchPattern> = (
+  id
+) => (state) =>
   branchPatterns.getSelectors(selectBranchPatterns).selectById(state, id)
 
 /**
@@ -35,7 +49,9 @@ const selectorForBranchPattern = (id: BranchPatternId) => (state: RootState) =>
  *
  * @returns A selector which returns the translation from the identified branch pattern when called.
  */
-const selectorForTranslation = (id: BranchPatternId) => (state: RootState) => {
+const selectorForTranslation: BranchPatternSelectorCreator<Translation> = (
+  id
+) => (state) => {
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
@@ -49,7 +65,9 @@ const selectorForTranslation = (id: BranchPatternId) => (state: RootState) => {
  *
  * @returns A selector which returns the scale from the identified branch pattern when called.
  */
-const selectorForScale = (id: BranchPatternId) => (state: RootState) => {
+const selectorForScale: BranchPatternSelectorCreator<Scale> = (id) => (
+  state
+) => {
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
@@ -63,7 +81,9 @@ const selectorForScale = (id: BranchPatternId) => (state: RootState) => {
  *
  * @returns A selector which returns the angle from the identified branch pattern when called.
  */
-const selectorForAngle = (id: BranchPatternId) => (state: RootState) => {
+const selectorForAngle: BranchPatternSelectorCreator<Angle> = (id) => (
+  state
+) => {
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)
@@ -77,7 +97,9 @@ const selectorForAngle = (id: BranchPatternId) => (state: RootState) => {
  *
  * @returns A selector which returns the depth from the identified branch pattern when called.
  */
-const selectorForDepth = (id: BranchPatternId) => (state: RootState) => {
+const selectorForDepth: BranchPatternSelectorCreator<Depth> = (id) => (
+  state
+) => {
   const branchPattern = branchPatterns
     .getSelectors(selectBranchPatterns)
     .selectById(state, id)

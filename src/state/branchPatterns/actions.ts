@@ -1,21 +1,33 @@
-import { createAction } from "@reduxjs/toolkit"
 import {
-  BranchPatternInputs,
+  createAction,
+  ActionCreatorWithPreparedPayload,
+} from "@reduxjs/toolkit"
+import {
   BranchPatternId,
-  Translation,
-  Scale,
-  Angle,
-  Depth,
+  BranchPatternInputs,
+  BranchPatternInputKey,
 } from "./types"
 
+interface BranchPatternInputUpdate<Key extends BranchPatternInputKey> {
+  id: BranchPatternId
+  changes: Pick<BranchPatternInputs, Key>
+}
+
+export type BranchPatternInputActionCreator<
+  Key extends BranchPatternInputKey
+> = ActionCreatorWithPreparedPayload<
+  [BranchPatternId, BranchPatternInputs[Key]],
+  BranchPatternInputUpdate<Key>
+>
+
 /**
- * Creates an action containing a new branch pattern to be added to the list of branch patterns.
+ * Creates an action containing new branch pattern inputs to be added to the list of branch patterns.
  *
- * @param branchPattern - The new branch pattern.
+ * @param branchPattern - The new branch pattern inputs.
  *
- * @returns A payload action whose payload is the new branch pattern to add.
+ * @returns A payload action whose payload is the new branch pattern inputs to add.
  */
-const addOne = createAction<BranchPatternInputs>("branchPattern/ADD_ONE")
+const addOne = createAction<BranchPatternInputs>("branchPatterns/ADD_ONE")
 
 /**
  * Creates an action identifying an existing branch pattern to be destroyed.
@@ -24,7 +36,7 @@ const addOne = createAction<BranchPatternInputs>("branchPattern/ADD_ONE")
  *
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.removeOne()` API.
  */
-const removeOne = createAction<BranchPatternId>("branchPattern/REMOVE_ONE")
+const removeOne = createAction<BranchPatternId>("branchPatterns/REMOVE_ONE")
 
 /**
  * Creates an action representing a change to the identified branch pattern's translation.
@@ -34,9 +46,9 @@ const removeOne = createAction<BranchPatternId>("branchPattern/REMOVE_ONE")
  *
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
-const setTranslation = createAction(
-  "branchPattern/SET_TRANSLATION",
-  (id: BranchPatternId, translation: Translation) => ({
+const setTranslation: BranchPatternInputActionCreator<"translation"> = createAction(
+  "branchPatterns/SET_TRANSLATION",
+  (id, translation) => ({
     payload: {
       id,
       changes: { translation },
@@ -52,9 +64,9 @@ const setTranslation = createAction(
  *
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
-const setScale = createAction(
-  "branchPattern/SET_SCALE",
-  (id: BranchPatternId, scale: Scale) => ({
+const setScale: BranchPatternInputActionCreator<"scale"> = createAction(
+  "branchPatterns/SET_SCALE",
+  (id, scale) => ({
     payload: {
       id,
       changes: { scale },
@@ -70,9 +82,9 @@ const setScale = createAction(
  *
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
-const setAngle = createAction(
-  "branchPattern/SET_ANGLE",
-  (id: BranchPatternId, angle: Angle) => ({
+const setAngle: BranchPatternInputActionCreator<"angle"> = createAction(
+  "branchPatterns/SET_ANGLE",
+  (id, angle) => ({
     payload: {
       id,
       changes: { angle },
@@ -88,9 +100,9 @@ const setAngle = createAction(
  *
  * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.updateOne()` API.
  */
-const setDepth = createAction(
-  "branchPattern/SET_DEPTH",
-  (id: BranchPatternId, depth: Depth) => ({
+const setDepth: BranchPatternInputActionCreator<"depth"> = createAction(
+  "branchPatterns/SET_DEPTH",
+  (id, depth) => ({
     payload: {
       id,
       changes: { depth },

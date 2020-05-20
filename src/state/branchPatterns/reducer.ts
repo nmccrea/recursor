@@ -11,7 +11,7 @@ import {
 import { BranchPatternInputs } from "./types"
 
 /**
- * A case reducer which creates a unique ID for the given new branch pattern before adding it to the list.
+ * A case reducer which creates a branch pattern out of the given branch pattern inputs and adds it to the list.
  */
 const addOneWithUniqueId = (
   previousState: BranchPatterns,

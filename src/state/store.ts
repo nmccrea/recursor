@@ -13,6 +13,7 @@ const store = configureStore({ reducer: rootReducer })
 
 export default store
 export type RootState = ReturnType<typeof rootReducer>
+export type Selector<ReturnType> = (state: RootState) => ReturnType | undefined
 export type AppThunkAction<ReturnType = void> = ThunkAction<
   ReturnType,
   RootState,

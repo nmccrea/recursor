@@ -8,7 +8,7 @@ import {
 } from "./actions"
 
 describe("addOne()", () => {
-  it("returns an action object for adding a new branch pattern", () => {
+  it("returns an action object for adding new branch pattern inputs", () => {
     const action = addOne({
       color: "blue",
       translation: 0.891,
@@ -18,7 +18,7 @@ describe("addOne()", () => {
     })
 
     expect(action).toEqual({
-      type: addOne.type,
+      type: "branchPatterns/ADD_ONE",
       payload: {
         color: "blue",
         translation: 0.891,
@@ -35,7 +35,7 @@ describe("removeOne()", () => {
     const action = removeOne("test/subject")
 
     expect(action).toEqual({
-      type: removeOne.type,
+      type: "branchPatterns/REMOVE_ONE",
       payload: "test/subject",
     })
   })
@@ -46,7 +46,7 @@ describe("setTranslation()", () => {
     const action = setTranslation("test/translation", 0.54321)
 
     expect(action).toEqual({
-      type: setTranslation.type,
+      type: "branchPatterns/SET_TRANSLATION",
       payload: {
         id: "test/translation",
         changes: { translation: 0.54321 },
@@ -60,7 +60,7 @@ describe("setScale()", () => {
     const action = setScale("test/scale", Math.PI / 1.2345)
 
     expect(action).toEqual({
-      type: setScale.type,
+      type: "branchPatterns/SET_SCALE",
       payload: {
         id: "test/scale",
         changes: { scale: Math.PI / 1.2345 },
@@ -74,7 +74,7 @@ describe("setAngle()", () => {
     const action = setAngle("test/angle", Math.PI / 1.2345)
 
     expect(action).toEqual({
-      type: setAngle.type,
+      type: "branchPatterns/SET_ANGLE",
       payload: {
         id: "test/angle",
         changes: { angle: Math.PI / 1.2345 },
@@ -88,7 +88,7 @@ describe("setDepth()", () => {
     const action = setDepth("test/depth", Math.PI / 1.2345)
 
     expect(action).toEqual({
-      type: setDepth.type,
+      type: "branchPatterns/SET_DEPTH",
       payload: {
         id: "test/depth",
         changes: { depth: Math.PI / 1.2345 },

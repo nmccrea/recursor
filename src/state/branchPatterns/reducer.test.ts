@@ -20,7 +20,7 @@ describe("reducer", () => {
     expect(initialState).toEqual({ ids: [], entities: {} })
   })
 
-  describe("`addOne()` action", () => {
+  describe("`addOne` action", () => {
     it("creates a unique id for the given branch pattern and adds it to the list", () => {
       const previousState = {
         ids: ["test/control"],
@@ -69,7 +69,7 @@ describe("reducer", () => {
     })
   })
 
-  describe("`removeOne()` action", () => {
+  describe("`removeOne` action", () => {
     it("removes the identified branch pattern from the list", () => {
       const previousState = {
         ids: ["test/subject", "test/control"],
