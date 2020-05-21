@@ -29,14 +29,13 @@ const SliderInput = <Key extends BranchPatternNumericInputKey>({
 }: SliderInputProps<Key>) => {
   const value = useSelector(selectorCreator(branchPatternId))
   const dispatch = useDispatch()
-  const domId = `${branchPatternId}/${label.toLowerCase()}`
   return (
-    <>
-      <label htmlFor={domId}>{label}</label>
+    <label>
+      {label}
+
       <input
         type="range"
         value={value}
-        id={domId}
         min={min}
         max={max}
         step={step}
@@ -44,7 +43,7 @@ const SliderInput = <Key extends BranchPatternNumericInputKey>({
           dispatch(actionCreator(branchPatternId, Number(event.target.value)))
         }
       />
-    </>
+    </label>
   )
 }
 
