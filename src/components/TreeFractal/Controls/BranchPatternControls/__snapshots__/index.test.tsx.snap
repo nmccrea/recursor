@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`<BranchPatternControls />\` renders correctly 1`] = `
+<div>
+  <div
+    style="display: flex;"
+  >
+    <p>
+      test/subject
+    </p>
+    <button>
+      Remove
+    </button>
+    <label>
+      Translation
+      <input
+        max="1.5"
+        min="0"
+        step="0.05"
+        type="range"
+        value="0.4836"
+      />
+    </label>
+    <label>
+      Scale
+      <input
+        max="2"
+        min="0"
+        step="0.05"
+        type="range"
+        value="0.4836"
+      />
+    </label>
+    <label>
+      Angle
+      <input
+        max="6.2832"
+        min="-6.2832"
+        step="0.0001"
+        type="range"
+        value="0.4836"
+      />
+    </label>
+    <label>
+      Depth
+      <input
+        max="8"
+        min="0"
+        step="1"
+        type="range"
+        value="0.4836"
+      />
+    </label>
+  </div>
+</div>
+`;

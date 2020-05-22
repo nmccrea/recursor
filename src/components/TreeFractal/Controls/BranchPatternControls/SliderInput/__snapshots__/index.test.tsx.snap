@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SliderInput /> renders correctly based on the value returned by the selector 1`] = `
+<div>
+  <label>
+    Test Subject
+    <input
+      max="0.744"
+      min="0.422"
+      step="0.001"
+      type="range"
+      value="0.5636"
+    />
+  </label>
+</div>
+`;
