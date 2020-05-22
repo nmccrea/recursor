@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Trunk /> renders correctly 1`] = `
+exports[`<FractalSource /> renders correctly 1`] = `
 <div>
   <div
     style="width: 10px; height: 200px; position: relative;"
   >
     <div
-      class="tree trunk depth-1"
+      class="tree source depth-1"
       style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-100%) scale(1) rotate(0rad);"
     >
       <div

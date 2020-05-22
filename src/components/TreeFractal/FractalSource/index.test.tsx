@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import { Similarity } from "../../../state/similarities/types"
-import Trunk from "."
+import FractalSource from "."
 
 const MOCK_SIMILARITIES: { [id: string]: Similarity } = {
   "test/a": {
@@ -30,9 +30,9 @@ jest.mock("react-redux", () => ({
   useSelector: (selector: Function) => selector(),
 }))
 
-describe("<Trunk />", () => {
+describe("<FractalSource />", () => {
   it("renders correctly", () => {
-    const { container } = render(<Trunk />)
+    const { container } = render(<FractalSource />)
 
     expect(container).toMatchSnapshot()
   })

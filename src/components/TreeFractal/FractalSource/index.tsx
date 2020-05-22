@@ -1,12 +1,12 @@
 import React from "react"
-import Branch from "../Branch"
+import Recursion from "../Recursion"
 
-const Trunk = () => (
+const FractalSource = () => (
   <div style={{ width: "10px", height: "200px", position: "relative" }}>
-    <Branch
+    <Recursion
       currentDepth={0}
       similarity={{
-        id: "trunk",
+        id: "source",
         color: "black",
         translation: 1,
         scale: 1,
@@ -17,4 +17,4 @@ const Trunk = () => (
   </div>
 )
 
-export default Trunk
+export default FractalSource

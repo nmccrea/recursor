@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Branch /> correctly renders the tree with the appropriate depth 1`] = `
+exports[`<Recursion /> correctly renders the tree with the appropriate depth 1`] = `
 <div>
   <div
     class="tree test/a depth-1"
@@ -28,4 +28,4 @@ exports[`<Branch /> correctly renders the tree with the appropriate depth 1`] = 
 </div>
 `;
 
-exports[`<Branch /> renders nothing when the \`currentDepth\` is equal to the given similarity's depth 1`] = `<div />`;
+exports[`<Recursion /> renders nothing when the \`currentDepth\` is equal to the given similarity's depth 1`] = `<div />`;

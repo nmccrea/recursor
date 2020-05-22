@@ -16,12 +16,12 @@ const styleFor = ({ translation, scale, angle, color }: Similarity) => ({
   ].join(" "),
 })
 
-interface BranchProps {
+interface RecursionProps {
   similarity: Similarity
   currentDepth: Depth
 }
 
-const Branch = ({ similarity, currentDepth }: BranchProps) => {
+const Recursion = ({ similarity, currentDepth }: RecursionProps) => {
   if (currentDepth >= similarity.depth) return null
   const similarities = useSelector(selectAll)
   return (
@@ -34,7 +34,7 @@ const Branch = ({ similarity, currentDepth }: BranchProps) => {
       }}
     >
       {similarities.map((similarity) => (
-        <Branch
+        <Recursion
           similarity={similarity}
           currentDepth={currentDepth + 1}
           key={`${similarity.id}`}
@@ -44,4 +44,4 @@ const Branch = ({ similarity, currentDepth }: BranchProps) => {
   )
 }
 
-export default Branch
+export default Recursion

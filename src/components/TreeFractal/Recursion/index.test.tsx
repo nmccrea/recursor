@@ -1,7 +1,7 @@
 import React from "react"
 import { render } from "@testing-library/react"
 import { Similarity } from "../../../state/similarities/types"
-import Branch from "."
+import Recursion from "."
 
 const MOCK_SIMILARITIES: { [id: string]: Similarity } = {
   "test/a": {
@@ -30,7 +30,7 @@ jest.mock("react-redux", () => ({
   useSelector: (selector: Function) => selector(),
 }))
 
-describe("<Branch />", () => {
+describe("<Recursion />", () => {
   afterEach(() => {
     jest.restoreAllMocks()
   })
@@ -39,7 +39,7 @@ describe("<Branch />", () => {
     const similarity = MOCK_SIMILARITIES["test/a"]
 
     const { container } = render(
-      <Branch similarity={similarity} currentDepth={0} />
+      <Recursion similarity={similarity} currentDepth={0} />
     )
 
     expect(container).toMatchSnapshot()
@@ -49,7 +49,7 @@ describe("<Branch />", () => {
     const similarity = MOCK_SIMILARITIES["test/b"]
 
     const { container } = render(
-      <Branch similarity={similarity} currentDepth={2} />
+      <Recursion similarity={similarity} currentDepth={2} />
     )
 
     expect(container).toMatchSnapshot()

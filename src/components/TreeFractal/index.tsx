@@ -1,5 +1,5 @@
 import React from "react"
-import Trunk from "./Trunk"
+import FractalSource from "./FractalSource"
 
 const TreeFractal = () => (
   <div
@@ -11,7 +11,7 @@ const TreeFractal = () => (
       alignItems: "flex-end",
     }}
   >
-    <Trunk />
+    <FractalSource />
   </div>
 )
 
