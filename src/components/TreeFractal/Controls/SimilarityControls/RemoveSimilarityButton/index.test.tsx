@@ -1,6 +1,7 @@
 import React from "react"
 import * as reactRedux from "react-redux"
 import { render, fireEvent, getByText } from "@testing-library/react"
+import { RemoveOneAction } from "../../../../../state/similarities/actions"
 import RemoveSimilarityButton from "."
 
 describe("`<RemoveSimilarityButton />`", () => {
@@ -23,7 +24,7 @@ describe("`<RemoveSimilarityButton />`", () => {
 
     fireEvent.click(getByText(container, "Remove"))
 
-    expect(mockDispatch).toHaveBeenCalledWith({
+    expect(mockDispatch).toHaveBeenCalledWith<[RemoveOneAction]>({
       type: "similarities/REMOVE_ONE",
       payload: "test/subject",
     })

@@ -163,6 +163,13 @@ const getDepthSetterFor = (
   id: SimilarityId
 ): SimilarityInputActionCreator<"depth"> => (depth) => setDepth(id, depth)
 
+export type AddOneAction = ReturnType<typeof addOne>
+export type RemoveOneAction = ReturnType<typeof removeOne>
+export type SetTranslationAction = ReturnType<typeof setTranslation>
+export type SetScaleAction = ReturnType<typeof setScale>
+export type SetAngleAction = ReturnType<typeof setAngle>
+export type SetDepthAction = ReturnType<typeof setDepth>
+
 export {
   addOne,
   removeOne,

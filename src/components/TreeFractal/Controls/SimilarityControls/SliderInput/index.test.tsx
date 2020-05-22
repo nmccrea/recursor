@@ -1,7 +1,10 @@
 import React from "react"
 import * as reactRedux from "react-redux"
 import { render, fireEvent, getByLabelText } from "@testing-library/react"
-import { getTranslationSetterFor } from "../../../../../state/similarities/actions"
+import {
+  getTranslationSetterFor,
+  SetTranslationAction,
+} from "../../../../../state/similarities/actions"
 import SliderInput from "."
 
 describe("`<SliderInput />`", () => {
@@ -44,7 +47,7 @@ describe("`<SliderInput />`", () => {
       target: { value: 0.5582 },
     })
 
-    expect(mockDispatch).toHaveBeenCalledWith({
+    expect(mockDispatch).toHaveBeenCalledWith<[SetTranslationAction]>({
       type: "similarities/SET_TRANSLATION",
       payload: {
         id: "test/subject",
