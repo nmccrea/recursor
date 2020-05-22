@@ -30,7 +30,7 @@ jest.mock("react-redux", () => ({
   useSelector: (selector: Function) => selector(),
 }))
 
-describe("<Recursion />", () => {
+describe("`<Recursion />`", () => {
   afterEach(() => {
     jest.restoreAllMocks()
   })

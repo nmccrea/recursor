@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<FractalSource /> renders correctly 1`] = `
+exports[`\`<FractalSource />\` renders correctly 1`] = `
 <div>
   <div
     style="width: 10px; height: 200px; position: relative;"

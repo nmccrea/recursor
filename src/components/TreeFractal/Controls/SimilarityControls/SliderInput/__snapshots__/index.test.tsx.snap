@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SliderInput /> renders correctly based on the value returned by the selector 1`] = `
+exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
 <div>
   <label>
     Test Subject

@@ -4,7 +4,7 @@ import { render, fireEvent, getByLabelText } from "@testing-library/react"
 import { getTranslationSetterFor } from "../../../../../state/similarities/actions"
 import SliderInput from "."
 
-describe("<SliderInput />", () => {
+describe("`<SliderInput />`", () => {
   it("renders correctly based on the value returned by the selector", () => {
     jest
       .spyOn(reactRedux, "useSelector")

@@ -30,7 +30,7 @@ jest.mock("react-redux", () => ({
   useSelector: (selector: Function) => selector(),
 }))
 
-describe("<TreeFractal />", () => {
+describe("`<TreeFractal />`", () => {
   it("renders correctly", () => {
     const { container } = render(<TreeFractal />)
 
