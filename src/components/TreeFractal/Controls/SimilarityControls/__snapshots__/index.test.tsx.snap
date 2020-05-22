@@ -12,11 +12,11 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
       Remove
     </button>
     <label>
-      Translation
+      Angle
       <input
-        max="1.5"
-        min="0"
-        step="0.05"
+        max="6.2832"
+        min="-6.2832"
+        step="0.0001"
         type="range"
         value="0.4836"
       />
@@ -32,11 +32,11 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
       />
     </label>
     <label>
-      Angle
+      Translation
       <input
-        max="6.2832"
-        min="-6.2832"
-        step="0.0001"
+        max="1.5"
+        min="0"
+        step="0.05"
         type="range"
         value="0.4836"
       />
