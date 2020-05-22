@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`\`<BranchPatternControls />\` renders correctly 1`] = `
+exports[`\`<SimilarityControls />\` renders correctly 1`] = `
 <div>
   <div
     style="display: flex;"

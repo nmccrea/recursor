@@ -1,7 +1,7 @@
 import React from "react"
 import * as reactRedux from "react-redux"
 import { render, fireEvent, getByLabelText } from "@testing-library/react"
-import { getTranslationSetterFor } from "../../../../../state/branchPatterns/actions"
+import { getTranslationSetterFor } from "../../../../../state/similarities/actions"
 import SliderInput from "."
 
 describe("<SliderInput />", () => {
@@ -45,7 +45,7 @@ describe("<SliderInput />", () => {
     })
 
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: "branchPatterns/SET_TRANSLATION",
+      type: "similarities/SET_TRANSLATION",
       payload: {
         id: "test/subject",
         changes: { translation: 0.5582 },

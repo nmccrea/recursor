@@ -1,12 +1,12 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import { selectAll } from "../../../state/branchPatterns/selectors"
-import { BranchPattern, Depth } from "../../../state/branchPatterns/types"
+import { selectAll } from "../../../state/similarities/selectors"
+import { Similarity, Depth } from "../../../state/similarities/types"
 
 /**
- * Generates a CSS object with styles dictated by the given branch pattern.
+ * Generates a CSS object with styles dictated by the given similarity.
  */
-const styleFor = ({ translation, scale, angle, color }: BranchPattern) => ({
+const styleFor = ({ translation, scale, angle, color }: Similarity) => ({
   backgroundColor: color,
   transformOrigin: "center bottom",
   transform: [
@@ -17,27 +17,27 @@ const styleFor = ({ translation, scale, angle, color }: BranchPattern) => ({
 })
 
 interface BranchProps {
-  branchPattern: BranchPattern
+  similarity: Similarity
   currentDepth: Depth
 }
 
-const Branch = ({ branchPattern, currentDepth }: BranchProps) => {
-  if (currentDepth >= branchPattern.depth) return null
-  const branchPatterns = useSelector(selectAll)
+const Branch = ({ similarity, currentDepth }: BranchProps) => {
+  if (currentDepth >= similarity.depth) return null
+  const similarities = useSelector(selectAll)
   return (
     <div
-      className={`tree ${branchPattern.id} depth-${currentDepth + 1}`}
+      className={`tree ${similarity.id} depth-${currentDepth + 1}`}
       style={{
         position: "absolute",
         inset: 0,
-        ...styleFor(branchPattern),
+        ...styleFor(similarity),
       }}
     >
-      {branchPatterns.map((branchPattern) => (
+      {similarities.map((similarity) => (
         <Branch
-          branchPattern={branchPattern}
+          similarity={similarity}
           currentDepth={currentDepth + 1}
-          key={`${branchPattern.id}`}
+          key={`${similarity.id}`}
         />
       ))}
     </div>

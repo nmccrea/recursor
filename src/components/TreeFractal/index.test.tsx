@@ -1,9 +1,9 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { BranchPattern } from "../../state/branchPatterns/types"
+import { Similarity } from "../../state/similarities/types"
 import TreeFractal from "."
 
-const MOCK_BRANCH_PATTERNS: { [id: string]: BranchPattern } = {
+const MOCK_SIMILARITIES: { [id: string]: Similarity } = {
   "test/a": {
     id: "test/a",
     translation: 0.994,
@@ -22,8 +22,8 @@ const MOCK_BRANCH_PATTERNS: { [id: string]: BranchPattern } = {
   },
 }
 
-jest.mock("../../state/branchPatterns/selectors", () => ({
-  selectAll: () => Object.values(MOCK_BRANCH_PATTERNS),
+jest.mock("../../state/similarities/selectors", () => ({
+  selectAll: () => Object.values(MOCK_SIMILARITIES),
 }))
 
 jest.mock("react-redux", () => ({

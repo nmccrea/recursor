@@ -4,9 +4,9 @@
  */
 
 import { configureStore, combineReducers } from "@reduxjs/toolkit"
-import branchPatterns from "./branchPatterns/reducer"
+import similarities from "./similarities/reducer"
 
-const rootReducer = combineReducers({ branchPatterns })
+const rootReducer = combineReducers({ similarities })
 const store = configureStore({ reducer: rootReducer })
 
 export default store

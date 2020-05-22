@@ -1,7 +1,7 @@
 import {
   selectAll,
   selectIds,
-  getBranchPatternSelectorFor,
+  getSimilaritySelectorFor,
   getTranslationSelectorFor,
   getScaleSelectorFor,
   getAngleSelectorFor,
@@ -9,9 +9,9 @@ import {
 } from "./selectors"
 
 describe("`selectAll()`", () => {
-  it("returns a list of all existing branch patterns, ordered according to the `ids` state", () => {
+  it("returns a list of all existing similarities, ordered according to the `ids` state", () => {
     const state = {
-      branchPatterns: {
+      similarities: {
         ids: ["test/a", "test/c", "test/b"],
         entities: {
           "test/a": {
@@ -74,9 +74,9 @@ describe("`selectAll()`", () => {
 })
 
 describe("`selectIds()`", () => {
-  it("returns the ordered list of IDs of all existing branch patterns", () => {
+  it("returns the ordered list of IDs of all existing similarities", () => {
     const state = {
-      branchPatterns: {
+      similarities: {
         ids: ["test/a", "test/b", "test/c"],
         entities: {
           "test/a": {
@@ -113,11 +113,11 @@ describe("`selectIds()`", () => {
   })
 })
 
-describe("`getBranchPatternSelectorFor()`", () => {
+describe("`getSimilaritySelectorFor()`", () => {
   describe("returned selector", () => {
-    it("returns the identified branch pattern", () => {
+    it("returns the identified similarity", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
             "test/subject": {
@@ -140,7 +140,7 @@ describe("`getBranchPatternSelectorFor()`", () => {
         },
       }
 
-      const result = getBranchPatternSelectorFor("test/subject")(state)
+      const result = getSimilaritySelectorFor("test/subject")(state)
 
       expect(result).toEqual({
         id: "test/subject",
@@ -156,9 +156,9 @@ describe("`getBranchPatternSelectorFor()`", () => {
 
 describe("`getTranslationSelectorFor()`", () => {
   describe("returned selector", () => {
-    it("returns the identified branch pattern's translation", () => {
+    it("returns the identified similarity's translation", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
             "test/subject": {
@@ -188,7 +188,7 @@ describe("`getTranslationSelectorFor()`", () => {
 
     it("preserves the numeric value of `0`", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject"],
           entities: {
             "test/subject": {
@@ -212,9 +212,9 @@ describe("`getTranslationSelectorFor()`", () => {
 
 describe("`getScaleSelectorFor()`", () => {
   describe("returned selector", () => {
-    it("returns the identified branch pattern's scale", () => {
+    it("returns the identified similarity's scale", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
             "test/subject": {
@@ -244,7 +244,7 @@ describe("`getScaleSelectorFor()`", () => {
 
     it("preserves the numeric value of `0`", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject"],
           entities: {
             "test/subject": {
@@ -268,9 +268,9 @@ describe("`getScaleSelectorFor()`", () => {
 
 describe("`getAngleSelectorFor()`", () => {
   describe("returned selector", () => {
-    it("returns the identified branch pattern's angle", () => {
+    it("returns the identified similarity's angle", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
             "test/subject": {
@@ -300,7 +300,7 @@ describe("`getAngleSelectorFor()`", () => {
 
     it("preserves the numeric value of `0`", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject"],
           entities: {
             "test/subject": {
@@ -324,9 +324,9 @@ describe("`getAngleSelectorFor()`", () => {
 
 describe("`getDepthSelectorFor()`", () => {
   describe("returned selector", () => {
-    it("returns the identified branch pattern's depth", () => {
+    it("returns the identified similarity's depth", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
             "test/subject": {
@@ -356,7 +356,7 @@ describe("`getDepthSelectorFor()`", () => {
 
     it("preserves the numeric value of `0`", () => {
       const state = {
-        branchPatterns: {
+        similarities: {
           ids: ["test/subject"],
           entities: {
             "test/subject": {

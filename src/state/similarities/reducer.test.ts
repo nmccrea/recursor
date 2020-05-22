@@ -21,7 +21,7 @@ describe("reducer", () => {
   })
 
   describe("`addOne` action", () => {
-    it("creates a unique id for the given branch pattern and adds it to the list", () => {
+    it("creates a unique id for the given similarity and adds it to the list", () => {
       const previousState = {
         ids: ["test/control"],
         entities: {
@@ -70,7 +70,7 @@ describe("reducer", () => {
   })
 
   describe("`removeOne` action", () => {
-    it("removes the identified branch pattern from the list", () => {
+    it("removes the identified similarity from the list", () => {
       const previousState = {
         ids: ["test/subject", "test/control"],
         entities: {
@@ -113,7 +113,7 @@ describe("reducer", () => {
   })
 
   describe("`setTranslation` action", () => {
-    it("updates the translation for the identified branch pattern", () => {
+    it("updates the translation for the identified similarity", () => {
       const previousState = {
         ids: ["test/subject", "test/control"],
         entities: {
@@ -164,7 +164,7 @@ describe("reducer", () => {
   })
 
   describe("`setScale` action", () => {
-    it("updates the scale for the identified branch pattern", () => {
+    it("updates the scale for the identified similarity", () => {
       const previousState = {
         ids: ["test/subject", "test/control"],
         entities: {
@@ -215,7 +215,7 @@ describe("reducer", () => {
   })
 
   describe("`setAngle` action", () => {
-    it("updates the angle for the identified branch pattern", () => {
+    it("updates the angle for the identified similarity", () => {
       const previousState = {
         ids: ["test/subject", "test/control"],
         entities: {
@@ -266,7 +266,7 @@ describe("reducer", () => {
   })
 
   describe("`setDepth` action", () => {
-    it("updates the depth for the identified branch pattern", () => {
+    it("updates the depth for the identified similarity", () => {
       const previousState = {
         ids: ["test/subject", "test/control"],
         entities: {

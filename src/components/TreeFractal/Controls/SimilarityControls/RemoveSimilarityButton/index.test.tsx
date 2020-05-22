@@ -1,14 +1,14 @@
 import React from "react"
 import * as reactRedux from "react-redux"
 import { render, fireEvent, getByText } from "@testing-library/react"
-import RemoveBranchPatternButton from "."
+import RemoveSimilarityButton from "."
 
-describe("`<RemoveBranchPatternButton />`", () => {
+describe("`<RemoveSimilarityButton />`", () => {
   it("renders correctly", () => {
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
 
     const { container } = render(
-      <RemoveBranchPatternButton branchPatternId={"test/subject"} />
+      <RemoveSimilarityButton similarityId={"test/subject"} />
     )
 
     expect(container).toMatchSnapshot()
@@ -18,13 +18,13 @@ describe("`<RemoveBranchPatternButton />`", () => {
     const mockDispatch = jest.fn()
     jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
     const { container } = render(
-      <RemoveBranchPatternButton branchPatternId={"test/subject"} />
+      <RemoveSimilarityButton similarityId={"test/subject"} />
     )
 
     fireEvent.click(getByText(container, "Remove"))
 
     expect(mockDispatch).toHaveBeenCalledWith({
-      type: "branchPatterns/REMOVE_ONE",
+      type: "similarities/REMOVE_ONE",
       payload: "test/subject",
     })
   })

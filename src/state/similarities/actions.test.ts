@@ -12,7 +12,7 @@ import {
 } from "./actions"
 
 describe("`addOne()`", () => {
-  it("returns an action object for adding new branch pattern inputs", () => {
+  it("returns an action object for adding new similarity inputs", () => {
     const action = addOne({
       color: "blue",
       translation: 0.891,
@@ -22,7 +22,7 @@ describe("`addOne()`", () => {
     })
 
     expect(action).toEqual({
-      type: "branchPatterns/ADD_ONE",
+      type: "similarities/ADD_ONE",
       payload: {
         color: "blue",
         translation: 0.891,
@@ -35,22 +35,22 @@ describe("`addOne()`", () => {
 })
 
 describe("`removeOne()`", () => {
-  it("returns an action object for removing an existing branch pattern", () => {
+  it("returns an action object for removing an existing similarity", () => {
     const action = removeOne("test/subject")
 
     expect(action).toEqual({
-      type: "branchPatterns/REMOVE_ONE",
+      type: "similarities/REMOVE_ONE",
       payload: "test/subject",
     })
   })
 })
 
 describe("`setTranslation()`", () => {
-  it("returns an action object for setting the identified branch pattern's transformation translation", () => {
+  it("returns an action object for setting the identified similarity's transformation translation", () => {
     const action = setTranslation("test/subject", 0.54321)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_TRANSLATION",
+      type: "similarities/SET_TRANSLATION",
       payload: {
         id: "test/subject",
         changes: { translation: 0.54321 },
@@ -60,11 +60,11 @@ describe("`setTranslation()`", () => {
 })
 
 describe("`getTranslationSetterFor()`", () => {
-  it("returns an action creator for setting the translation of the identified branch pattern", () => {
+  it("returns an action creator for setting the translation of the identified similarity", () => {
     const action = getTranslationSetterFor("test/subject")(0.7524)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_TRANSLATION",
+      type: "similarities/SET_TRANSLATION",
       payload: {
         id: "test/subject",
         changes: { translation: 0.7524 },
@@ -74,11 +74,11 @@ describe("`getTranslationSetterFor()`", () => {
 })
 
 describe("`setScale()`", () => {
-  it("returns an action object for setting the identified branch pattern's transformation scale", () => {
+  it("returns an action object for setting the identified similarity's transformation scale", () => {
     const action = setScale("test/subject", Math.PI / 1.2345)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_SCALE",
+      type: "similarities/SET_SCALE",
       payload: {
         id: "test/subject",
         changes: { scale: Math.PI / 1.2345 },
@@ -88,11 +88,11 @@ describe("`setScale()`", () => {
 })
 
 describe("`getScaleSetterFor()`", () => {
-  it("returns an action creator for setting the scale of the identified branch pattern", () => {
+  it("returns an action creator for setting the scale of the identified similarity", () => {
     const action = getScaleSetterFor("test/subject")(0.2244)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_SCALE",
+      type: "similarities/SET_SCALE",
       payload: {
         id: "test/subject",
         changes: { scale: 0.2244 },
@@ -102,11 +102,11 @@ describe("`getScaleSetterFor()`", () => {
 })
 
 describe("`setAngle()`", () => {
-  it("returns an action object for setting the identified branch pattern's transformation angle", () => {
+  it("returns an action object for setting the identified similarity's transformation angle", () => {
     const action = setAngle("test/subject", Math.PI / 1.2345)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_ANGLE",
+      type: "similarities/SET_ANGLE",
       payload: {
         id: "test/subject",
         changes: { angle: Math.PI / 1.2345 },
@@ -116,11 +116,11 @@ describe("`setAngle()`", () => {
 })
 
 describe("`getAngleSetterFor()`", () => {
-  it("returns an action creator for setting the angle of the identified branch pattern", () => {
+  it("returns an action creator for setting the angle of the identified similarity", () => {
     const action = getAngleSetterFor("test/subject")(0.9105)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_ANGLE",
+      type: "similarities/SET_ANGLE",
       payload: {
         id: "test/subject",
         changes: { angle: 0.9105 },
@@ -130,11 +130,11 @@ describe("`getAngleSetterFor()`", () => {
 })
 
 describe("`setDepth()`", () => {
-  it("returns an action object for setting the identified branch pattern's recursion depth", () => {
+  it("returns an action object for setting the identified similarity's recursion depth", () => {
     const action = setDepth("test/subject", Math.PI / 1.2345)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_DEPTH",
+      type: "similarities/SET_DEPTH",
       payload: {
         id: "test/subject",
         changes: { depth: Math.PI / 1.2345 },
@@ -144,11 +144,11 @@ describe("`setDepth()`", () => {
 })
 
 describe("`getDepthSetterFor()`", () => {
-  it("returns an action creator for setting the depth of the identified branch pattern", () => {
+  it("returns an action creator for setting the depth of the identified similarity", () => {
     const action = getDepthSetterFor("test/subject")(0.1928)
 
     expect(action).toEqual({
-      type: "branchPatterns/SET_DEPTH",
+      type: "similarities/SET_DEPTH",
       payload: {
         id: "test/subject",
         changes: { depth: 0.1928 },

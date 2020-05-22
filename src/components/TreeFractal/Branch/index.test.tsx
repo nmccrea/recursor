@@ -1,9 +1,9 @@
 import React from "react"
 import { render } from "@testing-library/react"
-import { BranchPattern } from "../../../state/branchPatterns/types"
+import { Similarity } from "../../../state/similarities/types"
 import Branch from "."
 
-const MOCK_BRANCH_PATTERNS: { [id: string]: BranchPattern } = {
+const MOCK_SIMILARITIES: { [id: string]: Similarity } = {
   "test/a": {
     id: "test/a",
     translation: 0.994,
@@ -22,8 +22,8 @@ const MOCK_BRANCH_PATTERNS: { [id: string]: BranchPattern } = {
   },
 }
 
-jest.mock("../../../state/branchPatterns/selectors", () => ({
-  selectAll: () => Object.values(MOCK_BRANCH_PATTERNS),
+jest.mock("../../../state/similarities/selectors", () => ({
+  selectAll: () => Object.values(MOCK_SIMILARITIES),
 }))
 
 jest.mock("react-redux", () => ({
@@ -36,20 +36,20 @@ describe("<Branch />", () => {
   })
 
   it("correctly renders the tree with the appropriate depth", () => {
-    const branchPattern = MOCK_BRANCH_PATTERNS["test/a"]
+    const similarity = MOCK_SIMILARITIES["test/a"]
 
     const { container } = render(
-      <Branch branchPattern={branchPattern} currentDepth={0} />
+      <Branch similarity={similarity} currentDepth={0} />
     )
 
     expect(container).toMatchSnapshot()
   })
 
-  it("renders nothing when the `currentDepth` is equal to the given branch pattern's depth", () => {
-    const branchPattern = MOCK_BRANCH_PATTERNS["test/b"]
+  it("renders nothing when the `currentDepth` is equal to the given similarity's depth", () => {
+    const similarity = MOCK_SIMILARITIES["test/b"]
 
     const { container } = render(
-      <Branch branchPattern={branchPattern} currentDepth={2} />
+      <Branch similarity={similarity} currentDepth={2} />
     )
 
     expect(container).toMatchSnapshot()

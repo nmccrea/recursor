@@ -5,7 +5,7 @@ const Trunk = () => (
   <div style={{ width: "10px", height: "200px", position: "relative" }}>
     <Branch
       currentDepth={0}
-      branchPattern={{
+      similarity={{
         id: "trunk",
         color: "black",
         translation: 1,
