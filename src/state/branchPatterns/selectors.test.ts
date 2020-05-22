@@ -1,11 +1,11 @@
 import {
   selectAll,
   selectIds,
-  selectorForBranchPattern,
-  selectorForTranslation,
-  selectorForScale,
-  selectorForAngle,
-  selectorForDepth,
+  getBranchPatternSelectorFor,
+  getTranslationSelectorFor,
+  getScaleSelectorFor,
+  getAngleSelectorFor,
+  getDepthSelectorFor,
 } from "./selectors"
 
 describe("`selectAll()`", () => {
@@ -113,7 +113,7 @@ describe("`selectIds()`", () => {
   })
 })
 
-describe("`selectorForBranchPattern()`", () => {
+describe("`getBranchPatternSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified branch pattern", () => {
       const state = {
@@ -140,7 +140,7 @@ describe("`selectorForBranchPattern()`", () => {
         },
       }
 
-      const result = selectorForBranchPattern("test/subject")(state)
+      const result = getBranchPatternSelectorFor("test/subject")(state)
 
       expect(result).toEqual({
         id: "test/subject",
@@ -154,7 +154,7 @@ describe("`selectorForBranchPattern()`", () => {
   })
 })
 
-describe("`selectorForTranslation()`", () => {
+describe("`getTranslationSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified branch pattern's translation", () => {
       const state = {
@@ -181,7 +181,7 @@ describe("`selectorForTranslation()`", () => {
         },
       }
 
-      const result = selectorForTranslation("test/subject")(state)
+      const result = getTranslationSelectorFor("test/subject")(state)
 
       expect(result).toEqual(1)
     })
@@ -203,14 +203,14 @@ describe("`selectorForTranslation()`", () => {
         },
       }
 
-      const result = selectorForTranslation("test/subject")(state)
+      const result = getTranslationSelectorFor("test/subject")(state)
 
       expect(result).toEqual(0)
     })
   })
 })
 
-describe("`selectorForScale()`", () => {
+describe("`getScaleSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified branch pattern's scale", () => {
       const state = {
@@ -237,7 +237,7 @@ describe("`selectorForScale()`", () => {
         },
       }
 
-      const result = selectorForScale("test/subject")(state)
+      const result = getScaleSelectorFor("test/subject")(state)
 
       expect(result).toEqual(0.7)
     })
@@ -259,14 +259,14 @@ describe("`selectorForScale()`", () => {
         },
       }
 
-      const result = selectorForScale("test/subject")(state)
+      const result = getScaleSelectorFor("test/subject")(state)
 
       expect(result).toEqual(0)
     })
   })
 })
 
-describe("`selectorForAngle()`", () => {
+describe("`getAngleSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified branch pattern's angle", () => {
       const state = {
@@ -293,7 +293,7 @@ describe("`selectorForAngle()`", () => {
         },
       }
 
-      const result = selectorForAngle("test/subject")(state)
+      const result = getAngleSelectorFor("test/subject")(state)
 
       expect(result).toEqual(Math.PI / 3)
     })
@@ -315,14 +315,14 @@ describe("`selectorForAngle()`", () => {
         },
       }
 
-      const result = selectorForAngle("test/subject")(state)
+      const result = getAngleSelectorFor("test/subject")(state)
 
       expect(result).toEqual(0)
     })
   })
 })
 
-describe("`selectorForDepth()`", () => {
+describe("`getDepthSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified branch pattern's depth", () => {
       const state = {
@@ -349,7 +349,7 @@ describe("`selectorForDepth()`", () => {
         },
       }
 
-      const result = selectorForDepth("test/subject")(state)
+      const result = getDepthSelectorFor("test/subject")(state)
 
       expect(result).toEqual(5)
     })
@@ -371,7 +371,7 @@ describe("`selectorForDepth()`", () => {
         },
       }
 
-      const result = selectorForDepth("test/subject")(state)
+      const result = getDepthSelectorFor("test/subject")(state)
 
       expect(result).toEqual(0)
     })

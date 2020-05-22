@@ -2,12 +2,16 @@ import {
   addOne,
   removeOne,
   setTranslation,
+  getTranslationSetterFor,
   setScale,
+  getScaleSetterFor,
   setAngle,
+  getAngleSetterFor,
   setDepth,
+  getDepthSetterFor,
 } from "./actions"
 
-describe("addOne()", () => {
+describe("`addOne()`", () => {
   it("returns an action object for adding new branch pattern inputs", () => {
     const action = addOne({
       color: "blue",
@@ -30,7 +34,7 @@ describe("addOne()", () => {
   })
 })
 
-describe("removeOne()", () => {
+describe("`removeOne()`", () => {
   it("returns an action object for removing an existing branch pattern", () => {
     const action = removeOne("test/subject")
 
@@ -41,57 +45,113 @@ describe("removeOne()", () => {
   })
 })
 
-describe("setTranslation()", () => {
+describe("`setTranslation()`", () => {
   it("returns an action object for setting the identified branch pattern's transformation translation", () => {
-    const action = setTranslation("test/translation", 0.54321)
+    const action = setTranslation("test/subject", 0.54321)
 
     expect(action).toEqual({
       type: "branchPatterns/SET_TRANSLATION",
       payload: {
-        id: "test/translation",
+        id: "test/subject",
         changes: { translation: 0.54321 },
       },
     })
   })
 })
 
-describe("setScale()", () => {
+describe("`getTranslationSetterFor()`", () => {
+  it("returns an action creator for setting the translation of the identified branch pattern", () => {
+    const action = getTranslationSetterFor("test/subject")(0.7524)
+
+    expect(action).toEqual({
+      type: "branchPatterns/SET_TRANSLATION",
+      payload: {
+        id: "test/subject",
+        changes: { translation: 0.7524 },
+      },
+    })
+  })
+})
+
+describe("`setScale()`", () => {
   it("returns an action object for setting the identified branch pattern's transformation scale", () => {
-    const action = setScale("test/scale", Math.PI / 1.2345)
+    const action = setScale("test/subject", Math.PI / 1.2345)
 
     expect(action).toEqual({
       type: "branchPatterns/SET_SCALE",
       payload: {
-        id: "test/scale",
+        id: "test/subject",
         changes: { scale: Math.PI / 1.2345 },
       },
     })
   })
 })
 
-describe("setAngle()", () => {
+describe("`getScaleSetterFor()`", () => {
+  it("returns an action creator for setting the scale of the identified branch pattern", () => {
+    const action = getScaleSetterFor("test/subject")(0.2244)
+
+    expect(action).toEqual({
+      type: "branchPatterns/SET_SCALE",
+      payload: {
+        id: "test/subject",
+        changes: { scale: 0.2244 },
+      },
+    })
+  })
+})
+
+describe("`setAngle()`", () => {
   it("returns an action object for setting the identified branch pattern's transformation angle", () => {
-    const action = setAngle("test/angle", Math.PI / 1.2345)
+    const action = setAngle("test/subject", Math.PI / 1.2345)
 
     expect(action).toEqual({
       type: "branchPatterns/SET_ANGLE",
       payload: {
-        id: "test/angle",
+        id: "test/subject",
         changes: { angle: Math.PI / 1.2345 },
       },
     })
   })
 })
 
-describe("setDepth()", () => {
+describe("`getAngleSetterFor()`", () => {
+  it("returns an action creator for setting the angle of the identified branch pattern", () => {
+    const action = getAngleSetterFor("test/subject")(0.9105)
+
+    expect(action).toEqual({
+      type: "branchPatterns/SET_ANGLE",
+      payload: {
+        id: "test/subject",
+        changes: { angle: 0.9105 },
+      },
+    })
+  })
+})
+
+describe("`setDepth()`", () => {
   it("returns an action object for setting the identified branch pattern's recursion depth", () => {
-    const action = setDepth("test/depth", Math.PI / 1.2345)
+    const action = setDepth("test/subject", Math.PI / 1.2345)
 
     expect(action).toEqual({
       type: "branchPatterns/SET_DEPTH",
       payload: {
-        id: "test/depth",
+        id: "test/subject",
         changes: { depth: Math.PI / 1.2345 },
+      },
+    })
+  })
+})
+
+describe("`getDepthSetterFor()`", () => {
+  it("returns an action creator for setting the depth of the identified branch pattern", () => {
+    const action = getDepthSetterFor("test/subject")(0.1928)
+
+    expect(action).toEqual({
+      type: "branchPatterns/SET_DEPTH",
+      payload: {
+        id: "test/subject",
+        changes: { depth: 0.1928 },
       },
     })
   })
