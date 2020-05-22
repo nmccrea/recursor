@@ -26,40 +26,40 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
     <RemoveSimilarityButton similarityId={similarityId} />
 
     <SliderInput
-      selector={getTranslationSelectorFor(similarityId)}
-      actionCreator={getTranslationSetterFor(similarityId)}
-      label="Translation"
-      min={0}
-      max={1.5}
-      step={0.05}
-    />
-
-    <SliderInput
-      selector={getScaleSelectorFor(similarityId)}
-      actionCreator={getScaleSetterFor(similarityId)}
-      label="Scale"
-      min={0}
-      max={2}
-      step={0.05}
-    />
-
-    <SliderInput
-      selector={getAngleSelectorFor(similarityId)}
-      actionCreator={getAngleSetterFor(similarityId)}
       label="Angle"
       // `min` and `max` must both be multiples of `step`
       min={-Math.round((2 * Math.PI) / 0.0001) * 0.0001}
       max={Math.round((2 * Math.PI) / 0.0001) * 0.0001}
+      selector={getAngleSelectorFor(similarityId)}
+      actionCreator={getAngleSetterFor(similarityId)}
       step={0.0001}
     />
 
     <SliderInput
-      selector={getDepthSelectorFor(similarityId)}
-      actionCreator={getDepthSetterFor(similarityId)}
+      label="Scale"
+      min={0}
+      max={2}
+      step={0.05}
+      selector={getScaleSelectorFor(similarityId)}
+      actionCreator={getScaleSetterFor(similarityId)}
+    />
+
+    <SliderInput
+      label="Translation"
+      min={0}
+      max={1.5}
+      step={0.05}
+      selector={getTranslationSelectorFor(similarityId)}
+      actionCreator={getTranslationSetterFor(similarityId)}
+    />
+
+    <SliderInput
       label="Depth"
       min={0}
       max={8}
       step={1}
+      selector={getDepthSelectorFor(similarityId)}
+      actionCreator={getDepthSetterFor(similarityId)}
     />
   </div>
 )

@@ -8,21 +8,21 @@ import {
 } from "../../../../../state/similarities/types"
 
 export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
-  selector: SimilarityInputSelector<Key>
-  actionCreator: SimilarityInputActionCreator<Key>
   label: string
   min: SimilarityNumericInputs[Key]
   max: SimilarityNumericInputs[Key]
   step: SimilarityNumericInputs[Key]
+  selector: SimilarityInputSelector<Key>
+  actionCreator: SimilarityInputActionCreator<Key>
 }
 
 const SliderInput = <Key extends SimilarityNumericInputKey>({
-  selector,
-  actionCreator,
   label,
   min,
   max,
   step,
+  selector,
+  actionCreator,
 }: SliderInputProps<Key>) => {
   const value = useSelector(selector)
   const dispatch = useDispatch()
