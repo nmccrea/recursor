@@ -1,3 +1,12 @@
+import { RootState } from "../store"
+import {
+  Similarity,
+  SimilarityId,
+  Translation,
+  Scale,
+  Angle,
+  Depth,
+} from "./types"
 import {
   selectAll,
   selectIds,
@@ -10,7 +19,7 @@ import {
 
 describe("`selectAll()`", () => {
   it("returns a list of all existing similarities, ordered according to the `ids` state", () => {
-    const state = {
+    const state: RootState = {
       similarities: {
         ids: ["test/a", "test/c", "test/b"],
         entities: {
@@ -44,7 +53,7 @@ describe("`selectAll()`", () => {
 
     const result = selectAll(state)
 
-    expect(result).toEqual([
+    expect(result).toEqual<Similarity[]>([
       {
         id: "test/a",
         color: "blue",
@@ -75,7 +84,7 @@ describe("`selectAll()`", () => {
 
 describe("`selectIds()`", () => {
   it("returns the ordered list of IDs of all existing similarities", () => {
-    const state = {
+    const state: RootState = {
       similarities: {
         ids: ["test/a", "test/b", "test/c"],
         entities: {
@@ -109,14 +118,14 @@ describe("`selectIds()`", () => {
 
     const result = selectIds(state)
 
-    expect(result).toEqual(["test/a", "test/b", "test/c"])
+    expect(result).toEqual<SimilarityId[]>(["test/a", "test/b", "test/c"])
   })
 })
 
 describe("`getSimilaritySelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified similarity", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
@@ -142,7 +151,7 @@ describe("`getSimilaritySelectorFor()`", () => {
 
       const result = getSimilaritySelectorFor("test/subject")(state)
 
-      expect(result).toEqual({
+      expect(result).toEqual<Similarity>({
         id: "test/subject",
         color: "blue",
         translation: 1,
@@ -157,7 +166,7 @@ describe("`getSimilaritySelectorFor()`", () => {
 describe("`getTranslationSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified similarity's translation", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
@@ -183,11 +192,11 @@ describe("`getTranslationSelectorFor()`", () => {
 
       const result = getTranslationSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(1)
+      expect(result).toEqual<Translation>(1)
     })
 
     it("preserves the numeric value of `0`", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject"],
           entities: {
@@ -205,7 +214,7 @@ describe("`getTranslationSelectorFor()`", () => {
 
       const result = getTranslationSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(0)
+      expect(result).toEqual<Translation>(0)
     })
   })
 })
@@ -213,7 +222,7 @@ describe("`getTranslationSelectorFor()`", () => {
 describe("`getScaleSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified similarity's scale", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
@@ -239,11 +248,11 @@ describe("`getScaleSelectorFor()`", () => {
 
       const result = getScaleSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(0.7)
+      expect(result).toEqual<Scale>(0.7)
     })
 
     it("preserves the numeric value of `0`", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject"],
           entities: {
@@ -261,7 +270,7 @@ describe("`getScaleSelectorFor()`", () => {
 
       const result = getScaleSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(0)
+      expect(result).toEqual<Scale>(0)
     })
   })
 })
@@ -269,7 +278,7 @@ describe("`getScaleSelectorFor()`", () => {
 describe("`getAngleSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified similarity's angle", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
@@ -295,11 +304,11 @@ describe("`getAngleSelectorFor()`", () => {
 
       const result = getAngleSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(Math.PI / 3)
+      expect(result).toEqual<Angle>(Math.PI / 3)
     })
 
     it("preserves the numeric value of `0`", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject"],
           entities: {
@@ -317,7 +326,7 @@ describe("`getAngleSelectorFor()`", () => {
 
       const result = getAngleSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(0)
+      expect(result).toEqual<Angle>(0)
     })
   })
 })
@@ -325,7 +334,7 @@ describe("`getAngleSelectorFor()`", () => {
 describe("`getDepthSelectorFor()`", () => {
   describe("returned selector", () => {
     it("returns the identified similarity's depth", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject", "test/control"],
           entities: {
@@ -351,11 +360,11 @@ describe("`getDepthSelectorFor()`", () => {
 
       const result = getDepthSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(5)
+      expect(result).toEqual<Depth>(5)
     })
 
     it("preserves the numeric value of `0`", () => {
-      const state = {
+      const state: RootState = {
         similarities: {
           ids: ["test/subject"],
           entities: {
@@ -373,7 +382,7 @@ describe("`getDepthSelectorFor()`", () => {
 
       const result = getDepthSelectorFor("test/subject")(state)
 
-      expect(result).toEqual(0)
+      expect(result).toEqual<Depth>(0)
     })
   })
 })

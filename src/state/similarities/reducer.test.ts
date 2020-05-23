@@ -1,4 +1,5 @@
 import reducer from "./reducer"
+import { Similarities } from "./similarities"
 import {
   addOne,
   removeOne,
@@ -17,12 +18,12 @@ describe("reducer", () => {
   it("has the correct initial state", () => {
     const initialState = reducer(undefined, { type: "" })
 
-    expect(initialState).toEqual({ ids: [], entities: {} })
+    expect(initialState).toEqual<Similarities>({ ids: [], entities: {} })
   })
 
   describe("`addOne` action", () => {
     it("creates a unique id for the given similarity and adds it to the list", () => {
-      const previousState = {
+      const previousState: Similarities = {
         ids: ["test/control"],
         entities: {
           "test/control": {
@@ -45,7 +46,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual({
+      expect(nextState).toEqual<Similarities>({
         ids: ["test/control", "fake-nanoid-unique-id"],
         entities: {
           "test/control": {
@@ -71,7 +72,7 @@ describe("reducer", () => {
 
   describe("`removeOne` action", () => {
     it("removes the identified similarity from the list", () => {
-      const previousState = {
+      const previousState: Similarities = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -96,7 +97,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual({
+      expect(nextState).toEqual<Similarities>({
         ids: ["test/control"],
         entities: {
           "test/control": {
@@ -114,7 +115,7 @@ describe("reducer", () => {
 
   describe("`setTranslation` action", () => {
     it("updates the translation for the identified similarity", () => {
-      const previousState = {
+      const previousState: Similarities = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -139,7 +140,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual({
+      expect(nextState).toEqual<Similarities>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -165,7 +166,7 @@ describe("reducer", () => {
 
   describe("`setScale` action", () => {
     it("updates the scale for the identified similarity", () => {
-      const previousState = {
+      const previousState: Similarities = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -190,7 +191,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual({
+      expect(nextState).toEqual<Similarities>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -216,7 +217,7 @@ describe("reducer", () => {
 
   describe("`setAngle` action", () => {
     it("updates the angle for the identified similarity", () => {
-      const previousState = {
+      const previousState: Similarities = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -241,7 +242,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual({
+      expect(nextState).toEqual<Similarities>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -267,7 +268,7 @@ describe("reducer", () => {
 
   describe("`setDepth` action", () => {
     it("updates the depth for the identified similarity", () => {
-      const previousState = {
+      const previousState: Similarities = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -292,7 +293,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual({
+      expect(nextState).toEqual<Similarities>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
