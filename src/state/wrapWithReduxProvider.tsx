@@ -5,7 +5,7 @@
 
 import React from "react"
 import { Provider as ReduxProvider } from "react-redux"
-import store from "./store"
+import { createStore } from "./store"
 
 interface Arg {
   element: React.ReactNode
@@ -15,5 +15,5 @@ interface Arg {
  * Wraps an element in a `react-redux` `<Provider />` supplying the application's Redux store.
  */
 export const wrapWithReduxProvider = ({ element }: Arg) => (
-  <ReduxProvider store={store}>{element}</ReduxProvider>
+  <ReduxProvider store={createStore()}>{element}</ReduxProvider>
 )

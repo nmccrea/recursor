@@ -7,8 +7,8 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit"
 import similarities from "./similarities/reducer"
 
 const rootReducer = combineReducers({ similarities })
-const store = configureStore({ reducer: rootReducer })
+const createStore = () => configureStore({ reducer: rootReducer })
 
-export default store
+export { createStore }
 export type RootState = ReturnType<typeof rootReducer>
 export type Selector<ReturnType> = (state: RootState) => ReturnType | undefined
