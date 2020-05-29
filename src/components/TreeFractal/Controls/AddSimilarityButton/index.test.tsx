@@ -1,33 +1,49 @@
 import React from "react"
+import { Provider } from "react-redux"
 import { render, fireEvent, getByText } from "@testing-library/react"
-import * as reactRedux from "react-redux"
-import { AddOneAction } from "../../../../state/similarities/actions"
+import { createStore, RootState } from "../../../../state/store"
 import AddsimilarityButton from "."
+
+jest.mock("@reduxjs/toolkit", () => ({
+  ...jest.requireActual("@reduxjs/toolkit"),
+  nanoid: () => "fake-nanoid-unique-id",
+}))
 
 describe("`<AddSimilarityButton />`", () => {
   it("renders correctly", () => {
-    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
-
-    const { container } = render(<AddsimilarityButton />)
+    const { container } = render(
+      <Provider store={createStore()}>
+        <AddsimilarityButton />
+      </Provider>
+    )
 
     expect(container).toMatchSnapshot()
   })
 
   it("responds correctly to a click event", () => {
-    const mockDispatch = jest.fn()
-    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(mockDispatch)
-    const { container } = render(<AddsimilarityButton />)
+    const state: RootState = { similarities: { ids: [], entities: {} } }
+    const store = createStore(state)
+    const { container } = render(
+      <Provider store={store}>
+        <AddsimilarityButton />
+      </Provider>
+    )
 
     fireEvent.click(getByText(container, "Add Similarity"))
 
-    expect(mockDispatch).toHaveBeenCalledWith<[AddOneAction]>({
-      type: "similarities/ADD_ONE",
-      payload: {
-        translation: 1,
-        scale: 0.9,
-        angle: 1.23425,
-        depth: 4,
-        color: "black",
+    expect(store.getState()).toEqual<RootState>({
+      similarities: {
+        ids: ["fake-nanoid-unique-id"],
+        entities: {
+          "fake-nanoid-unique-id": {
+            id: "fake-nanoid-unique-id",
+            translation: 1,
+            scale: 0.9,
+            angle: 1.23425,
+            depth: 4,
+            color: "black",
+          },
+        },
       },
     })
   })

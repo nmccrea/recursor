@@ -1,24 +1,24 @@
 import React from "react"
+import { Provider } from "react-redux"
 import { render } from "@testing-library/react"
-import * as reactRedux from "react-redux"
-import { RootState } from "../../../state/store"
+import { createStore, RootState } from "../../../state/store"
 import Controls from "."
 
 describe("`<Controls />`", () => {
   it("renders correctly when there are no existing similarities", () => {
-    const mockState: RootState = { similarities: { ids: [], entities: {} } }
-    jest
-      .spyOn(reactRedux, "useSelector")
-      .mockImplementation((selector) => selector(mockState))
-    jest.spyOn(reactRedux, "useDispatch").mockReturnValue(jest.fn())
+    const state: RootState = { similarities: { ids: [], entities: {} } }
 
-    const { container } = render(<Controls />)
+    const { container } = render(
+      <Provider store={createStore(state)}>
+        <Controls />
+      </Provider>
+    )
 
     expect(container).toMatchSnapshot()
   })
 
   it("renders correctly when there is one existing similarity", () => {
-    const mockState: RootState = {
+    const state: RootState = {
       similarities: {
         ids: ["test/subject"],
         entities: {
@@ -33,17 +33,18 @@ describe("`<Controls />`", () => {
         },
       },
     }
-    jest
-      .spyOn(reactRedux, "useSelector")
-      .mockImplementation((selector) => selector(mockState))
 
-    const { container } = render(<Controls />)
+    const { container } = render(
+      <Provider store={createStore(state)}>
+        <Controls />
+      </Provider>
+    )
 
     expect(container).toMatchSnapshot()
   })
 
   it("renders correctly when there are multiple existing similarities.", () => {
-    const mockState: RootState = {
+    const state: RootState = {
       similarities: {
         ids: ["test/a", "test/b"],
         entities: {
@@ -66,11 +67,12 @@ describe("`<Controls />`", () => {
         },
       },
     }
-    jest
-      .spyOn(reactRedux, "useSelector")
-      .mockImplementation((selector) => selector(mockState))
 
-    const { container } = render(<Controls />)
+    const { container } = render(
+      <Provider store={createStore(state)}>
+        <Controls />
+      </Provider>
+    )
 
     expect(container).toMatchSnapshot()
   })
