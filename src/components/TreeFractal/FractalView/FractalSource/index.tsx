@@ -8,7 +8,7 @@ const FractalSource = () => (
       similarity={{
         id: "source",
         color: "black",
-        translation: 1,
+        translation: 0,
         scale: 1,
         angle: 0,
         depth: Infinity,

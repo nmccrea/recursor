@@ -7,7 +7,7 @@ exports[`\`<FractalSource />\` renders correctly 1`] = `
   >
     <div
       class="tree source depth-1"
-      style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-100%) scale(1) rotate(0rad);"
+      style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-0%) scale(1) rotate(0rad);"
     >
       <div
         class="tree test/a depth-2"
