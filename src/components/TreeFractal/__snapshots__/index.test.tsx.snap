@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`<TreeFractal />\` renders correctly 1`] = `
+<div>
+  <div
+    style="width: 95vw; height: 70vh; display: flex; justify-content: center; align-items: flex-end;"
+  >
+    <div
+      style="width: 10px; height: 200px; position: relative;"
+    >
+      <div
+        class="tree source depth-1"
+        style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-0%) scale(1) rotate(0rad);"
+      />
+    </div>
+  </div>
+  <button>
+    Add Similarity
+  </button>
+</div>
+`;
