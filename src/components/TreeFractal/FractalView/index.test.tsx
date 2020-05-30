@@ -4,7 +4,7 @@ import { render } from "@testing-library/react"
 import { createStore, RootState } from "../../../state/store"
 import FractalView from "."
 
-describe("`<TreeFractal />`", () => {
+describe("`<FractalView />`", () => {
   it("renders correctly", () => {
     const state: RootState = {
       similarities: {

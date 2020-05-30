@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`\`<TreeFractal />\` renders correctly 1`] = `
+exports[`\`<FractalView />\` renders correctly 1`] = `
 <div>
   <div
     style="width: 95vw; height: 70vh; display: flex; justify-content: center; align-items: flex-end;"
