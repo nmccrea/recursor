@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector } from "react-redux"
 import AddSimilarityButton from "./AddSimilarityButton"
 import SimilarityControls from "./SimilarityControls"
-import { selectIds } from "../../../state/similarities/selectors"
+import { selectIds } from "../../state/similarities/selectors"
 
 const Controls = () => {
   const similarityIds = useSelector(selectIds)
