@@ -1,7 +1,7 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import { selectAll } from "../../../state/similarities/selectors"
-import { Similarity, Depth } from "../../../state/similarities/types"
+import { selectAll } from "../../../../state/similarities/selectors"
+import { Similarity, Depth } from "../../../../state/similarities/types"
 
 /**
  * Generates a CSS object with styles dictated by the given similarity.

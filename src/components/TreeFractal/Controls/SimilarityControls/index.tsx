@@ -4,14 +4,14 @@ import {
   getScaleSetterFor,
   getAngleSetterFor,
   getDepthSetterFor,
-} from "../../../state/similarities/actions"
+} from "../../../../state/similarities/actions"
 import {
   getTranslationSelectorFor,
   getScaleSelectorFor,
   getAngleSelectorFor,
   getDepthSelectorFor,
-} from "../../../state/similarities/selectors"
-import { SimilarityId } from "../../../state/similarities/types"
+} from "../../../../state/similarities/selectors"
+import { SimilarityId } from "../../../../state/similarities/types"
 import RemoveSimilarityButton from "./RemoveSimilarityButton"
 import SliderInput from "./SliderInput"
 

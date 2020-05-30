@@ -1,7 +1,7 @@
 import React from "react"
 import { Provider } from "react-redux"
 import { render } from "@testing-library/react"
-import { createStore, RootState } from "../../state/store"
+import { createStore, RootState } from "../../../state/store"
 import FractalView from "."
 
 describe("`<TreeFractal />`", () => {
