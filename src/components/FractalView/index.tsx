@@ -1,7 +1,7 @@
 import React from "react"
 import FractalSource from "./FractalSource"
 
-const TreeFractal = () => (
+const FractalView = () => (
   <div
     style={{
       width: "95vw",
@@ -15,4 +15,4 @@ const TreeFractal = () => (
   </div>
 )
 
-export default TreeFractal
+export default FractalView

@@ -2,7 +2,7 @@ import React from "react"
 import { Provider } from "react-redux"
 import { render } from "@testing-library/react"
 import { createStore, RootState } from "../../state/store"
-import TreeFractal from "."
+import FractalView from "."
 
 describe("`<TreeFractal />`", () => {
   it("renders correctly", () => {
@@ -32,7 +32,7 @@ describe("`<TreeFractal />`", () => {
 
     const { container } = render(
       <Provider store={createStore(state)}>
-        <TreeFractal />
+        <FractalView />
       </Provider>
     )
 
