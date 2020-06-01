@@ -10,9 +10,9 @@ import { SimilarityInputs } from "../../../../state/similarities/types"
  */
 const generateNewSimilarityInputs = (): SimilarityInputs => ({
   translation: 1,
-  scale: 0.9,
-  angle: 1.23425,
-  depth: 4,
+  scale: 0.75,
+  angle: 0,
+  depth: 5,
   color: "black",
 })
 
