@@ -1,12 +1,24 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { selectAll } from "../../../../state/similarities/selectors"
-import { Similarity, Depth } from "../../../../state/similarities/types"
+import {
+  Similarity,
+  Translation,
+  Scale,
+  Angle,
+  Depth,
+  Color,
+} from "../../../../state/similarities/types"
 
 /**
  * Generates a CSS object with styles dictated by the given similarity.
  */
-const styleFor = ({ translation, scale, angle, color }: Similarity) => ({
+const styleFor = (
+  translation: Translation,
+  scale: Scale,
+  angle: Angle,
+  color: Color
+) => ({
   backgroundColor: color,
   transformOrigin: "center bottom",
   transform: [
@@ -16,28 +28,35 @@ const styleFor = ({ translation, scale, angle, color }: Similarity) => ({
   ].join(" "),
 })
 
-interface RecursionProps {
-  similarity: Similarity
+interface RecursionProps extends Similarity {
   currentDepth: Depth
 }
 
-const Recursion = ({ similarity, currentDepth }: RecursionProps) => {
-  if (currentDepth >= similarity.depth) return null
+const Recursion = ({
+  id,
+  translation,
+  scale,
+  angle,
+  depth,
+  color,
+  currentDepth,
+}: RecursionProps) => {
+  if (currentDepth >= depth) return null
   const similarities = useSelector(selectAll)
   return (
     <div
-      className={`tree ${similarity.id} depth-${currentDepth + 1}`}
+      className={`tree ${id} depth-${currentDepth + 1}`}
       style={{
         position: "absolute",
         inset: 0,
-        ...styleFor(similarity),
+        ...styleFor(translation, scale, angle, color),
       }}
     >
       {similarities.map((similarity) => (
         <Recursion
-          similarity={similarity}
+          {...similarity}
           currentDepth={currentDepth + 1}
-          key={`${similarity.id}`}
+          key={similarity.id}
         />
       ))}
     </div>

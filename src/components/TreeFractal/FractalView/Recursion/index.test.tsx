@@ -35,11 +35,9 @@ const TEST_STATE: RootState = {
 
 describe("`<Recursion />`", () => {
   it("correctly renders the tree with the appropriate depth", () => {
-    const similarity = SIMILARITY_A
-
     const { container } = render(
       <Provider store={createStore(TEST_STATE)}>
-        <Recursion similarity={similarity} currentDepth={0} />
+        <Recursion {...SIMILARITY_A} currentDepth={0} />
       </Provider>
     )
 
@@ -47,11 +45,9 @@ describe("`<Recursion />`", () => {
   })
 
   it("renders nothing when the `currentDepth` is equal to the given similarity's depth", () => {
-    const similarity = SIMILARITY_B
-
     const { container } = render(
       <Provider store={createStore(TEST_STATE)}>
-        <Recursion similarity={similarity} currentDepth={2} />
+        <Recursion {...SIMILARITY_B} currentDepth={2} />
       </Provider>
     )
 
