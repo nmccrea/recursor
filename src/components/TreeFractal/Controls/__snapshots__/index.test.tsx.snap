@@ -15,7 +15,9 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       Remove
     </button>
     <label>
-      Angle
+      <p>
+        Angle
+      </p>
       <input
         max="6.2832"
         min="-6.2832"
@@ -23,9 +25,23 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="0.1385"
       />
+      <p>
+        Min: 
+        -2.00π rad
+      </p>
+      <p>
+        Max: 
+        2.00π rad
+      </p>
+      <p>
+        Value: 
+        0.04π rad
+      </p>
     </label>
     <label>
-      Scale
+      <p>
+        Scale
+      </p>
       <input
         max="2"
         min="0"
@@ -33,9 +49,23 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="0.7791"
       />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        2.00
+      </p>
+      <p>
+        Value: 
+        0.78
+      </p>
     </label>
     <label>
-      Translation
+      <p>
+        Translation
+      </p>
       <input
         max="1.5"
         min="0"
@@ -43,9 +73,23 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="0.4663"
       />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        1.50
+      </p>
+      <p>
+        Value: 
+        0.47
+      </p>
     </label>
     <label>
-      Depth
+      <p>
+        Depth
+      </p>
       <input
         max="8"
         min="0"
@@ -53,6 +97,18 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="3"
       />
+      <p>
+        Min: 
+        0
+      </p>
+      <p>
+        Max: 
+        8
+      </p>
+      <p>
+        Value: 
+        3
+      </p>
     </label>
   </div>
   <div
@@ -65,7 +121,9 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       Remove
     </button>
     <label>
-      Angle
+      <p>
+        Angle
+      </p>
       <input
         max="6.2832"
         min="-6.2832"
@@ -73,9 +131,23 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="0.4692"
       />
+      <p>
+        Min: 
+        -2.00π rad
+      </p>
+      <p>
+        Max: 
+        2.00π rad
+      </p>
+      <p>
+        Value: 
+        0.15π rad
+      </p>
     </label>
     <label>
-      Scale
+      <p>
+        Scale
+      </p>
       <input
         max="2"
         min="0"
@@ -83,9 +155,23 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="0.7202"
       />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        2.00
+      </p>
+      <p>
+        Value: 
+        0.72
+      </p>
     </label>
     <label>
-      Translation
+      <p>
+        Translation
+      </p>
       <input
         max="1.5"
         min="0"
@@ -93,9 +179,23 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="0.7432"
       />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        1.50
+      </p>
+      <p>
+        Value: 
+        0.74
+      </p>
     </label>
     <label>
-      Depth
+      <p>
+        Depth
+      </p>
       <input
         max="8"
         min="0"
@@ -103,6 +203,18 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         type="range"
         value="7"
       />
+      <p>
+        Min: 
+        0
+      </p>
+      <p>
+        Max: 
+        8
+      </p>
+      <p>
+        Value: 
+        7
+      </p>
     </label>
   </div>
 </div>
@@ -131,7 +243,9 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
       Remove
     </button>
     <label>
-      Angle
+      <p>
+        Angle
+      </p>
       <input
         max="6.2832"
         min="-6.2832"
@@ -139,9 +253,23 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
         type="range"
         value="0.1385"
       />
+      <p>
+        Min: 
+        -2.00π rad
+      </p>
+      <p>
+        Max: 
+        2.00π rad
+      </p>
+      <p>
+        Value: 
+        0.04π rad
+      </p>
     </label>
     <label>
-      Scale
+      <p>
+        Scale
+      </p>
       <input
         max="2"
         min="0"
@@ -149,9 +277,23 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
         type="range"
         value="0.7791"
       />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        2.00
+      </p>
+      <p>
+        Value: 
+        0.78
+      </p>
     </label>
     <label>
-      Translation
+      <p>
+        Translation
+      </p>
       <input
         max="1.5"
         min="0"
@@ -159,9 +301,23 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
         type="range"
         value="0.4663"
       />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        1.50
+      </p>
+      <p>
+        Value: 
+        0.47
+      </p>
     </label>
     <label>
-      Depth
+      <p>
+        Depth
+      </p>
       <input
         max="8"
         min="0"
@@ -169,6 +325,18 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
         type="range"
         value="3"
       />
+      <p>
+        Min: 
+        0
+      </p>
+      <p>
+        Max: 
+        8
+      </p>
+      <p>
+        Value: 
+        3
+      </p>
     </label>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import React from "react"
+import { formatNumber, formatAngle } from "../../../../utils/valueFormatter"
 import {
   getTranslationSetterFor,
   getScaleSetterFor,
@@ -30,9 +31,10 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
       // `min` and `max` must both be multiples of `step`
       min={-Math.round((2 * Math.PI) / 0.0001) * 0.0001}
       max={Math.round((2 * Math.PI) / 0.0001) * 0.0001}
+      step={0.0001}
       selector={getAngleSelectorFor(similarityId)}
       actionCreator={getAngleSetterFor(similarityId)}
-      step={0.0001}
+      valueFormatter={formatAngle}
     />
 
     <SliderInput
@@ -42,6 +44,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
       step={0.05}
       selector={getScaleSelectorFor(similarityId)}
       actionCreator={getScaleSetterFor(similarityId)}
+      valueFormatter={(value) => formatNumber(value, { precision: 2 })}
     />
 
     <SliderInput
@@ -51,6 +54,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
       step={0.05}
       selector={getTranslationSelectorFor(similarityId)}
       actionCreator={getTranslationSetterFor(similarityId)}
+      valueFormatter={(value) => formatNumber(value, { precision: 2 })}
     />
 
     <SliderInput
@@ -60,6 +64,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
       step={1}
       selector={getDepthSelectorFor(similarityId)}
       actionCreator={getDepthSetterFor(similarityId)}
+      valueFormatter={(value) => formatNumber(value, { precision: 0 })}
     />
   </div>
 )

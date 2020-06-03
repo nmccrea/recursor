@@ -14,6 +14,7 @@ export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
   step: SimilarityNumericInputs[Key]
   selector: SimilarityInputSelector<Key>
   actionCreator: SimilarityInputActionCreator<Key>
+  valueFormatter: (value?: number) => string
 }
 
 const SliderInput = <Key extends SimilarityNumericInputKey>({
@@ -23,13 +24,14 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
   step,
   selector,
   actionCreator,
+  valueFormatter,
 }: SliderInputProps<Key>) => {
   const value = useSelector(selector)
   const dispatch = useDispatch()
 
   return (
     <label>
-      {label}
+      <p>{label}</p>
 
       <input
         type="range"
@@ -41,6 +43,10 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
           dispatch(actionCreator(Number(event.target.value)))
         }
       />
+
+      <p>Min: {valueFormatter(min)}</p>
+      <p>Max: {valueFormatter(max)}</p>
+      <p>Value: {valueFormatter(value)}</p>
     </label>
   )
 }
