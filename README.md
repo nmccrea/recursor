@@ -1,3 +1,5 @@
-# spaceplane
+# Recursor
 
-A plane in space. A plane OF space. A spatial plane. A planar space. A planespace. A spaceplane?
+A tree fractal creator. It looks something like this:
+
+![Recursor Tree Fractal Creator](docs/images/2020-06-02-demo.gif)

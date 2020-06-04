@@ -2,7 +2,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: `Spaceplane`,
+    title: `Recursor`,
     description: `A project by Nick McCrea.`,
     author: `Nick McCrea`,
   },
