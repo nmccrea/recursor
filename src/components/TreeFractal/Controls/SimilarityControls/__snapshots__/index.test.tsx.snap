@@ -5,9 +5,6 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
   <div
     style="display: flex;"
   >
-    <p>
-      test/subject
-    </p>
     <button>
       Remove
     </button>

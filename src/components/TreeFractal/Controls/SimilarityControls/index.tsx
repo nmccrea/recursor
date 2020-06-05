@@ -22,8 +22,6 @@ interface SimilarityControlsProps {
 
 const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
   <div style={{ display: "flex" }}>
-    <p>{similarityId}</p>
-
     <RemoveSimilarityButton similarityId={similarityId} />
 
     <SliderInput

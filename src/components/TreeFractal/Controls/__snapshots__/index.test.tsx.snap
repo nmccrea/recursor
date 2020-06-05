@@ -8,9 +8,6 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
   <div
     style="display: flex;"
   >
-    <p>
-      test/a
-    </p>
     <button>
       Remove
     </button>
@@ -114,9 +111,6 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
   <div
     style="display: flex;"
   >
-    <p>
-      test/b
-    </p>
     <button>
       Remove
     </button>
@@ -236,9 +230,6 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
   <div
     style="display: flex;"
   >
-    <p>
-      test/subject
-    </p>
     <button>
       Remove
     </button>
