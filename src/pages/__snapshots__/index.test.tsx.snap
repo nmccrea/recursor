@@ -1,0 +1,256 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`<TreeFractalPage />\` renders correctly when there are existing similarities 1`] = `
+<div>
+  <div
+    style="width: 95vw; height: 70vh; display: flex; justify-content: center; align-items: flex-end;"
+  >
+    <div
+      style="width: 10px; height: 200px; position: relative;"
+    >
+      <div
+        class="tree source depth-1"
+        style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-0%) scale(1) rotate(0rad);"
+      >
+        <div
+          class="tree test/a depth-2"
+          style="position: absolute; inset: 0; background-color: gray; transform-origin: center bottom; transform: translateY(-22.98%) scale(0.5651) rotate(0.1236rad);"
+        />
+        <div
+          class="tree test/b depth-2"
+          style="position: absolute; inset: 0; background-color: brown; transform-origin: center bottom; transform: translateY(-21.34%) scale(0.4909) rotate(0.0488rad);"
+        />
+      </div>
+    </div>
+  </div>
+  <button>
+    Add Similarity
+  </button>
+  <div
+    style="display: flex;"
+  >
+    <button>
+      Remove
+    </button>
+    <label>
+      <p>
+        Angle
+      </p>
+      <input
+        max="6.2832"
+        min="-6.2832"
+        step="0.0001"
+        type="range"
+        value="0.1236"
+      />
+      <p>
+        Min: 
+        -2.00π rad
+      </p>
+      <p>
+        Max: 
+        2.00π rad
+      </p>
+      <p>
+        Value: 
+        0.04π rad
+      </p>
+    </label>
+    <label>
+      <p>
+        Scale
+      </p>
+      <input
+        max="2"
+        min="0"
+        step="0.05"
+        type="range"
+        value="0.5651"
+      />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        2.00
+      </p>
+      <p>
+        Value: 
+        0.57
+      </p>
+    </label>
+    <label>
+      <p>
+        Translation
+      </p>
+      <input
+        max="1.5"
+        min="0"
+        step="0.05"
+        type="range"
+        value="0.2298"
+      />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        1.50
+      </p>
+      <p>
+        Value: 
+        0.23
+      </p>
+    </label>
+    <label>
+      <p>
+        Depth
+      </p>
+      <input
+        max="8"
+        min="0"
+        step="1"
+        type="range"
+        value="2"
+      />
+      <p>
+        Min: 
+        0
+      </p>
+      <p>
+        Max: 
+        8
+      </p>
+      <p>
+        Value: 
+        2
+      </p>
+    </label>
+  </div>
+  <div
+    style="display: flex;"
+  >
+    <button>
+      Remove
+    </button>
+    <label>
+      <p>
+        Angle
+      </p>
+      <input
+        max="6.2832"
+        min="-6.2832"
+        step="0.0001"
+        type="range"
+        value="0.0488"
+      />
+      <p>
+        Min: 
+        -2.00π rad
+      </p>
+      <p>
+        Max: 
+        2.00π rad
+      </p>
+      <p>
+        Value: 
+        0.02π rad
+      </p>
+    </label>
+    <label>
+      <p>
+        Scale
+      </p>
+      <input
+        max="2"
+        min="0"
+        step="0.05"
+        type="range"
+        value="0.4909"
+      />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        2.00
+      </p>
+      <p>
+        Value: 
+        0.49
+      </p>
+    </label>
+    <label>
+      <p>
+        Translation
+      </p>
+      <input
+        max="1.5"
+        min="0"
+        step="0.05"
+        type="range"
+        value="0.2134"
+      />
+      <p>
+        Min: 
+        0.00
+      </p>
+      <p>
+        Max: 
+        1.50
+      </p>
+      <p>
+        Value: 
+        0.21
+      </p>
+    </label>
+    <label>
+      <p>
+        Depth
+      </p>
+      <input
+        max="8"
+        min="0"
+        step="1"
+        type="range"
+        value="2"
+      />
+      <p>
+        Min: 
+        0
+      </p>
+      <p>
+        Max: 
+        8
+      </p>
+      <p>
+        Value: 
+        2
+      </p>
+    </label>
+  </div>
+</div>
+`;
+
+exports[`\`<TreeFractalPage />\` renders correctly when there are no similarities 1`] = `
+<div>
+  <div
+    style="width: 95vw; height: 70vh; display: flex; justify-content: center; align-items: flex-end;"
+  >
+    <div
+      style="width: 10px; height: 200px; position: relative;"
+    >
+      <div
+        class="tree source depth-1"
+        style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-0%) scale(1) rotate(0rad);"
+      />
+    </div>
+  </div>
+  <button>
+    Add Similarity
+  </button>
+</div>
+`;
