@@ -1,9 +1,40 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] = `
+<div>
+  <label>
+    <p>
+      Test Input
+    </p>
+    <input
+      max="10"
+      min="0"
+      step="0.1"
+      type="range"
+      value="0.6732"
+    />
+    <p>
+      Min: 
+      fake formatted value
+    </p>
+    <p>
+      Max: 
+      fake formatted value
+    </p>
+    <p>
+      Value: 
+      fake formatted value
+    </p>
+  </label>
+</div>
+`;
+
 exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
 <div>
   <label>
-    Test Subject - Angle
+    <p>
+      Test Subject - Angle
+    </p>
     <input
       max="0.744"
       min="0.422"
@@ -11,9 +42,23 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       type="range"
       value="0.9316"
     />
+    <p>
+      Min: 
+      0.422
+    </p>
+    <p>
+      Max: 
+      0.744
+    </p>
+    <p>
+      Value: 
+      0.9316
+    </p>
   </label>
   <label>
-    Test Subject - Translation
+    <p>
+      Test Subject - Translation
+    </p>
     <input
       max="0.562"
       min="0.824"
@@ -21,6 +66,18 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       type="range"
       value="0.1256"
     />
+    <p>
+      Min: 
+      0.824
+    </p>
+    <p>
+      Max: 
+      0.562
+    </p>
+    <p>
+      Value: 
+      0.1256
+    </p>
   </label>
 </div>
 `;
@@ -28,7 +85,9 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
 exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
 <div>
   <label>
-    Test Input
+    <p>
+      Test Input
+    </p>
     <input
       max="10"
       min="0"
@@ -36,6 +95,18 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
       type="range"
       value="0.5582"
     />
+    <p>
+      Min: 
+      0
+    </p>
+    <p>
+      Max: 
+      10
+    </p>
+    <p>
+      Value: 
+      0.5582
+    </p>
   </label>
 </div>
 `;
