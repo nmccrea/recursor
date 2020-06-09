@@ -1,13 +1,13 @@
 import React from "react"
 import Layout from "../components/Layout"
-import SEO from "../components/SEO"
+import Head from "../components/Head"
 import TreeFractal from "../components/TreeFractal"
 
-const TreeFractalPage = () => (
+const HomePage = () => (
   <Layout>
-    <SEO title="Recursor" />
+    <Head title="Home" />
     <TreeFractal />
   </Layout>
 )
 
-export default TreeFractalPage
+export default HomePage

@@ -3,7 +3,7 @@
 module.exports = {
   siteMetadata: {
     title: `Recursor`,
-    description: `A project by Nick McCrea.`,
+    description: `A tree fractal creator.`,
     author: `Nick McCrea`,
   },
   plugins: [
