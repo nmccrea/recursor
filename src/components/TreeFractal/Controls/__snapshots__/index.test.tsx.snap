@@ -2,9 +2,11 @@
 
 exports[`\`<Controls />\` renders correctly when there are multiple existing similarities. 1`] = `
 <div>
-  <button>
-    Add Similarity
-  </button>
+  <div>
+    <button>
+      Add Similarity
+    </button>
+  </div>
   <div
     style="display: flex;"
   >
@@ -216,17 +218,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 
 exports[`\`<Controls />\` renders correctly when there are no existing similarities 1`] = `
 <div>
-  <button>
-    Add Similarity
-  </button>
+  <div>
+    <button>
+      Add Similarity
+    </button>
+  </div>
 </div>
 `;
 
 exports[`\`<Controls />\` renders correctly when there is one existing similarity 1`] = `
 <div>
-  <button>
-    Add Similarity
-  </button>
+  <div>
+    <button>
+      Add Similarity
+    </button>
+  </div>
   <div
     style="display: flex;"
   >

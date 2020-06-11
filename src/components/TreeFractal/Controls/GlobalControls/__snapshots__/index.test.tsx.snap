@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`<GlobalControls />\` renders correctly 1`] = `
+<div>
+  <div>
+    <button>
+      Add Similarity
+    </button>
+  </div>
+</div>
+`;

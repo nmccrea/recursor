@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
-import { addOne } from "../../../../state/similarities/actions"
-import { SimilarityInputs } from "../../../../state/similarities/types"
+import { addOne } from "../../../../../state/similarities/actions"
+import { SimilarityInputs } from "../../../../../state/similarities/types"
 
 /**
  * Generate a set of new similarity inputs.

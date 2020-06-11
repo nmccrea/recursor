@@ -14,8 +14,10 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
       />
     </div>
   </div>
-  <button>
-    Add Similarity
-  </button>
+  <div>
+    <button>
+      Add Similarity
+    </button>
+  </div>
 </div>
 `;
