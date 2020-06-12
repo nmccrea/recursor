@@ -1,18 +1,26 @@
 import React from "react"
+import styled from "styled-components"
 import Recursion from "../Recursion"
 
+const SourceGeometry = styled.div`
+  width: 6px;
+  height: 120px;
+  position: relative;
+  transform: translateY(100%);
+`
+
 const FractalSource = () => (
-  <div style={{ width: "10px", height: "200px", position: "relative" }}>
+  <SourceGeometry>
     <Recursion
       id="source"
       color="black"
       translation={0}
       scale={1}
       angle={0}
-      depth={Infinity}
+      depth={1}
       currentDepth={0}
     />
-  </div>
+  </SourceGeometry>
 )
 
 export default FractalSource

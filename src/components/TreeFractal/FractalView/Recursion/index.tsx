@@ -1,4 +1,5 @@
 import React from "react"
+import styled from "styled-components"
 import { useSelector } from "react-redux"
 import { selectAll } from "../../../../state/similarities/selectors"
 import {
@@ -10,23 +11,30 @@ import {
   Color,
 } from "../../../../state/similarities/types"
 
-/**
- * Generates a CSS object with styles dictated by the given similarity.
- */
-const styleFor = (
-  translation: Translation,
-  scale: Scale,
-  angle: Angle,
-  color: Color
-) => ({
-  backgroundColor: color,
-  transformOrigin: "center bottom",
-  transform: [
-    `translateY(-${100 * translation}%)`,
-    `scale(${scale})`,
-    `rotate(${angle}rad)`,
-  ].join(" "),
-})
+// Use `styled-components` transient props to prevent prop forwarding.
+// See: https://styled-components.com/docs/api#transient-props
+interface TransformProps {
+  $translation: Translation
+  $scale: Scale
+  $angle: Angle
+  $color: Color
+}
+
+const Geometry = styled.div<TransformProps>`
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+
+  background-color: ${({ $color }) => $color};
+
+  transform-origin: center bottom;
+  transform: ${({ $translation, $scale, $angle }) =>
+    `translateY(-${
+      100 * $translation
+    }%) scale(${$scale}) rotate(${$angle}rad)`};
+`
 
 interface RecursionProps extends Similarity {
   currentDepth: Depth
@@ -34,23 +42,23 @@ interface RecursionProps extends Similarity {
 
 const Recursion = ({
   id,
+  depth,
+  currentDepth,
   translation,
   scale,
   angle,
-  depth,
   color,
-  currentDepth,
 }: RecursionProps) => {
   if (currentDepth >= depth) return null
+
   const similarities = useSelector(selectAll)
   return (
-    <div
-      className={`tree ${id} depth-${currentDepth + 1}`}
-      style={{
-        position: "absolute",
-        inset: 0,
-        ...styleFor(translation, scale, angle, color),
-      }}
+    <Geometry
+      $translation={translation}
+      $scale={scale}
+      $angle={angle}
+      $color={color}
+      className={`similarity-${id} depth-${currentDepth + 1}`}
     >
       {similarities.map((similarity) => (
         <Recursion
@@ -59,7 +67,7 @@ const Recursion = ({
           key={similarity.id}
         />
       ))}
-    </div>
+    </Geometry>
   )
 }
 

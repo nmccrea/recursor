@@ -3,22 +3,21 @@
 exports[`\`<TreeFractal />\` renders correctly 1`] = `
 <div>
   <div
-    class="sc-AxiKw hsNphq"
+    class="sc-AxhUy LaSiD"
   >
     <div
-      class="sc-AxjAm dwAczw"
+      class="sc-AxiKw bkSRTf"
     >
       <div
-        style="width: 10px; height: 200px; position: relative;"
+        class="sc-AxirZ eJFmNH"
       >
         <div
-          class="tree source depth-1"
-          style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-0%) scale(1) rotate(0rad);"
+          class="sc-AxjAm lhlKPj similarity-source depth-1"
         />
       </div>
     </div>
     <div
-      class="sc-AxirZ NQFDz"
+      class="sc-AxhCb jEalCL"
     >
       <div>
         <button>

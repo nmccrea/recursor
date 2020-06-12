@@ -3,28 +3,23 @@
 exports[`\`<FractalSource />\` renders correctly 1`] = `
 <div>
   <div
-    style="width: 10px; height: 200px; position: relative;"
+    class="sc-AxirZ eJFmNH"
   >
     <div
-      class="tree source depth-1"
-      style="position: absolute; inset: 0; background-color: black; transform-origin: center bottom; transform: translateY(-0%) scale(1) rotate(0rad);"
+      class="sc-AxjAm lhlKPj similarity-source depth-1"
     >
       <div
-        class="tree test/a depth-2"
-        style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+        class="sc-AxjAm enjJjR similarity-test/a depth-2"
       >
         <div
-          class="tree test/a depth-3"
-          style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          class="sc-AxjAm enjJjR similarity-test/a depth-3"
         />
       </div>
       <div
-        class="tree test/b depth-2"
-        style="position: absolute; inset: 0; background-color: red; transform-origin: center bottom; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
+        class="sc-AxjAm hDRcvy similarity-test/b depth-2"
       >
         <div
-          class="tree test/a depth-3"
-          style="position: absolute; inset: 0; background-color: green; transform-origin: center bottom; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          class="sc-AxjAm enjJjR similarity-test/a depth-3"
         />
       </div>
     </div>
