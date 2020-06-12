@@ -1,18 +1,18 @@
 import React from "react"
+import styled from "styled-components"
 import FractalSource from "./FractalSource"
 
+const Viewport = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+`
+
 const FractalView = () => (
-  <div
-    style={{
-      width: "95vw",
-      height: "70vh",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "flex-end",
-    }}
-  >
+  <Viewport>
     <FractalSource />
-  </div>
+  </Viewport>
 )
 
 export default FractalView

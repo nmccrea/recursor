@@ -1,18 +1,31 @@
 import React from "react"
+import styled from "styled-components"
 import { useSelector } from "react-redux"
+import { selectIds } from "../../../state/similarities/selectors"
+import { container } from "../../../styles/mixins/box"
 import GlobalControls from "./GlobalControls"
 import SimilarityControls from "./SimilarityControls"
-import { selectIds } from "../../../state/similarities/selectors"
+
+const Container = styled.div`
+  ${container}
+  box-shadow: 0 -3px 5px 2px #bbb;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow-y: auto;
+`
 
 const Controls = () => {
   const similarityIds = useSelector(selectIds)
   return (
-    <>
+    <Container>
       <GlobalControls />
+
       {similarityIds.map((similarityId) => (
         <SimilarityControls similarityId={similarityId} key={similarityId} />
       ))}
-    </>
+    </Container>
   )
 }
 

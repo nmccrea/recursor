@@ -3,7 +3,7 @@
 exports[`\`<FractalView />\` renders correctly 1`] = `
 <div>
   <div
-    style="width: 95vw; height: 70vh; display: flex; justify-content: center; align-items: flex-end;"
+    class="sc-AxjAm dwAczw"
   >
     <div
       style="width: 10px; height: 200px; position: relative;"
