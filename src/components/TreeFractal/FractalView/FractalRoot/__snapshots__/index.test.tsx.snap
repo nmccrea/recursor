@@ -1,12 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`\`<FractalSource />\` renders correctly 1`] = `
+exports[`\`<FractalRoot />\` renders correctly 1`] = `
 <div>
   <div
     class="sc-AxirZ eJFmNH"
   >
     <div
-      class="sc-AxjAm lhlKPj similarity-source depth-1"
+      class="sc-AxjAm lhlKPj similarity-root depth-1"
     >
       <div
         class="sc-AxjAm enjJjR similarity-test/a depth-2"

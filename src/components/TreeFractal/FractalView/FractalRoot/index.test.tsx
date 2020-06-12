@@ -2,9 +2,9 @@ import React from "react"
 import { Provider } from "react-redux"
 import { render } from "@testing-library/react"
 import { createStore, RootState } from "../../../../state/store"
-import FractalSource from "."
+import FractalRoot from "."
 
-describe("`<FractalSource />`", () => {
+describe("`<FractalRoot />`", () => {
   it("renders correctly", () => {
     const state: RootState = {
       similarities: {
@@ -32,7 +32,7 @@ describe("`<FractalSource />`", () => {
 
     const { container } = render(
       <Provider store={createStore(state)}>
-        <FractalSource />
+        <FractalRoot />
       </Provider>
     )
 

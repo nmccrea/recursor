@@ -12,7 +12,7 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
         class="sc-AxirZ eJFmNH"
       >
         <div
-          class="sc-AxjAm lhlKPj similarity-source depth-1"
+          class="sc-AxjAm lhlKPj similarity-root depth-1"
         />
       </div>
     </div>

@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import FractalSource from "./FractalSource"
+import FractalRoot from "./FractalRoot"
 
 const Viewport = styled.div`
   display: flex;
@@ -11,7 +11,7 @@ const Viewport = styled.div`
 
 const FractalView = () => (
   <Viewport>
-    <FractalSource />
+    <FractalRoot />
   </Viewport>
 )
 
