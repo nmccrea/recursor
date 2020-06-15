@@ -1,7 +1,7 @@
 import { css } from "styled-components"
 
 /**
- * A simple padded container.
+ * Creates a simple padded container.
  */
 export const container = css`
   display: block;
