@@ -1,8 +1,8 @@
 import React from "react"
 import { Provider } from "react-redux"
-import { render, fireEvent, getByText } from "@testing-library/react"
+import { render, fireEvent, getByRole } from "@testing-library/react"
 import { createStore, RootState } from "../../../../../state/store"
-import AddsimilarityButton from "."
+import AddSimilarityButton from "."
 
 jest.mock("@reduxjs/toolkit", () => ({
   ...jest.requireActual("@reduxjs/toolkit"),
@@ -13,7 +13,7 @@ describe("`<AddSimilarityButton />`", () => {
   it("renders correctly", () => {
     const { container } = render(
       <Provider store={createStore()}>
-        <AddsimilarityButton />
+        <AddSimilarityButton />
       </Provider>
     )
 
@@ -25,11 +25,11 @@ describe("`<AddSimilarityButton />`", () => {
     const store = createStore(state)
     const { container } = render(
       <Provider store={store}>
-        <AddsimilarityButton />
+        <AddSimilarityButton />
       </Provider>
     )
 
-    fireEvent.click(getByText(container, "Add Similarity"))
+    fireEvent.click(getByRole(container, "button"))
 
     expect(store.getState()).toEqual<RootState>({
       similarities: {

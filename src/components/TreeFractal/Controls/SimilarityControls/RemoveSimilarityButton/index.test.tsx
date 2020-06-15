@@ -1,6 +1,6 @@
 import React from "react"
 import { Provider } from "react-redux"
-import { render, fireEvent, getByText } from "@testing-library/react"
+import { render, fireEvent, getByRole } from "@testing-library/react"
 import { createStore, RootState } from "../../../../../state/store"
 import RemoveSimilarityButton from "."
 
@@ -62,7 +62,7 @@ describe("`<RemoveSimilarityButton />`", () => {
       </Provider>
     )
 
-    fireEvent.click(getByText(container, "Remove"))
+    fireEvent.click(getByRole(container, "button"))
 
     expect(store.getState()).toEqual<RootState>({
       similarities: {
