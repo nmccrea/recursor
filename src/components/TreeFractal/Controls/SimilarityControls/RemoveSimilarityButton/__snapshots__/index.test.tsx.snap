@@ -2,7 +2,9 @@
 
 exports[`\`<RemoveSimilarityButton />\` renders correctly 1`] = `
 <div>
-  <button>
+  <button
+    class="sc-AxjAm sc-AxiKw dWhrYK"
+  >
     Remove
   </button>
 </div>

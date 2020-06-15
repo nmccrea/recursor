@@ -3,8 +3,10 @@
 exports[`\`<GlobalControls />\` renders correctly 1`] = `
 <div>
   <div>
-    <button>
-      Add Similarity
+    <button
+      class="sc-AxjAm sc-AxirZ eenqZt"
+    >
+      Add
     </button>
   </div>
 </div>

@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { addOne } from "../../../../../state/similarities/actions"
 import { SimilarityInputs } from "../../../../../state/similarities/types"
+import { ButtonPrimary } from "../../../../parts/Button"
 
 /**
  * Generate a set of new similarity inputs.
@@ -19,9 +20,11 @@ const generateNewSimilarityInputs = (): SimilarityInputs => ({
 const AddSimilarityButton = () => {
   const dispatch = useDispatch()
   return (
-    <button onClick={() => dispatch(addOne(generateNewSimilarityInputs()))}>
-      Add Similarity
-    </button>
+    <ButtonPrimary
+      onClick={() => dispatch(addOne(generateNewSimilarityInputs()))}
+    >
+      Add
+    </ButtonPrimary>
   )
 }
 

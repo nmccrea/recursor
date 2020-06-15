@@ -2,6 +2,7 @@ import React from "react"
 import { useDispatch } from "react-redux"
 import { removeOne } from "../../../../../state/similarities/actions"
 import { SimilarityId } from "../../../../../state/similarities/types"
+import { ButtonDanger } from "../../../../parts/Button"
 
 interface RemoveSimilarityButtonProps {
   similarityId: SimilarityId
@@ -12,13 +13,13 @@ const RemoveSimilarityButton = ({
 }: RemoveSimilarityButtonProps) => {
   const dispatch = useDispatch()
   return (
-    <button
+    <ButtonDanger
       onClick={() => {
         dispatch(removeOne(similarityId))
       }}
     >
       Remove
-    </button>
+    </ButtonDanger>
   )
 }
 

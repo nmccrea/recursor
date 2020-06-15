@@ -3,7 +3,7 @@
 exports[`\`<TreeFractal />\` renders correctly 1`] = `
 <div>
   <div
-    class="sc-AxhUy LaSiD"
+    class="sc-Axmtr iJPnRM"
   >
     <div
       class="sc-AxiKw bkSRTf"
@@ -17,11 +17,13 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-AxhCb jEalCL"
+      class="sc-AxheI hVoCyi"
     >
       <div>
-        <button>
-          Add Similarity
+        <button
+          class="sc-AxhCb sc-AxhUy eaRFYs"
+        >
+          Add
         </button>
       </div>
     </div>

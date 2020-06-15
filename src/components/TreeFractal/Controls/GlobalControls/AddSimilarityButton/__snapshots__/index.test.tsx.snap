@@ -2,8 +2,10 @@
 
 exports[`\`<AddSimilarityButton />\` renders correctly 1`] = `
 <div>
-  <button>
-    Add Similarity
+  <button
+    class="sc-AxjAm sc-AxirZ eenqZt"
+  >
+    Add
   </button>
 </div>
 `;
