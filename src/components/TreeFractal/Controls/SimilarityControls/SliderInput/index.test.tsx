@@ -34,6 +34,7 @@ describe("`<SliderInput />`", () => {
       <Provider store={createStore(state)}>
         <SliderInput
           label="Test Subject - Angle"
+          htmlId="test-subject-angle"
           min={0.422}
           max={0.744}
           step={0.001}
@@ -43,6 +44,7 @@ describe("`<SliderInput />`", () => {
         />
         <SliderInput
           label="Test Subject - Translation"
+          htmlId="test-subject-translation"
           min={0.824}
           max={0.562}
           step={0.001}
@@ -77,6 +79,7 @@ describe("`<SliderInput />`", () => {
       <Provider store={createStore(state)}>
         <SliderInput
           label="Test Input"
+          htmlId="test-input"
           min={0}
           max={10}
           step={0.1}
@@ -111,6 +114,7 @@ describe("`<SliderInput />`", () => {
       <Provider store={createStore(state)}>
         <SliderInput
           label="Test Input"
+          htmlId="test-input"
           min={0}
           max={10}
           step={0.1}

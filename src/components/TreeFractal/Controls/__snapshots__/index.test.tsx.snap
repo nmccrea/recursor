@@ -25,11 +25,14 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       <div
         class="sc-AxhUy eVFjRW"
       >
-        <label>
-          <p>
+        <div>
+          <label
+            for="test/a-angle"
+          >
             Angle
-          </p>
+          </label>
           <input
+            id="test/a-angle"
             max="6.2832"
             min="-6.2832"
             step="0.0001"
@@ -46,14 +49,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            0.04π rad
+            <output
+              for="test/a-angle"
+            >
+              0.04π rad
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/a-scale"
+          >
             Scale
-          </p>
+          </label>
           <input
+            id="test/a-scale"
             max="2"
             min="0"
             step="0.05"
@@ -70,14 +80,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            0.78
+            <output
+              for="test/a-scale"
+            >
+              0.78
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/a-translation"
+          >
             Translation
-          </p>
+          </label>
           <input
+            id="test/a-translation"
             max="1.5"
             min="0"
             step="0.05"
@@ -94,14 +111,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            0.47
+            <output
+              for="test/a-translation"
+            >
+              0.47
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/a-depth"
+          >
             Depth
-          </p>
+          </label>
           <input
+            id="test/a-depth"
             max="8"
             min="0"
             step="1"
@@ -118,9 +142,13 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            3
+            <output
+              for="test/a-depth"
+            >
+              3
+            </output>
           </p>
-        </label>
+        </div>
       </div>
     </div>
     <div
@@ -136,11 +164,14 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       <div
         class="sc-AxhUy eVFjRW"
       >
-        <label>
-          <p>
+        <div>
+          <label
+            for="test/b-angle"
+          >
             Angle
-          </p>
+          </label>
           <input
+            id="test/b-angle"
             max="6.2832"
             min="-6.2832"
             step="0.0001"
@@ -157,14 +188,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            0.15π rad
+            <output
+              for="test/b-angle"
+            >
+              0.15π rad
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/b-scale"
+          >
             Scale
-          </p>
+          </label>
           <input
+            id="test/b-scale"
             max="2"
             min="0"
             step="0.05"
@@ -181,14 +219,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            0.72
+            <output
+              for="test/b-scale"
+            >
+              0.72
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/b-translation"
+          >
             Translation
-          </p>
+          </label>
           <input
+            id="test/b-translation"
             max="1.5"
             min="0"
             step="0.05"
@@ -205,14 +250,21 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            0.74
+            <output
+              for="test/b-translation"
+            >
+              0.74
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/b-depth"
+          >
             Depth
-          </p>
+          </label>
           <input
+            id="test/b-depth"
             max="8"
             min="0"
             step="1"
@@ -229,9 +281,13 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           </p>
           <p>
             Value: 
-            7
+            <output
+              for="test/b-depth"
+            >
+              7
+            </output>
           </p>
-        </label>
+        </div>
       </div>
     </div>
   </div>
@@ -279,11 +335,14 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
       <div
         class="sc-AxhUy eVFjRW"
       >
-        <label>
-          <p>
+        <div>
+          <label
+            for="test/subject-angle"
+          >
             Angle
-          </p>
+          </label>
           <input
+            id="test/subject-angle"
             max="6.2832"
             min="-6.2832"
             step="0.0001"
@@ -300,14 +359,21 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           </p>
           <p>
             Value: 
-            0.04π rad
+            <output
+              for="test/subject-angle"
+            >
+              0.04π rad
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/subject-scale"
+          >
             Scale
-          </p>
+          </label>
           <input
+            id="test/subject-scale"
             max="2"
             min="0"
             step="0.05"
@@ -324,14 +390,21 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           </p>
           <p>
             Value: 
-            0.78
+            <output
+              for="test/subject-scale"
+            >
+              0.78
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/subject-translation"
+          >
             Translation
-          </p>
+          </label>
           <input
+            id="test/subject-translation"
             max="1.5"
             min="0"
             step="0.05"
@@ -348,14 +421,21 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           </p>
           <p>
             Value: 
-            0.47
+            <output
+              for="test/subject-translation"
+            >
+              0.47
+            </output>
           </p>
-        </label>
-        <label>
-          <p>
+        </div>
+        <div>
+          <label
+            for="test/subject-depth"
+          >
             Depth
-          </p>
+          </label>
           <input
+            id="test/subject-depth"
             max="8"
             min="0"
             step="1"
@@ -372,9 +452,13 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           </p>
           <p>
             Value: 
-            3
+            <output
+              for="test/subject-depth"
+            >
+              3
+            </output>
           </p>
-        </label>
+        </div>
       </div>
     </div>
   </div>

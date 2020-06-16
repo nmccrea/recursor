@@ -9,6 +9,7 @@ import {
 
 export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
   label: string
+  htmlId: string
   min: SimilarityNumericInputs[Key]
   max: SimilarityNumericInputs[Key]
   step: SimilarityNumericInputs[Key]
@@ -19,6 +20,7 @@ export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
 
 const SliderInput = <Key extends SimilarityNumericInputKey>({
   label,
+  htmlId,
   min,
   max,
   step,
@@ -30,10 +32,11 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
   const dispatch = useDispatch()
 
   return (
-    <label>
-      <p>{label}</p>
+    <div>
+      <label htmlFor={htmlId}>{label}</label>
 
       <input
+        id={htmlId}
         type="range"
         value={value}
         min={min}
@@ -46,8 +49,10 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
 
       <p>Min: {valueFormatter(min)}</p>
       <p>Max: {valueFormatter(max)}</p>
-      <p>Value: {valueFormatter(value)}</p>
-    </label>
+      <p>
+        Value: <output htmlFor={htmlId}>{valueFormatter(value)}</output>
+      </p>
+    </div>
   )
 }
 

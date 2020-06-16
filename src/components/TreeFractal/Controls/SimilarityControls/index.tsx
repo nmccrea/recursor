@@ -45,6 +45,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
     <Inputs>
       <SliderInput
         label="Angle"
+        htmlId={`${similarityId}-angle`}
         // `min` and `max` must both be multiples of `step`
         min={-Math.round((2 * Math.PI) / 0.0001) * 0.0001}
         max={Math.round((2 * Math.PI) / 0.0001) * 0.0001}
@@ -56,6 +57,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
 
       <SliderInput
         label="Scale"
+        htmlId={`${similarityId}-scale`}
         min={0}
         max={2}
         step={0.05}
@@ -66,6 +68,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
 
       <SliderInput
         label="Translation"
+        htmlId={`${similarityId}-translation`}
         min={0}
         max={1.5}
         step={0.05}
@@ -76,6 +79,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
 
       <SliderInput
         label="Depth"
+        htmlId={`${similarityId}-depth`}
         min={0}
         max={8}
         step={1}

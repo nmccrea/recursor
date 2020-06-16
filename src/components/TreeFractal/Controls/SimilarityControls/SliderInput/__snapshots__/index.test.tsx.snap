@@ -2,11 +2,14 @@
 
 exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] = `
 <div>
-  <label>
-    <p>
+  <div>
+    <label
+      for="test-input"
+    >
       Test Input
-    </p>
+    </label>
     <input
+      id="test-input"
       max="10"
       min="0"
       step="0.1"
@@ -23,19 +26,26 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
     </p>
     <p>
       Value: 
-      fake formatted value
+      <output
+        for="test-input"
+      >
+        fake formatted value
+      </output>
     </p>
-  </label>
+  </div>
 </div>
 `;
 
 exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
 <div>
-  <label>
-    <p>
+  <div>
+    <label
+      for="test-subject-angle"
+    >
       Test Subject - Angle
-    </p>
+    </label>
     <input
+      id="test-subject-angle"
       max="0.744"
       min="0.422"
       step="0.001"
@@ -52,14 +62,21 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
     </p>
     <p>
       Value: 
-      0.9316
+      <output
+        for="test-subject-angle"
+      >
+        0.9316
+      </output>
     </p>
-  </label>
-  <label>
-    <p>
+  </div>
+  <div>
+    <label
+      for="test-subject-translation"
+    >
       Test Subject - Translation
-    </p>
+    </label>
     <input
+      id="test-subject-translation"
       max="0.562"
       min="0.824"
       step="0.001"
@@ -76,19 +93,26 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
     </p>
     <p>
       Value: 
-      0.1256
+      <output
+        for="test-subject-translation"
+      >
+        0.1256
+      </output>
     </p>
-  </label>
+  </div>
 </div>
 `;
 
 exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
 <div>
-  <label>
-    <p>
+  <div>
+    <label
+      for="test-input"
+    >
       Test Input
-    </p>
+    </label>
     <input
+      id="test-input"
       max="10"
       min="0"
       step="0.1"
@@ -105,8 +129,12 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
     </p>
     <p>
       Value: 
-      0.5582
+      <output
+        for="test-input"
+      >
+        0.5582
+      </output>
     </p>
-  </label>
+  </div>
 </div>
 `;
