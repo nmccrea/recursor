@@ -3,7 +3,7 @@
 exports[`\`<Controls />\` renders correctly when there are multiple existing similarities. 1`] = `
 <div>
   <div
-    class="sc-AxhCb jEalCL"
+    class="sc-AxgMl eaBdeQ"
   >
     <div>
       <button
@@ -13,214 +13,226 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       </button>
     </div>
     <div
-      style="display: flex;"
+      class="sc-AxhCb cBgcGW"
     >
-      <button
-        class="sc-AxjAm sc-AxiKw dWhrYK"
+      <div>
+        <button
+          class="sc-AxjAm sc-AxiKw dWhrYK"
+        >
+          Remove
+        </button>
+      </div>
+      <div
+        class="sc-AxhUy eVFjRW"
       >
-        Remove
-      </button>
-      <label>
-        <p>
-          Angle
-        </p>
-        <input
-          max="6.2832"
-          min="-6.2832"
-          step="0.0001"
-          type="range"
-          value="0.1385"
-        />
-        <p>
-          Min: 
-          -2.00π rad
-        </p>
-        <p>
-          Max: 
-          2.00π rad
-        </p>
-        <p>
-          Value: 
-          0.04π rad
-        </p>
-      </label>
-      <label>
-        <p>
-          Scale
-        </p>
-        <input
-          max="2"
-          min="0"
-          step="0.05"
-          type="range"
-          value="0.7791"
-        />
-        <p>
-          Min: 
-          0.00
-        </p>
-        <p>
-          Max: 
-          2.00
-        </p>
-        <p>
-          Value: 
-          0.78
-        </p>
-      </label>
-      <label>
-        <p>
-          Translation
-        </p>
-        <input
-          max="1.5"
-          min="0"
-          step="0.05"
-          type="range"
-          value="0.4663"
-        />
-        <p>
-          Min: 
-          0.00
-        </p>
-        <p>
-          Max: 
-          1.50
-        </p>
-        <p>
-          Value: 
-          0.47
-        </p>
-      </label>
-      <label>
-        <p>
-          Depth
-        </p>
-        <input
-          max="8"
-          min="0"
-          step="1"
-          type="range"
-          value="3"
-        />
-        <p>
-          Min: 
-          0
-        </p>
-        <p>
-          Max: 
-          8
-        </p>
-        <p>
-          Value: 
-          3
-        </p>
-      </label>
+        <label>
+          <p>
+            Angle
+          </p>
+          <input
+            max="6.2832"
+            min="-6.2832"
+            step="0.0001"
+            type="range"
+            value="0.1385"
+          />
+          <p>
+            Min: 
+            -2.00π rad
+          </p>
+          <p>
+            Max: 
+            2.00π rad
+          </p>
+          <p>
+            Value: 
+            0.04π rad
+          </p>
+        </label>
+        <label>
+          <p>
+            Scale
+          </p>
+          <input
+            max="2"
+            min="0"
+            step="0.05"
+            type="range"
+            value="0.7791"
+          />
+          <p>
+            Min: 
+            0.00
+          </p>
+          <p>
+            Max: 
+            2.00
+          </p>
+          <p>
+            Value: 
+            0.78
+          </p>
+        </label>
+        <label>
+          <p>
+            Translation
+          </p>
+          <input
+            max="1.5"
+            min="0"
+            step="0.05"
+            type="range"
+            value="0.4663"
+          />
+          <p>
+            Min: 
+            0.00
+          </p>
+          <p>
+            Max: 
+            1.50
+          </p>
+          <p>
+            Value: 
+            0.47
+          </p>
+        </label>
+        <label>
+          <p>
+            Depth
+          </p>
+          <input
+            max="8"
+            min="0"
+            step="1"
+            type="range"
+            value="3"
+          />
+          <p>
+            Min: 
+            0
+          </p>
+          <p>
+            Max: 
+            8
+          </p>
+          <p>
+            Value: 
+            3
+          </p>
+        </label>
+      </div>
     </div>
     <div
-      style="display: flex;"
+      class="sc-AxhCb cBgcGW"
     >
-      <button
-        class="sc-AxjAm sc-AxiKw dWhrYK"
+      <div>
+        <button
+          class="sc-AxjAm sc-AxiKw dWhrYK"
+        >
+          Remove
+        </button>
+      </div>
+      <div
+        class="sc-AxhUy eVFjRW"
       >
-        Remove
-      </button>
-      <label>
-        <p>
-          Angle
-        </p>
-        <input
-          max="6.2832"
-          min="-6.2832"
-          step="0.0001"
-          type="range"
-          value="0.4692"
-        />
-        <p>
-          Min: 
-          -2.00π rad
-        </p>
-        <p>
-          Max: 
-          2.00π rad
-        </p>
-        <p>
-          Value: 
-          0.15π rad
-        </p>
-      </label>
-      <label>
-        <p>
-          Scale
-        </p>
-        <input
-          max="2"
-          min="0"
-          step="0.05"
-          type="range"
-          value="0.7202"
-        />
-        <p>
-          Min: 
-          0.00
-        </p>
-        <p>
-          Max: 
-          2.00
-        </p>
-        <p>
-          Value: 
-          0.72
-        </p>
-      </label>
-      <label>
-        <p>
-          Translation
-        </p>
-        <input
-          max="1.5"
-          min="0"
-          step="0.05"
-          type="range"
-          value="0.7432"
-        />
-        <p>
-          Min: 
-          0.00
-        </p>
-        <p>
-          Max: 
-          1.50
-        </p>
-        <p>
-          Value: 
-          0.74
-        </p>
-      </label>
-      <label>
-        <p>
-          Depth
-        </p>
-        <input
-          max="8"
-          min="0"
-          step="1"
-          type="range"
-          value="7"
-        />
-        <p>
-          Min: 
-          0
-        </p>
-        <p>
-          Max: 
-          8
-        </p>
-        <p>
-          Value: 
-          7
-        </p>
-      </label>
+        <label>
+          <p>
+            Angle
+          </p>
+          <input
+            max="6.2832"
+            min="-6.2832"
+            step="0.0001"
+            type="range"
+            value="0.4692"
+          />
+          <p>
+            Min: 
+            -2.00π rad
+          </p>
+          <p>
+            Max: 
+            2.00π rad
+          </p>
+          <p>
+            Value: 
+            0.15π rad
+          </p>
+        </label>
+        <label>
+          <p>
+            Scale
+          </p>
+          <input
+            max="2"
+            min="0"
+            step="0.05"
+            type="range"
+            value="0.7202"
+          />
+          <p>
+            Min: 
+            0.00
+          </p>
+          <p>
+            Max: 
+            2.00
+          </p>
+          <p>
+            Value: 
+            0.72
+          </p>
+        </label>
+        <label>
+          <p>
+            Translation
+          </p>
+          <input
+            max="1.5"
+            min="0"
+            step="0.05"
+            type="range"
+            value="0.7432"
+          />
+          <p>
+            Min: 
+            0.00
+          </p>
+          <p>
+            Max: 
+            1.50
+          </p>
+          <p>
+            Value: 
+            0.74
+          </p>
+        </label>
+        <label>
+          <p>
+            Depth
+          </p>
+          <input
+            max="8"
+            min="0"
+            step="1"
+            type="range"
+            value="7"
+          />
+          <p>
+            Min: 
+            0
+          </p>
+          <p>
+            Max: 
+            8
+          </p>
+          <p>
+            Value: 
+            7
+          </p>
+        </label>
+      </div>
     </div>
   </div>
 </div>
@@ -229,7 +241,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 exports[`\`<Controls />\` renders correctly when there are no existing similarities 1`] = `
 <div>
   <div
-    class="sc-AxhCb jEalCL"
+    class="sc-AxgMl eaBdeQ"
   >
     <div>
       <button
@@ -245,7 +257,7 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
 exports[`\`<Controls />\` renders correctly when there is one existing similarity 1`] = `
 <div>
   <div
-    class="sc-AxhCb jEalCL"
+    class="sc-AxgMl eaBdeQ"
   >
     <div>
       <button
@@ -255,109 +267,115 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
       </button>
     </div>
     <div
-      style="display: flex;"
+      class="sc-AxhCb cBgcGW"
     >
-      <button
-        class="sc-AxjAm sc-AxiKw dWhrYK"
+      <div>
+        <button
+          class="sc-AxjAm sc-AxiKw dWhrYK"
+        >
+          Remove
+        </button>
+      </div>
+      <div
+        class="sc-AxhUy eVFjRW"
       >
-        Remove
-      </button>
-      <label>
-        <p>
-          Angle
-        </p>
-        <input
-          max="6.2832"
-          min="-6.2832"
-          step="0.0001"
-          type="range"
-          value="0.1385"
-        />
-        <p>
-          Min: 
-          -2.00π rad
-        </p>
-        <p>
-          Max: 
-          2.00π rad
-        </p>
-        <p>
-          Value: 
-          0.04π rad
-        </p>
-      </label>
-      <label>
-        <p>
-          Scale
-        </p>
-        <input
-          max="2"
-          min="0"
-          step="0.05"
-          type="range"
-          value="0.7791"
-        />
-        <p>
-          Min: 
-          0.00
-        </p>
-        <p>
-          Max: 
-          2.00
-        </p>
-        <p>
-          Value: 
-          0.78
-        </p>
-      </label>
-      <label>
-        <p>
-          Translation
-        </p>
-        <input
-          max="1.5"
-          min="0"
-          step="0.05"
-          type="range"
-          value="0.4663"
-        />
-        <p>
-          Min: 
-          0.00
-        </p>
-        <p>
-          Max: 
-          1.50
-        </p>
-        <p>
-          Value: 
-          0.47
-        </p>
-      </label>
-      <label>
-        <p>
-          Depth
-        </p>
-        <input
-          max="8"
-          min="0"
-          step="1"
-          type="range"
-          value="3"
-        />
-        <p>
-          Min: 
-          0
-        </p>
-        <p>
-          Max: 
-          8
-        </p>
-        <p>
-          Value: 
-          3
-        </p>
-      </label>
+        <label>
+          <p>
+            Angle
+          </p>
+          <input
+            max="6.2832"
+            min="-6.2832"
+            step="0.0001"
+            type="range"
+            value="0.1385"
+          />
+          <p>
+            Min: 
+            -2.00π rad
+          </p>
+          <p>
+            Max: 
+            2.00π rad
+          </p>
+          <p>
+            Value: 
+            0.04π rad
+          </p>
+        </label>
+        <label>
+          <p>
+            Scale
+          </p>
+          <input
+            max="2"
+            min="0"
+            step="0.05"
+            type="range"
+            value="0.7791"
+          />
+          <p>
+            Min: 
+            0.00
+          </p>
+          <p>
+            Max: 
+            2.00
+          </p>
+          <p>
+            Value: 
+            0.78
+          </p>
+        </label>
+        <label>
+          <p>
+            Translation
+          </p>
+          <input
+            max="1.5"
+            min="0"
+            step="0.05"
+            type="range"
+            value="0.4663"
+          />
+          <p>
+            Min: 
+            0.00
+          </p>
+          <p>
+            Max: 
+            1.50
+          </p>
+          <p>
+            Value: 
+            0.47
+          </p>
+        </label>
+        <label>
+          <p>
+            Depth
+          </p>
+          <input
+            max="8"
+            min="0"
+            step="1"
+            type="range"
+            value="3"
+          />
+          <p>
+            Min: 
+            0
+          </p>
+          <p>
+            Max: 
+            8
+          </p>
+          <p>
+            Value: 
+            3
+          </p>
+        </label>
+      </div>
     </div>
   </div>
 </div>
