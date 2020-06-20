@@ -1,15 +1,10 @@
+import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
-import GlobalStyle from "../../styles/GlobalStyle"
 
 interface Props {
   children: React.ReactNode
 }
 
-const Layout = ({ children }: Props) => (
-  <>
-    <GlobalStyle />
-    {children}
-  </>
-)
+const Layout = ({ children }: Props) => children
 
 export default Layout
