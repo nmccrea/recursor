@@ -11,8 +11,6 @@ import {
   Color,
 } from "../../../../state/similarities/types"
 
-// Use `styled-components` transient props to prevent prop forwarding.
-// See: https://styled-components.com/docs/api#transient-props
 interface TransformProps {
   $translation: Translation
   $scale: Scale
@@ -20,7 +18,7 @@ interface TransformProps {
   $color: Color
 }
 
-const Geometry = styled.div<TransformProps>`
+const RecursionGeometry = styled.div<TransformProps>`
   position: absolute;
   top: 0px;
   bottom: 0px;
@@ -53,7 +51,7 @@ const Recursion = ({
 
   const similarities = useSelector(selectAll)
   return (
-    <Geometry
+    <RecursionGeometry
       $translation={translation}
       $scale={scale}
       $angle={angle}
@@ -67,7 +65,7 @@ const Recursion = ({
           key={similarity.id}
         />
       ))}
-    </Geometry>
+    </RecursionGeometry>
   )
 }
 
