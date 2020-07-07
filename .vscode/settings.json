@@ -1,4 +1,5 @@
 {
   "eslint.lintTask.options": "--ext js,jsx,ts,tsx src",
-  "workbench.tree.indent": 20
+  "workbench.tree.indent": 20,
+  "explorer.sortOrder": "filesFirst"
 }
