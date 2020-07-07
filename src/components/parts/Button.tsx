@@ -1,20 +1,19 @@
 import styled from "styled-components"
-import { colorPrimary, colorDanger } from "../../styles/colors"
-import { borderRadius } from "../../styles/mixins/borderRadius"
+import { colorPrimary, colorDanger } from "../../styles/theme/colors"
+import { borderRadius } from "../../styles/utilities/borderRadius"
 import {
-  shadowDefault,
-  shadowHover,
-  shadowActive,
-} from "../../styles/mixins/shadow"
+  shadowSmall,
+  shadowMedium,
+  shadowLarge,
+} from "../../styles/utilities/shadow"
 
 /**
  * A generic button element with visual feedback on hover and click.
  */
 export const Button = styled.button`
   ${borderRadius}
-  ${shadowDefault}
+  ${shadowSmall}
 
-  border: 0;
   padding: 6px 16px;
 
   background-color: lightgray;
@@ -25,12 +24,12 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    ${shadowHover}
+    ${shadowMedium}
     filter: brightness(95%);
   }
 
   &:active {
-    ${shadowActive}
+    ${shadowLarge}
     filter: brightness(100%);
   }
 `

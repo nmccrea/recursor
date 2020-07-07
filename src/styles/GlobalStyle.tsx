@@ -1,12 +1,17 @@
 import { createGlobalStyle } from "styled-components"
 import { normalize } from "styled-normalize"
+import { fontSans } from "./utilities/typography"
 
 export default createGlobalStyle`
   ${normalize}
 
+  // Reset default font.
   body {
-    font-family: Roboto, Arial, sans-serif;
-    font-size: 14px;
-    font-weight: 600;
+    ${fontSans}
+  }
+
+  // Reset button borders.
+  button {
+    border: none;
   }
 `

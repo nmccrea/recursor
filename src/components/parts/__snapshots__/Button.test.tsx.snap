@@ -3,7 +3,7 @@
 exports[`\`<Button />\` renders correctly 1`] = `
 <div>
   <button
-    class="sc-AxjAm daexxO"
+    class="sc-AxjAm iGplDk"
   />
 </div>
 `;
@@ -11,7 +11,7 @@ exports[`\`<Button />\` renders correctly 1`] = `
 exports[`\`<ButtonDanger />\` renders correctly 1`] = `
 <div>
   <button
-    class="sc-AxjAm sc-AxiKw dWhrYK"
+    class="sc-AxjAm sc-AxiKw cgflug"
   />
 </div>
 `;
@@ -19,7 +19,7 @@ exports[`\`<ButtonDanger />\` renders correctly 1`] = `
 exports[`\`<ButtonPrimary />\` renders correctly 1`] = `
 <div>
   <button
-    class="sc-AxjAm sc-AxirZ eenqZt"
+    class="sc-AxjAm sc-AxirZ CUWHb"
   />
 </div>
 `;

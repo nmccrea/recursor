@@ -2,12 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { useSelector } from "react-redux"
 import { selectIds } from "../../../state/similarities/selectors"
-import { container } from "../../../styles/mixins/box"
 import GlobalControls from "./GlobalControls"
 import SimilarityControls from "./SimilarityControls"
 
 const Container = styled.div`
-  ${container}
+  padding: 0.5rem;
   box-shadow: 0 -3px 5px 2px #bbb;
 
   display: flex;
