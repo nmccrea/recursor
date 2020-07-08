@@ -46,7 +46,7 @@ const formatAngle = (value?: number, options?: AngleFormatOptions) => {
   return formatNumber(convertedValue, {
     ...DEFAULT_ANGLE_FORMAT_OPTIONS,
     ...options,
-    suffix: "π rad",
+    suffix: "π",
   })
 }
 
