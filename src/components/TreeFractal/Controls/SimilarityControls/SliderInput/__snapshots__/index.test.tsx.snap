@@ -2,13 +2,17 @@
 
 exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] = `
 <div>
-  <div>
+  <div
+    class="sc-AxjAm jGLlPB"
+  >
     <label
+      class="sc-AxirZ bgcmOO"
       for="test-input"
     >
       Test Input
     </label>
     <input
+      class="sc-AxiKw gsXQqj"
       id="test-input"
       max="10"
       min="0"
@@ -16,35 +20,47 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
       type="range"
       value="0.6732"
     />
-    <p>
-      Min: 
-      fake formatted value
-    </p>
-    <p>
-      Max: 
-      fake formatted value
-    </p>
-    <p>
-      Value: 
+    <span
+      class="sc-AxhCb hSkuxf"
+    >
       <output
         for="test-input"
       >
         fake formatted value
       </output>
-    </p>
+      <span
+        class="sc-AxheI fFWgbo"
+      >
+         
+      </span>
+    </span>
+    <span
+      class="sc-AxhUy jQYyyH"
+    >
+      fake formatted value
+    </span>
+    <span
+      class="sc-AxgMl QdATi"
+    >
+      fake formatted value
+    </span>
   </div>
 </div>
 `;
 
 exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
 <div>
-  <div>
+  <div
+    class="sc-AxjAm jGLlPB"
+  >
     <label
+      class="sc-AxirZ bgcmOO"
       for="test-subject-angle"
     >
       Test Subject - Angle
     </label>
     <input
+      class="sc-AxiKw gsXQqj"
       id="test-subject-angle"
       max="0.744"
       min="0.422"
@@ -52,30 +68,42 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       type="range"
       value="0.9316"
     />
-    <p>
-      Min: 
-      0.422
-    </p>
-    <p>
-      Max: 
-      0.744
-    </p>
-    <p>
-      Value: 
+    <span
+      class="sc-AxhCb hSkuxf"
+    >
       <output
         for="test-subject-angle"
       >
         0.9316
       </output>
-    </p>
+      <span
+        class="sc-AxheI fFWgbo"
+      >
+         
+      </span>
+    </span>
+    <span
+      class="sc-AxhUy jQYyyH"
+    >
+      0.422
+    </span>
+    <span
+      class="sc-AxgMl QdATi"
+    >
+      0.744
+    </span>
   </div>
-  <div>
+  <div
+    class="sc-AxjAm jGLlPB"
+  >
     <label
+      class="sc-AxirZ bgcmOO"
       for="test-subject-translation"
     >
       Test Subject - Translation
     </label>
     <input
+      class="sc-AxiKw gsXQqj"
       id="test-subject-translation"
       max="0.562"
       min="0.824"
@@ -83,35 +111,47 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       type="range"
       value="0.1256"
     />
-    <p>
-      Min: 
-      0.824
-    </p>
-    <p>
-      Max: 
-      0.562
-    </p>
-    <p>
-      Value: 
+    <span
+      class="sc-AxhCb hSkuxf"
+    >
       <output
         for="test-subject-translation"
       >
         0.1256
       </output>
-    </p>
+      <span
+        class="sc-AxheI fFWgbo"
+      >
+         
+      </span>
+    </span>
+    <span
+      class="sc-AxhUy jQYyyH"
+    >
+      0.824
+    </span>
+    <span
+      class="sc-AxgMl QdATi"
+    >
+      0.562
+    </span>
   </div>
 </div>
 `;
 
 exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
 <div>
-  <div>
+  <div
+    class="sc-AxjAm jGLlPB"
+  >
     <label
+      class="sc-AxirZ bgcmOO"
       for="test-input"
     >
       Test Input
     </label>
     <input
+      class="sc-AxiKw gsXQqj"
       id="test-input"
       max="10"
       min="0"
@@ -119,22 +159,30 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
       type="range"
       value="0.5582"
     />
-    <p>
-      Min: 
-      0
-    </p>
-    <p>
-      Max: 
-      10
-    </p>
-    <p>
-      Value: 
+    <span
+      class="sc-AxhCb hSkuxf"
+    >
       <output
         for="test-input"
       >
         0.5582
       </output>
-    </p>
+      <span
+        class="sc-AxheI fFWgbo"
+      >
+         
+      </span>
+    </span>
+    <span
+      class="sc-AxhUy jQYyyH"
+    >
+      0
+    </span>
+    <span
+      class="sc-AxgMl QdATi"
+    >
+      10
+    </span>
   </div>
 </div>
 `;

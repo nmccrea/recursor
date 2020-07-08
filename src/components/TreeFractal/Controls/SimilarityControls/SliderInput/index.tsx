@@ -6,6 +6,54 @@ import {
   SimilarityNumericInputs,
   SimilarityNumericInputKey,
 } from "../../../../../state/similarities/types"
+import styled from "styled-components"
+
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+`
+
+const Label = styled.label`
+  grid-column: span 3 / span 3;
+
+  font-size: 0.9em;
+`
+
+const Input = styled.input`
+  grid-column: span 2 / span 2;
+`
+
+const Value = styled.span`
+  grid-column: span 1 / span 1;
+
+  margin-left: 0.25rem;
+  font-size: 0.9em;
+  justify-self: flex-end;
+  white-space: nowrap;
+`
+
+const Min = styled.span`
+  justify-self: flex-start;
+
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+`
+
+const Max = styled.span`
+  justify-self: flex-end;
+
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+`
+
+const Unit = styled.span`
+  font-size: 0.8em;
+  font-style: italic;
+  color: gray;
+`
 
 export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
   label: string
@@ -16,6 +64,7 @@ export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
   selector: SimilarityInputSelector<Key>
   actionCreator: SimilarityInputActionCreator<Key>
   valueFormatter: (value?: number) => string
+  unit: string
 }
 
 const SliderInput = <Key extends SimilarityNumericInputKey>({
@@ -27,15 +76,16 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
   selector,
   actionCreator,
   valueFormatter,
+  unit,
 }: SliderInputProps<Key>) => {
   const value = useSelector(selector)
   const dispatch = useDispatch()
 
   return (
-    <div>
-      <label htmlFor={htmlId}>{label}</label>
+    <Container>
+      <Label htmlFor={htmlId}>{label}</Label>
 
-      <input
+      <Input
         id={htmlId}
         type="range"
         value={value}
@@ -47,12 +97,14 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
         }
       />
 
-      <p>Min: {valueFormatter(min)}</p>
-      <p>Max: {valueFormatter(max)}</p>
-      <p>
-        Value: <output htmlFor={htmlId}>{valueFormatter(value)}</output>
-      </p>
-    </div>
+      <Value>
+        <output htmlFor={htmlId}>{valueFormatter(value)}</output>
+        <Unit>&nbsp;{unit}</Unit>
+      </Value>
+
+      <Min>{valueFormatter(min)}</Min>
+      <Max>{valueFormatter(max)}</Max>
+    </Container>
   )
 }
 
