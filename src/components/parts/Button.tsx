@@ -1,18 +1,12 @@
 import styled from "styled-components"
-import { colorPrimary, colorDanger } from "../../styles/theme/colors"
-import { borderRadius } from "../../styles/utilities/borderRadius"
-import {
-  shadowSmall,
-  shadowMedium,
-  shadowLarge,
-} from "../../styles/utilities/shadow"
+import { color, border, shadow } from "../../styles/utilities"
 
 /**
  * A generic button element with visual feedback on hover and click.
  */
 export const Button = styled.button`
-  ${borderRadius}
-  ${shadowSmall}
+  ${border.borderRadius}
+  ${shadow.small}
 
   padding: 6px 16px;
 
@@ -24,12 +18,12 @@ export const Button = styled.button`
   text-transform: uppercase;
 
   &:hover {
-    ${shadowMedium}
+    ${shadow.medium}
     filter: brightness(95%);
   }
 
   &:active {
-    ${shadowLarge}
+    ${shadow.large}
     filter: brightness(100%);
   }
 `
@@ -38,12 +32,12 @@ export const Button = styled.button`
  * A button for primary, most common, or expected actions.
  */
 export const ButtonPrimary = styled(Button)`
-  background-color: ${colorPrimary};
+  background-color: ${color.primary};
 `
 
 /**
  * A button for destructive actions.
  */
 export const ButtonDanger = styled(Button)`
-  background-color: ${colorDanger};
+  background-color: ${color.danger};
 `
