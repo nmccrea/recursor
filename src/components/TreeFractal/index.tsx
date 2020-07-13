@@ -11,7 +11,7 @@ const Container = styled.div`
   right: 0px;
 
   display: grid;
-  grid-template-rows: 3fr 1fr;
+  grid-template-rows: 2fr 1fr;
   grid-template-columns: 1fr;
 `
 

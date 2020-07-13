@@ -3,7 +3,7 @@
 exports[`\`<TreeFractal />\` renders correctly 1`] = `
 <div>
   <div
-    class="sc-fzozJi jaTKws"
+    class="sc-fzqNJr bVqitE"
   >
     <div
       class="sc-AxiKw bkSRTf"
@@ -17,15 +17,20 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
       </div>
     </div>
     <div
-      class="sc-AxmLO johHhV"
+      class="sc-fznZeY cOrFmO"
     >
-      <div>
+      <div
+        class="sc-fzokOt cVoZm"
+      >
         <button
           class="sc-AxhCb sc-AxhUy cMvSSa"
         >
           Add
         </button>
       </div>
+      <div
+        class="sc-fzqBZW gwUpGn"
+      />
     </div>
   </div>
 </div>
