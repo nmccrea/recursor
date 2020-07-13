@@ -6,20 +6,25 @@ exports[`\`<FractalRoot />\` renders correctly 1`] = `
     class="sc-AxirZ eJFmNH"
   >
     <div
-      class="sc-AxjAm lhlKPj similarity-root depth-1"
+      class="sc-AxjAm expajj similarity-root depth-1"
+      style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
     >
       <div
-        class="sc-AxjAm enjJjR similarity-test/a depth-2"
+        class="sc-AxjAm expajj similarity-test/a depth-2"
+        style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
       >
         <div
-          class="sc-AxjAm enjJjR similarity-test/a depth-3"
+          class="sc-AxjAm expajj similarity-test/a depth-3"
+          style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
         />
       </div>
       <div
-        class="sc-AxjAm hDRcvy similarity-test/b depth-2"
+        class="sc-AxjAm expajj similarity-test/b depth-2"
+        style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
       >
         <div
-          class="sc-AxjAm enjJjR similarity-test/a depth-3"
+          class="sc-AxjAm expajj similarity-test/a depth-3"
+          style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
         />
       </div>
     </div>

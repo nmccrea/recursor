@@ -11,27 +11,31 @@ import {
   Color,
 } from "../../../../state/similarities/types"
 
-interface TransformProps {
+interface RecursionGeometryProps {
   $translation: Translation
   $scale: Scale
   $angle: Angle
   $color: Color
 }
 
-const RecursionGeometry = styled.div<TransformProps>`
+// Use inline styles via `attrs()` for transform to avoid spamming new `styled-components` styles.
+// See https://github.com/styled-components/styled-components/issues/1212#issuecomment-461134678
+const RecursionGeometry = styled.div.attrs<RecursionGeometryProps>(
+  ({ $translation, $scale, $angle, $color }) => ({
+    style: {
+      backgroundColor: $color,
+      transform: `translateY(-${
+        100 * $translation
+      }%) scale(${$scale}) rotate(${$angle}rad)`,
+    },
+  })
+)<RecursionGeometryProps>`
+  transform-origin: center bottom;
   position: absolute;
   top: 0px;
   bottom: 0px;
   left: 0px;
   right: 0px;
-
-  background-color: ${({ $color }) => $color};
-
-  transform-origin: center bottom;
-  transform: ${({ $translation, $scale, $angle }) =>
-    `translateY(-${
-      100 * $translation
-    }%) scale(${$scale}) rotate(${$angle}rad)`};
 `
 
 interface RecursionProps extends Similarity {

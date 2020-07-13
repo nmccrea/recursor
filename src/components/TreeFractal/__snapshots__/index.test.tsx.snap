@@ -12,7 +12,8 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
         class="sc-AxirZ eJFmNH"
       >
         <div
-          class="sc-AxjAm lhlKPj similarity-root depth-1"
+          class="sc-AxjAm expajj similarity-root depth-1"
+          style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
         />
       </div>
     </div>
