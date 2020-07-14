@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { screen } from "../../../styles/utilities"
+import { grid, screen } from "../../../styles/utilities"
 
 const Container = styled.div`
   padding: 0.5rem;
@@ -17,14 +17,14 @@ const GlobalControlsArea = styled.div`
 
 const SimilarityControlsArea = styled.div`
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
+  ${grid.columns(1)}
 
   ${screen.small} {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    ${grid.columns(2)}
   }
 
   ${screen.medium} {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    ${grid.columns(3)}
   }
 
   ${screen.large} {

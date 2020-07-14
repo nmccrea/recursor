@@ -3,16 +3,16 @@
 exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] = `
 <div>
   <div
-    class="sc-AxjAm jGLlPB"
+    class="sc-AxjAm iyhaxV"
   >
     <label
-      class="sc-AxirZ bgcmOO"
+      class="sc-AxirZ ceLFXb"
       for="test-input"
     >
       Test Input
     </label>
     <input
-      class="sc-AxiKw gsXQqj"
+      class="sc-AxiKw hoaEsM"
       id="test-input"
       max="10"
       min="0"
@@ -21,7 +21,7 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
       value="0.6732"
     />
     <span
-      class="sc-AxhCb hSkuxf"
+      class="sc-AxhCb gXbpxa"
     >
       <output
         for="test-input"
@@ -51,16 +51,16 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
 exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
 <div>
   <div
-    class="sc-AxjAm jGLlPB"
+    class="sc-AxjAm iyhaxV"
   >
     <label
-      class="sc-AxirZ bgcmOO"
+      class="sc-AxirZ ceLFXb"
       for="test-subject-angle"
     >
       Test Subject - Angle
     </label>
     <input
-      class="sc-AxiKw gsXQqj"
+      class="sc-AxiKw hoaEsM"
       id="test-subject-angle"
       max="0.744"
       min="0.422"
@@ -69,7 +69,7 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       value="0.9316"
     />
     <span
-      class="sc-AxhCb hSkuxf"
+      class="sc-AxhCb gXbpxa"
     >
       <output
         for="test-subject-angle"
@@ -94,16 +94,16 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
     </span>
   </div>
   <div
-    class="sc-AxjAm jGLlPB"
+    class="sc-AxjAm iyhaxV"
   >
     <label
-      class="sc-AxirZ bgcmOO"
+      class="sc-AxirZ ceLFXb"
       for="test-subject-translation"
     >
       Test Subject - Translation
     </label>
     <input
-      class="sc-AxiKw gsXQqj"
+      class="sc-AxiKw hoaEsM"
       id="test-subject-translation"
       max="0.562"
       min="0.824"
@@ -112,7 +112,7 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       value="0.1256"
     />
     <span
-      class="sc-AxhCb hSkuxf"
+      class="sc-AxhCb gXbpxa"
     >
       <output
         for="test-subject-translation"
@@ -142,16 +142,16 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
 exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
 <div>
   <div
-    class="sc-AxjAm jGLlPB"
+    class="sc-AxjAm iyhaxV"
   >
     <label
-      class="sc-AxirZ bgcmOO"
+      class="sc-AxirZ ceLFXb"
       for="test-input"
     >
       Test Input
     </label>
     <input
-      class="sc-AxiKw gsXQqj"
+      class="sc-AxiKw hoaEsM"
       id="test-input"
       max="10"
       min="0"
@@ -160,7 +160,7 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
       value="0.5582"
     />
     <span
-      class="sc-AxhCb hSkuxf"
+      class="sc-AxhCb gXbpxa"
     >
       <output
         for="test-input"

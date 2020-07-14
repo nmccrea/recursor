@@ -25,9 +25,4 @@ const large = `@media (min-width: ${breakpoints.large})`
  */
 const extraLarge = `@media (min-width: ${breakpoints.extraLarge})`
 
-export default {
-  small,
-  medium,
-  large,
-  extraLarge,
-}
+export default { small, medium, large, extraLarge }

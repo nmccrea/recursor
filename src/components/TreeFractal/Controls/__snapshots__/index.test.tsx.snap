@@ -15,7 +15,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       </button>
     </div>
     <div
-      class="sc-AxiKw dgAPhx"
+      class="sc-AxiKw dWhaZl"
     >
       <div
         class="sc-AxheI cKmSbg"
@@ -31,16 +31,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/a-angle"
             >
               Angle
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/a-angle"
               max="6.2832"
               min="-6.2832"
@@ -49,7 +49,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.1385"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/a-angle"
@@ -79,16 +79,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/a-scale"
             >
               Scale
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/a-scale"
               max="2"
               min="0"
@@ -97,7 +97,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.7791"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/a-scale"
@@ -127,16 +127,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/a-translation"
             >
               Translation
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/a-translation"
               max="1.5"
               min="0"
@@ -145,7 +145,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.4663"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/a-translation"
@@ -175,16 +175,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/a-depth"
             >
               Depth
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/a-depth"
               max="8"
               min="0"
@@ -193,7 +193,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="3"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/a-depth"
@@ -234,16 +234,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/b-angle"
             >
               Angle
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/b-angle"
               max="6.2832"
               min="-6.2832"
@@ -252,7 +252,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.4692"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/b-angle"
@@ -282,16 +282,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/b-scale"
             >
               Scale
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/b-scale"
               max="2"
               min="0"
@@ -300,7 +300,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.7202"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/b-scale"
@@ -330,16 +330,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/b-translation"
             >
               Translation
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/b-translation"
               max="1.5"
               min="0"
@@ -348,7 +348,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.7432"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/b-translation"
@@ -378,16 +378,16 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/b-depth"
             >
               Depth
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/b-depth"
               max="8"
               min="0"
@@ -396,7 +396,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="7"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/b-depth"
@@ -443,7 +443,7 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
       </button>
     </div>
     <div
-      class="sc-AxiKw dgAPhx"
+      class="sc-AxiKw dWhaZl"
     />
   </div>
 </div>
@@ -464,7 +464,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
       </button>
     </div>
     <div
-      class="sc-AxiKw dgAPhx"
+      class="sc-AxiKw dWhaZl"
     >
       <div
         class="sc-AxheI cKmSbg"
@@ -480,16 +480,16 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/subject-angle"
             >
               Angle
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/subject-angle"
               max="6.2832"
               min="-6.2832"
@@ -498,7 +498,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="0.1385"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/subject-angle"
@@ -528,16 +528,16 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/subject-scale"
             >
               Scale
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/subject-scale"
               max="2"
               min="0"
@@ -546,7 +546,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="0.7791"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/subject-scale"
@@ -576,16 +576,16 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/subject-translation"
             >
               Translation
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/subject-translation"
               max="1.5"
               min="0"
@@ -594,7 +594,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="0.4663"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/subject-translation"
@@ -624,16 +624,16 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
           class="sc-Axmtr eaFFFQ"
         >
           <div
-            class="sc-AxmLO hGDqax"
+            class="sc-AxmLO gVmmAl"
           >
             <label
-              class="sc-fzozJi gfVMZE"
+              class="sc-fzozJi gxKHgV"
               for="test/subject-depth"
             >
               Depth
             </label>
             <input
-              class="sc-fzoLsD jJzUOn"
+              class="sc-fzoLsD iPLusI"
               id="test/subject-depth"
               max="8"
               min="0"
@@ -642,7 +642,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="3"
             />
             <span
-              class="sc-fzpans dCZeMz"
+              class="sc-fzpans kolRIK"
             >
               <output
                 for="test/subject-depth"

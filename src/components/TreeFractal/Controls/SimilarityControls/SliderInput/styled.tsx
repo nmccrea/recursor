@@ -1,24 +1,22 @@
 import styled from "styled-components"
+import { grid } from "../../../../../styles/utilities"
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  ${grid.columns(3)}
   align-items: stretch;
 `
 
 const Label = styled.label`
-  grid-column: span 3 / span 3;
-
+  ${grid.columnSpan(3)}
   font-size: 0.9em;
 `
 
 const Input = styled.input`
-  grid-column: span 2 / span 2;
+  ${grid.columnSpan(2)}
 `
 
 const Value = styled.span`
-  grid-column: span 1 / span 1;
-
   margin-left: 0.25rem;
   font-size: 0.9em;
   justify-self: flex-end;

@@ -16,16 +16,16 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
       class="sc-AxirZ fsjAlW"
     >
       <div
-        class="sc-AxgMl cRddtt"
+        class="sc-AxgMl gWlaqB"
       >
         <label
-          class="sc-AxheI bmDHfz"
+          class="sc-AxheI gWAXGq"
           for="test/subject-angle"
         >
           Angle
         </label>
         <input
-          class="sc-Axmtr fcxvXZ"
+          class="sc-Axmtr bfJTVu"
           id="test/subject-angle"
           max="6.2832"
           min="-6.2832"
@@ -34,7 +34,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
           value="0.1385"
         />
         <span
-          class="sc-AxmLO cZgnRk"
+          class="sc-AxmLO bTFsIt"
         >
           <output
             for="test/subject-angle"
@@ -64,16 +64,16 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
       class="sc-AxirZ fsjAlW"
     >
       <div
-        class="sc-AxgMl cRddtt"
+        class="sc-AxgMl gWlaqB"
       >
         <label
-          class="sc-AxheI bmDHfz"
+          class="sc-AxheI gWAXGq"
           for="test/subject-scale"
         >
           Scale
         </label>
         <input
-          class="sc-Axmtr fcxvXZ"
+          class="sc-Axmtr bfJTVu"
           id="test/subject-scale"
           max="2"
           min="0"
@@ -82,7 +82,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
           value="0.7791"
         />
         <span
-          class="sc-AxmLO cZgnRk"
+          class="sc-AxmLO bTFsIt"
         >
           <output
             for="test/subject-scale"
@@ -112,16 +112,16 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
       class="sc-AxirZ fsjAlW"
     >
       <div
-        class="sc-AxgMl cRddtt"
+        class="sc-AxgMl gWlaqB"
       >
         <label
-          class="sc-AxheI bmDHfz"
+          class="sc-AxheI gWAXGq"
           for="test/subject-translation"
         >
           Translation
         </label>
         <input
-          class="sc-Axmtr fcxvXZ"
+          class="sc-Axmtr bfJTVu"
           id="test/subject-translation"
           max="1.5"
           min="0"
@@ -130,7 +130,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
           value="0.4663"
         />
         <span
-          class="sc-AxmLO cZgnRk"
+          class="sc-AxmLO bTFsIt"
         >
           <output
             for="test/subject-translation"
@@ -160,16 +160,16 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
       class="sc-AxirZ fsjAlW"
     >
       <div
-        class="sc-AxgMl cRddtt"
+        class="sc-AxgMl gWlaqB"
       >
         <label
-          class="sc-AxheI bmDHfz"
+          class="sc-AxheI gWAXGq"
           for="test/subject-depth"
         >
           Depth
         </label>
         <input
-          class="sc-Axmtr fcxvXZ"
+          class="sc-Axmtr bfJTVu"
           id="test/subject-depth"
           max="8"
           min="0"
@@ -178,7 +178,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
           value="3"
         />
         <span
-          class="sc-AxmLO cZgnRk"
+          class="sc-AxmLO bTFsIt"
         >
           <output
             for="test/subject-depth"
