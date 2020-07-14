@@ -3,34 +3,34 @@
 exports[`\`<TreeFractal />\` renders correctly 1`] = `
 <div>
   <div
-    class="sc-fzqNJr bVqitE"
+    class="sc-AxjAm ksXllY"
   >
     <div
-      class="sc-AxiKw bkSRTf"
+      class="sc-AxirZ bzCvhX"
     >
       <div
-        class="sc-AxirZ eJFmNH"
+        class="sc-AxhCb ffeldz"
       >
         <div
-          class="sc-AxjAm expajj similarity-root depth-1"
+          class="sc-AxiKw dpuCvk similarity-root depth-1"
           style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
         />
       </div>
     </div>
     <div
-      class="sc-fznZeY cOrFmO"
+      class="sc-AxhUy kqnPxL"
     >
       <div
-        class="sc-fzokOt cVoZm"
+        class="sc-AxgMl TudtO"
       >
         <button
-          class="sc-AxhCb sc-AxhUy cMvSSa"
+          class="sc-Axmtr sc-AxmLO nmzJo"
         >
           Add
         </button>
       </div>
       <div
-        class="sc-fzqBZW gwUpGn"
+        class="sc-AxheI ffCPZw"
       />
     </div>
   </div>

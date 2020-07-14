@@ -1,5 +1,4 @@
 import React from "react"
-import styled from "styled-components"
 import { formatNumber, formatAngle } from "../../../../utils/valueFormatter"
 import {
   getTranslationSetterFor,
@@ -14,38 +13,9 @@ import {
   getDepthSelectorFor,
 } from "../../../../state/similarities/selectors"
 import { SimilarityId } from "../../../../state/similarities/types"
+import { Container, ControlElement } from "./styled"
 import RemoveSimilarityButton from "./RemoveSimilarityButton"
 import SliderInput from "./SliderInput"
-import { screen } from "../../../../styles/utilities"
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-right: 1rem;
-
-  ${screen.large} {
-    padding: 0.5rem 0;
-    flex-direction: row;
-    align-items: center;
-  }
-`
-
-const ControlContainer = styled.div`
-  padding: 0.5rem 0;
-
-  & + div {
-    border-top: 1px solid lightgray;
-  }
-
-  ${screen.large} {
-    padding: 0 0.5rem;
-
-    & + div {
-      border-top: unset;
-      border-left: 1px solid lightgray;
-    }
-  }
-`
 
 interface SimilarityControlsProps {
   similarityId: SimilarityId
@@ -57,7 +27,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
       <RemoveSimilarityButton similarityId={similarityId} />
     </div>
 
-    <ControlContainer>
+    <ControlElement>
       <SliderInput
         label="Angle"
         htmlId={`${similarityId}-angle`}
@@ -70,9 +40,9 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         valueFormatter={formatAngle}
         unit="rad"
       />
-    </ControlContainer>
+    </ControlElement>
 
-    <ControlContainer>
+    <ControlElement>
       <SliderInput
         label="Scale"
         htmlId={`${similarityId}-scale`}
@@ -84,9 +54,9 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         valueFormatter={(value) => formatNumber(value, { precision: 2 })}
         unit="x"
       />
-    </ControlContainer>
+    </ControlElement>
 
-    <ControlContainer>
+    <ControlElement>
       <SliderInput
         label="Translation"
         htmlId={`${similarityId}-translation`}
@@ -98,9 +68,9 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         valueFormatter={(value) => formatNumber(value, { precision: 2 })}
         unit="x"
       />
-    </ControlContainer>
+    </ControlElement>
 
-    <ControlContainer>
+    <ControlElement>
       <SliderInput
         label="Depth"
         htmlId={`${similarityId}-depth`}
@@ -112,7 +82,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         valueFormatter={(value) => formatNumber(value, { precision: 0 })}
         unit="x"
       />
-    </ControlContainer>
+    </ControlElement>
   </Container>
 )
 

@@ -3,30 +3,30 @@
 exports[`\`<FractalView />\` renders correctly 1`] = `
 <div>
   <div
-    class="sc-AxiKw bkSRTf"
+    class="sc-AxjAm dwAczw"
   >
     <div
-      class="sc-AxirZ eJFmNH"
+      class="sc-AxiKw kbMSYr"
     >
       <div
-        class="sc-AxjAm expajj similarity-root depth-1"
+        class="sc-AxirZ iKgucs similarity-root depth-1"
         style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
       >
         <div
-          class="sc-AxjAm expajj similarity-test/a depth-2"
+          class="sc-AxirZ iKgucs similarity-test/a depth-2"
           style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
         >
           <div
-            class="sc-AxjAm expajj similarity-test/a depth-3"
+            class="sc-AxirZ iKgucs similarity-test/a depth-3"
             style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
           />
         </div>
         <div
-          class="sc-AxjAm expajj similarity-test/b depth-2"
+          class="sc-AxirZ iKgucs similarity-test/b depth-2"
           style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
         >
           <div
-            class="sc-AxjAm expajj similarity-test/a depth-3"
+            class="sc-AxirZ iKgucs similarity-test/a depth-3"
             style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
           />
         </div>
