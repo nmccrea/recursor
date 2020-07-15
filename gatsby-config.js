@@ -7,7 +7,10 @@ module.exports = {
     author: `Nick McCrea`,
   },
   plugins: [
+    // Enable TypeScript.
     `gatsby-plugin-typescript`,
+    // Allow aboslute imports.
+    `gatsby-plugin-resolve-src`,
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,

@@ -1,6 +1,6 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import { selectIds } from "../../../state/similarities/selectors"
+import { selectIds } from "state/similarities/selectors"
 import { Container, GlobalControlsArea, SimilarityControlsArea } from "./styled"
 import AddSimilarityButton from "./AddSimilarityButton"
 import SimilarityControls from "./SimilarityControls"

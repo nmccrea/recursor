@@ -2,15 +2,15 @@ import React from "react"
 import "jest-styled-components"
 import { Provider } from "react-redux"
 import { render, fireEvent, getByRole } from "@testing-library/react"
-import { createStore, RootState } from "../../../../../state/store"
+import { createStore, RootState } from "state/store"
 import {
   getTranslationSetterFor,
   getAngleSetterFor,
-} from "../../../../../state/similarities/actions"
+} from "state/similarities/actions"
 import {
   getTranslationSelectorFor,
   getAngleSelectorFor,
-} from "../../../../../state/similarities/selectors"
+} from "state/similarities/selectors"
 import SliderInput from "."
 
 describe("`<SliderInput />`", () => {

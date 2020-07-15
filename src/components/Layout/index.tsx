@@ -1,5 +1,5 @@
 import React from "react"
-import GlobalStyle from "../../styles/GlobalStyle"
+import GlobalStyle from "styles/GlobalStyle"
 
 interface Props {
   children: React.ReactNode

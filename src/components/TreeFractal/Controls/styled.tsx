@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { grid, screen } from "../../../styles/utilities"
+import { grid, screen } from "styles/utilities"
 
 const Container = styled.div`
   padding: 0.5rem;

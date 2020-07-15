@@ -1,18 +1,18 @@
 import React from "react"
-import { formatNumber, formatAngle } from "../../../../utils/valueFormatter"
+import { formatNumber, formatAngle } from "utils/valueFormatter"
 import {
   getTranslationSetterFor,
   getScaleSetterFor,
   getAngleSetterFor,
   getDepthSetterFor,
-} from "../../../../state/similarities/actions"
+} from "state/similarities/actions"
 import {
   getTranslationSelectorFor,
   getScaleSelectorFor,
   getAngleSelectorFor,
   getDepthSelectorFor,
-} from "../../../../state/similarities/selectors"
-import { SimilarityId } from "../../../../state/similarities/types"
+} from "state/similarities/selectors"
+import { SimilarityId } from "state/similarities/types"
 import { Container, ControlElement } from "./styled"
 import RemoveSimilarityButton from "./RemoveSimilarityButton"
 import SliderInput from "./SliderInput"

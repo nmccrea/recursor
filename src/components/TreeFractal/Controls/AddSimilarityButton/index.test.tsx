@@ -2,7 +2,7 @@ import React from "react"
 import "jest-styled-components"
 import { Provider } from "react-redux"
 import { render, fireEvent, getByRole } from "@testing-library/react"
-import { createStore, RootState } from "../../../../state/store"
+import { createStore, RootState } from "state/store"
 import AddSimilarityButton from "."
 
 jest.mock("@reduxjs/toolkit", () => ({

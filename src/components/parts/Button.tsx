@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, border, shadow } from "../../styles/utilities"
+import { color, border, shadow } from "styles/utilities"
 
 /**
  * A generic button element with visual feedback on hover and click.

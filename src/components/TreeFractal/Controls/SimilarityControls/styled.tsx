@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { screen } from "../../../../styles/utilities"
+import { screen } from "styles/utilities"
 
 const Container = styled.div`
   display: flex;

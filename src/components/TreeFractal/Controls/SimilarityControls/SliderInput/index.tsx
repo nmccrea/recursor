@@ -1,11 +1,11 @@
 import React from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { SimilarityInputSelector } from "../../../../../state/similarities/selectors"
-import { SimilarityInputActionCreator } from "../../../../../state/similarities/actions"
+import { SimilarityInputSelector } from "state/similarities/selectors"
+import { SimilarityInputActionCreator } from "state/similarities/actions"
 import {
   SimilarityNumericInputs,
   SimilarityNumericInputKey,
-} from "../../../../../state/similarities/types"
+} from "state/similarities/types"
 import { Container, Label, Input, Value, Min, Max, Unit } from "./styled"
 
 export interface SliderInputProps<Key extends SimilarityNumericInputKey> {

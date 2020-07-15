@@ -1,4 +1,4 @@
-import { RootState, Selector } from "../store"
+import { RootState, Selector } from "state/store"
 import similarities from "./similarities"
 import { SimilarityId, SimilarityInputs, SimilarityInputKey } from "./types"
 

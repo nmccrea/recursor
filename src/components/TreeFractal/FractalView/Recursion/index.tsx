@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { useSelector } from "react-redux"
-import { selectAll } from "../../../../state/similarities/selectors"
+import { selectAll } from "state/similarities/selectors"
 import {
   Similarity,
   Translation,
@@ -9,7 +9,7 @@ import {
   Angle,
   Depth,
   Color,
-} from "../../../../state/similarities/types"
+} from "state/similarities/types"
 
 interface RecursionGeometryProps {
   $translation: Translation

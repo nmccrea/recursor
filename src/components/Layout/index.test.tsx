@@ -2,7 +2,7 @@ import React from "react"
 import "jest-styled-components"
 import { Provider } from "react-redux"
 import { render } from "@testing-library/react"
-import { createStore } from "../../state/store"
+import { createStore } from "state/store"
 import Layout from "."
 
 describe("`<Layout />`", () => {

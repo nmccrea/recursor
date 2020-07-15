@@ -1,8 +1,8 @@
 import React from "react"
 import { useDispatch } from "react-redux"
-import { addOne } from "../../../../state/similarities/actions"
-import { SimilarityInputs } from "../../../../state/similarities/types"
-import { ButtonPrimary } from "../../../parts/Button"
+import { addOne } from "state/similarities/actions"
+import { SimilarityInputs } from "state/similarities/types"
+import { ButtonPrimary } from "components/parts/Button"
 
 /**
  * Generate a set of new similarity inputs.

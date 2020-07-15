@@ -1,4 +1,5 @@
 module.exports = {
+  moduleDirectories: ["src", "node_modules"],
   transform: {
     "^.+\\.[jt]sx?$": "<rootDir>/jest-preprocess.js",
   },
