@@ -77,6 +77,7 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
         class="c4"
       >
          
+        x
       </span>
     </span>
     <span
@@ -170,6 +171,7 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
         class="c4"
       >
          
+        rad
       </span>
     </span>
     <span
@@ -213,6 +215,7 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
         class="c4"
       >
          
+        x
       </span>
     </span>
     <span
@@ -306,6 +309,7 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
         class="c4"
       >
          
+        x
       </span>
     </span>
     <span

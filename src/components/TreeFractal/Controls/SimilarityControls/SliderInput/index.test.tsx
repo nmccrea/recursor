@@ -42,6 +42,7 @@ describe("`<SliderInput />`", () => {
           selector={getAngleSelectorFor("test/subject")}
           actionCreator={getAngleSetterFor("test/subject")}
           valueFormatter={jest.fn((value) => String(value))}
+          unit="rad"
         />
         <SliderInput
           label="Test Subject - Translation"
@@ -52,6 +53,7 @@ describe("`<SliderInput />`", () => {
           selector={getTranslationSelectorFor("test/subject")}
           actionCreator={getTranslationSetterFor("test/subject")}
           valueFormatter={jest.fn((value) => String(value))}
+          unit="x"
         />
       </Provider>
     )
@@ -87,6 +89,7 @@ describe("`<SliderInput />`", () => {
           selector={getTranslationSelectorFor("test/subject")}
           actionCreator={getTranslationSetterFor("test/subject")}
           valueFormatter={() => "fake formatted value"}
+          unit="x"
         />
       </Provider>
     )
@@ -122,6 +125,7 @@ describe("`<SliderInput />`", () => {
           selector={getTranslationSelectorFor("test/subject")}
           actionCreator={getTranslationSetterFor("test/subject")}
           valueFormatter={jest.fn((value) => String(value))}
+          unit="x"
         />
       </Provider>
     )
