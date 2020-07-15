@@ -1,18 +1,63 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  grid-column: span 3 / span 3;
+  font-size: 0.9em;
+}
+
+.c2 {
+  grid-column: span 2 / span 2;
+}
+
+.c3 {
+  margin-left: 0.25rem;
+  font-size: 0.9em;
+  justify-self: flex-end;
+  white-space: nowrap;
+}
+
+.c5 {
+  justify-self: flex-start;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c6 {
+  justify-self: flex-end;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c4 {
+  font-size: 0.8em;
+  font-style: italic;
+  color: gray;
+}
+
 <div>
   <div
-    class="sc-AxjAm iyhaxV"
+    class="c0"
   >
     <label
-      class="sc-AxirZ ceLFXb"
+      class="c1"
       for="test-input"
     >
       Test Input
     </label>
     <input
-      class="sc-AxiKw hoaEsM"
+      class="c2"
       id="test-input"
       max="10"
       min="0"
@@ -21,7 +66,7 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
       value="0.6732"
     />
     <span
-      class="sc-AxhCb gXbpxa"
+      class="c3"
     >
       <output
         for="test-input"
@@ -29,18 +74,18 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
         fake formatted value
       </output>
       <span
-        class="sc-AxheI fFWgbo"
+        class="c4"
       >
          
       </span>
     </span>
     <span
-      class="sc-AxhUy jQYyyH"
+      class="c5"
     >
       fake formatted value
     </span>
     <span
-      class="sc-AxgMl QdATi"
+      class="c6"
     >
       fake formatted value
     </span>
@@ -49,18 +94,63 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
 `;
 
 exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  grid-column: span 3 / span 3;
+  font-size: 0.9em;
+}
+
+.c2 {
+  grid-column: span 2 / span 2;
+}
+
+.c3 {
+  margin-left: 0.25rem;
+  font-size: 0.9em;
+  justify-self: flex-end;
+  white-space: nowrap;
+}
+
+.c5 {
+  justify-self: flex-start;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c6 {
+  justify-self: flex-end;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c4 {
+  font-size: 0.8em;
+  font-style: italic;
+  color: gray;
+}
+
 <div>
   <div
-    class="sc-AxjAm iyhaxV"
+    class="c0"
   >
     <label
-      class="sc-AxirZ ceLFXb"
+      class="c1"
       for="test-subject-angle"
     >
       Test Subject - Angle
     </label>
     <input
-      class="sc-AxiKw hoaEsM"
+      class="c2"
       id="test-subject-angle"
       max="0.744"
       min="0.422"
@@ -69,7 +159,7 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       value="0.9316"
     />
     <span
-      class="sc-AxhCb gXbpxa"
+      class="c3"
     >
       <output
         for="test-subject-angle"
@@ -77,33 +167,33 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
         0.9316
       </output>
       <span
-        class="sc-AxheI fFWgbo"
+        class="c4"
       >
          
       </span>
     </span>
     <span
-      class="sc-AxhUy jQYyyH"
+      class="c5"
     >
       0.422
     </span>
     <span
-      class="sc-AxgMl QdATi"
+      class="c6"
     >
       0.744
     </span>
   </div>
   <div
-    class="sc-AxjAm iyhaxV"
+    class="c0"
   >
     <label
-      class="sc-AxirZ ceLFXb"
+      class="c1"
       for="test-subject-translation"
     >
       Test Subject - Translation
     </label>
     <input
-      class="sc-AxiKw hoaEsM"
+      class="c2"
       id="test-subject-translation"
       max="0.562"
       min="0.824"
@@ -112,7 +202,7 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       value="0.1256"
     />
     <span
-      class="sc-AxhCb gXbpxa"
+      class="c3"
     >
       <output
         for="test-subject-translation"
@@ -120,18 +210,18 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
         0.1256
       </output>
       <span
-        class="sc-AxheI fFWgbo"
+        class="c4"
       >
          
       </span>
     </span>
     <span
-      class="sc-AxhUy jQYyyH"
+      class="c5"
     >
       0.824
     </span>
     <span
-      class="sc-AxgMl QdATi"
+      class="c6"
     >
       0.562
     </span>
@@ -140,18 +230,63 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
 `;
 
 exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  grid-column: span 3 / span 3;
+  font-size: 0.9em;
+}
+
+.c2 {
+  grid-column: span 2 / span 2;
+}
+
+.c3 {
+  margin-left: 0.25rem;
+  font-size: 0.9em;
+  justify-self: flex-end;
+  white-space: nowrap;
+}
+
+.c5 {
+  justify-self: flex-start;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c6 {
+  justify-self: flex-end;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c4 {
+  font-size: 0.8em;
+  font-style: italic;
+  color: gray;
+}
+
 <div>
   <div
-    class="sc-AxjAm iyhaxV"
+    class="c0"
   >
     <label
-      class="sc-AxirZ ceLFXb"
+      class="c1"
       for="test-input"
     >
       Test Input
     </label>
     <input
-      class="sc-AxiKw hoaEsM"
+      class="c2"
       id="test-input"
       max="10"
       min="0"
@@ -160,7 +295,7 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
       value="0.5582"
     />
     <span
-      class="sc-AxhCb gXbpxa"
+      class="c3"
     >
       <output
         for="test-input"
@@ -168,18 +303,18 @@ exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
         0.5582
       </output>
       <span
-        class="sc-AxheI fFWgbo"
+        class="c4"
       >
          
       </span>
     </span>
     <span
-      class="sc-AxhUy jQYyyH"
+      class="c5"
     >
       0
     </span>
     <span
-      class="sc-AxgMl QdATi"
+      class="c6"
     >
       10
     </span>

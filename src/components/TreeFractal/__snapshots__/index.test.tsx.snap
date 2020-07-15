@@ -1,36 +1,160 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`\`<TreeFractal />\` renders correctly 1`] = `
+.c0 {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.c3 {
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.c2 {
+  width: 6px;
+  height: 120px;
+  position: relative;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.c4 {
+  padding: 0.5rem;
+  box-shadow: 0 -3px 5px 2px #bbb;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  overflow-y: auto;
+}
+
+.c5 {
+  padding-bottom: 0.5rem;
+}
+
+.c7 {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
+}
+
+.c6 {
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  padding: 6px 16px;
+  background-color: lightgray;
+  color: white;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  line-height: 1.75;
+  text-transform: uppercase;
+  background-color: cornflowerblue;
+}
+
+.c6:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  -webkit-filter: brightness(95%);
+  filter: brightness(95%);
+}
+
+.c6:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+}
+
+@media (min-width:640px) {
+  .c7 {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (min-width:768px) {
+  .c7 {
+    grid-template-columns: repeat(3,minmax(0,1fr));
+  }
+}
+
+@media (min-width:1024px) {
+  .c7 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 <div>
   <div
-    class="sc-AxjAm ksXllY"
+    class="c0"
   >
     <div
-      class="sc-AxirZ bzCvhX"
+      class="c1"
     >
       <div
-        class="sc-AxhCb ffeldz"
+        class="c2"
       >
         <div
-          class="sc-AxiKw dpuCvk similarity-root depth-1"
+          class="c3 similarity-root depth-1"
           style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
         />
       </div>
     </div>
     <div
-      class="sc-AxhUy kqnPxL"
+      class="c4"
     >
       <div
-        class="sc-AxgMl TudtO"
+        class="c5"
       >
         <button
-          class="sc-Axmtr sc-AxmLO nmzJo"
+          class="sc-Axmtr c6"
         >
           Add
         </button>
       </div>
       <div
-        class="sc-AxheI cTjNdQ"
+        class="c7"
       />
     </div>
   </div>

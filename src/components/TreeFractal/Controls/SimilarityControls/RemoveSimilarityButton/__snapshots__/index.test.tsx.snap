@@ -1,9 +1,36 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`\`<RemoveSimilarityButton />\` renders correctly 1`] = `
+.c0 {
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  padding: 6px 16px;
+  background-color: lightgray;
+  color: white;
+  -webkit-letter-spacing: 0.03em;
+  -moz-letter-spacing: 0.03em;
+  -ms-letter-spacing: 0.03em;
+  letter-spacing: 0.03em;
+  line-height: 1.75;
+  text-transform: uppercase;
+  background-color: lightsalmon;
+}
+
+.c0:hover {
+  box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
+  -webkit-filter: brightness(95%);
+  filter: brightness(95%);
+}
+
+.c0:active {
+  box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
+  -webkit-filter: brightness(100%);
+  filter: brightness(100%);
+}
+
 <div>
   <button
-    class="sc-AxjAm sc-AxiKw cgflug"
+    class="sc-AxjAm c0"
   >
     Remove
   </button>

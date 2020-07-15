@@ -1,32 +1,68 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`\`<FractalView />\` renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.c2 {
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.c1 {
+  width: 6px;
+  height: 120px;
+  position: relative;
+  -webkit-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
 <div>
   <div
-    class="sc-AxjAm dwAczw"
+    class="c0"
   >
     <div
-      class="sc-AxiKw kbMSYr"
+      class="c1"
     >
       <div
-        class="sc-AxirZ iKgucs similarity-root depth-1"
+        class="c2 similarity-root depth-1"
         style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
       >
         <div
-          class="sc-AxirZ iKgucs similarity-test/a depth-2"
+          class="c2 similarity-test/a depth-2"
           style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
         >
           <div
-            class="sc-AxirZ iKgucs similarity-test/a depth-3"
+            class="c2 similarity-test/a depth-3"
             style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
           />
         </div>
         <div
-          class="sc-AxirZ iKgucs similarity-test/b depth-2"
+          class="c2 similarity-test/b depth-2"
           style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
         >
           <div
-            class="sc-AxirZ iKgucs similarity-test/a depth-3"
+            class="c2 similarity-test/a depth-3"
             style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
           />
         </div>
