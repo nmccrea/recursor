@@ -10,6 +10,7 @@ const Container = styled.div`
     padding: 0.5rem 0;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
   }
 `
 
