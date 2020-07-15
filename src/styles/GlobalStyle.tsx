@@ -7,7 +7,7 @@ export default createGlobalStyle`
 
   // Reset default font.
   body {
-    ${typography.fontSans}
+    ${typography.fontFamilySans}
   }
 
   // Reset button borders.
