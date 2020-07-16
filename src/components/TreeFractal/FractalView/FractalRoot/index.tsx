@@ -17,7 +17,7 @@ const FractalRoot = () => (
       translation={0}
       scale={1}
       angle={0}
-      depth={1}
+      depth={0}
       currentDepth={0}
     />
   </RootGeometry>

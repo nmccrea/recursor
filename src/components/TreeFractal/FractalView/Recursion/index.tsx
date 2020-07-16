@@ -51,7 +51,7 @@ const Recursion = ({
   angle,
   color,
 }: RecursionProps) => {
-  if (currentDepth >= depth) return null
+  if (currentDepth > depth) return null
 
   const similarities = useSelector(selectAll)
   return (
@@ -60,7 +60,7 @@ const Recursion = ({
       $scale={scale}
       $angle={angle}
       $color={color}
-      className={`similarity-${id} depth-${currentDepth + 1}`}
+      className={`similarity-${id} depth-${currentDepth}`}
     >
       {similarities.map((similarity) => (
         <Recursion

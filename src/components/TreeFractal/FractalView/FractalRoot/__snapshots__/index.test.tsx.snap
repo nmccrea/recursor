@@ -26,26 +26,54 @@ exports[`\`<FractalRoot />\` renders correctly 1`] = `
     class="c0"
   >
     <div
-      class="c1 similarity-root depth-1"
+      class="c1 similarity-root depth-0"
       style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
     >
       <div
-        class="c1 similarity-test/a depth-2"
+        class="c1 similarity-test/a depth-1"
         style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
       >
         <div
-          class="c1 similarity-test/a depth-3"
+          class="c1 similarity-test/a depth-2"
           style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
-        />
+        >
+          <div
+            class="c1 similarity-test/a depth-3"
+            style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          />
+        </div>
+        <div
+          class="c1 similarity-test/b depth-2"
+          style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
+        >
+          <div
+            class="c1 similarity-test/a depth-3"
+            style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          />
+        </div>
       </div>
       <div
-        class="c1 similarity-test/b depth-2"
+        class="c1 similarity-test/b depth-1"
         style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
       >
         <div
-          class="c1 similarity-test/a depth-3"
+          class="c1 similarity-test/a depth-2"
           style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
-        />
+        >
+          <div
+            class="c1 similarity-test/a depth-3"
+            style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          />
+        </div>
+        <div
+          class="c1 similarity-test/b depth-2"
+          style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
+        >
+          <div
+            class="c1 similarity-test/a depth-3"
+            style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+          />
+        </div>
       </div>
     </div>
   </div>

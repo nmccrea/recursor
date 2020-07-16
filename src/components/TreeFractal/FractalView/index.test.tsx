@@ -16,7 +16,7 @@ describe("`<FractalView />`", () => {
             translation: 0.994,
             scale: 0.543,
             angle: -3.012 * Math.PI,
-            depth: 3,
+            depth: 2,
             color: "green",
           },
           "test/b": {
@@ -24,7 +24,7 @@ describe("`<FractalView />`", () => {
             translation: 1.042,
             scale: 0.452,
             angle: 1.902 * Math.PI,
-            depth: 2,
+            depth: 1,
             color: "red",
           },
         },

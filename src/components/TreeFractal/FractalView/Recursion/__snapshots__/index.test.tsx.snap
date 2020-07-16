@@ -14,24 +14,24 @@ exports[`\`<Recursion />\` correctly renders the tree with the appropriate depth
 
 <div>
   <div
-    class="c0 similarity-test/a depth-1"
+    class="c0 similarity-test/a depth-0"
     style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
   >
     <div
-      class="c0 similarity-test/a depth-2"
+      class="c0 similarity-test/a depth-1"
       style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
     >
       <div
-        class="c0 similarity-test/a depth-3"
+        class="c0 similarity-test/a depth-2"
         style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
       />
     </div>
     <div
-      class="c0 similarity-test/b depth-2"
+      class="c0 similarity-test/b depth-1"
       style="background-color: red; transform: translateY(-104.2%) scale(0.452) rotate(5.975309227127786rad);"
     >
       <div
-        class="c0 similarity-test/a depth-3"
+        class="c0 similarity-test/a depth-2"
         style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
       />
     </div>
@@ -39,4 +39,22 @@ exports[`\`<Recursion />\` correctly renders the tree with the appropriate depth
 </div>
 `;
 
-exports[`\`<Recursion />\` renders nothing when the \`currentDepth\` is equal to the given similarity's depth 1`] = `<div />`;
+exports[`\`<Recursion />\` renders nothing when the \`currentDepth\` is equal to the given similarity's depth 1`] = `
+.c0 {
+  -webkit-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+<div>
+  <div
+    class="c0 similarity-test/a depth-2"
+    style="background-color: green; transform: translateY(-99.4%) scale(0.543) rotate(-9.462477072612456rad);"
+  />
+</div>
+`;
