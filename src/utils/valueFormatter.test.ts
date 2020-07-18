@@ -1,6 +1,6 @@
 import { formatNumber, formatAngle } from "./valueFormatter"
 
-describe("`numberFormatter()`", () => {
+describe("`formatNumber()`", () => {
   it("returns a correctly-formatted string", () => {
     const results = [
       formatNumber(0),
