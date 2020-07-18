@@ -7,6 +7,18 @@ import {
   SimilarityNumericInputKey,
 } from "state/similarities/types"
 import { Container, Label, Input, Value, Min, Max, Unit } from "./styled"
+import identity from "utils/identity"
+
+type ValueConverter = (value: number) => number
+interface ValueConverters {
+  convertInput: ValueConverter
+  convertOutput: ValueConverter
+}
+
+const DEFAULT_VALUE_CONVERTERS: ValueConverters = {
+  convertInput: identity,
+  convertOutput: identity,
+}
 
 export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
   label: string
@@ -18,6 +30,7 @@ export interface SliderInputProps<Key extends SimilarityNumericInputKey> {
   actionCreator: SimilarityInputActionCreator<Key>
   valueFormatter: (value?: number) => string
   unit: string
+  valueConverters?: ValueConverters
 }
 
 const SliderInput = <Key extends SimilarityNumericInputKey>({
@@ -30,9 +43,14 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
   actionCreator,
   valueFormatter,
   unit,
+  valueConverters,
 }: SliderInputProps<Key>) => {
-  const value = useSelector(selector)
+  let value = useSelector(selector)
   const dispatch = useDispatch()
+
+  const { convertInput, convertOutput } =
+    valueConverters || DEFAULT_VALUE_CONVERTERS
+  value = value === undefined ? value : convertOutput(value)
 
   return (
     <Container>
@@ -46,7 +64,7 @@ const SliderInput = <Key extends SimilarityNumericInputKey>({
         max={max}
         step={step}
         onChange={(event) =>
-          dispatch(actionCreator(Number(event.target.value)))
+          dispatch(actionCreator(convertInput(Number(event.target.value))))
         }
       />
 

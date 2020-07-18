@@ -1,6 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] = `
+exports[`\`<SliderInput />\` rendering converts the output value using the provided output converter 1`] = `
+.c0 {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.c1 {
+  grid-column: span 3 / span 3;
+  font-size: 0.9em;
+}
+
+.c2 {
+  grid-column: span 2 / span 2;
+}
+
+.c3 {
+  margin-left: 0.25rem;
+  font-size: 0.9em;
+  justify-self: flex-end;
+  white-space: nowrap;
+}
+
+.c5 {
+  justify-self: flex-start;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c6 {
+  justify-self: flex-end;
+  font-size: 0.7em;
+  color: gray;
+  white-space: nowrap;
+}
+
+.c4 {
+  font-size: 0.8em;
+  font-style: italic;
+  color: gray;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <label
+      class="c1"
+      for="test-input"
+    >
+      Test Input
+    </label>
+    <input
+      class="c2"
+      id="test-input"
+      max="10"
+      min="0"
+      step="0.1"
+      type="range"
+      value="5.55"
+    />
+    <span
+      class="c3"
+    >
+      <output
+        for="test-input"
+      >
+        5.55
+      </output>
+      <span
+        class="c4"
+      >
+         
+        x
+      </span>
+    </span>
+    <span
+      class="c5"
+    >
+      0
+    </span>
+    <span
+      class="c6"
+    >
+      10
+    </span>
+  </div>
+</div>
+`;
+
+exports[`\`<SliderInput />\` rendering formats the value using to the given formatter 1`] = `
 .c0 {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
@@ -94,7 +188,7 @@ exports[`\`<SliderInput />\` formats the value using to the given formatter 1`] 
 </div>
 `;
 
-exports[`\`<SliderInput />\` renders correctly based on the value returned by the selector 1`] = `
+exports[`\`<SliderInput />\` rendering renders correctly based on the value returned by the selector 1`] = `
 .c0 {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
@@ -141,50 +235,6 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
 }
 
 <div>
-  <div
-    class="c0"
-  >
-    <label
-      class="c1"
-      for="test-subject-angle"
-    >
-      Test Subject - Angle
-    </label>
-    <input
-      class="c2"
-      id="test-subject-angle"
-      max="0.744"
-      min="0.422"
-      step="0.001"
-      type="range"
-      value="0.9316"
-    />
-    <span
-      class="c3"
-    >
-      <output
-        for="test-subject-angle"
-      >
-        0.9316
-      </output>
-      <span
-        class="c4"
-      >
-         
-        rad
-      </span>
-    </span>
-    <span
-      class="c5"
-    >
-      0.422
-    </span>
-    <span
-      class="c6"
-    >
-      0.744
-    </span>
-  </div>
   <div
     class="c0"
   >
@@ -229,98 +279,48 @@ exports[`\`<SliderInput />\` renders correctly based on the value returned by th
       0.562
     </span>
   </div>
-</div>
-`;
-
-exports[`\`<SliderInput />\` responds correctly to a change event 1`] = `
-.c0 {
-  display: grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  -webkit-align-items: stretch;
-  -webkit-box-align: stretch;
-  -ms-flex-align: stretch;
-  align-items: stretch;
-}
-
-.c1 {
-  grid-column: span 3 / span 3;
-  font-size: 0.9em;
-}
-
-.c2 {
-  grid-column: span 2 / span 2;
-}
-
-.c3 {
-  margin-left: 0.25rem;
-  font-size: 0.9em;
-  justify-self: flex-end;
-  white-space: nowrap;
-}
-
-.c5 {
-  justify-self: flex-start;
-  font-size: 0.7em;
-  color: gray;
-  white-space: nowrap;
-}
-
-.c6 {
-  justify-self: flex-end;
-  font-size: 0.7em;
-  color: gray;
-  white-space: nowrap;
-}
-
-.c4 {
-  font-size: 0.8em;
-  font-style: italic;
-  color: gray;
-}
-
-<div>
   <div
     class="c0"
   >
     <label
       class="c1"
-      for="test-input"
+      for="test-subject-scale"
     >
-      Test Input
+      Test Subject - Scale
     </label>
     <input
       class="c2"
-      id="test-input"
-      max="10"
-      min="0"
-      step="0.1"
+      id="test-subject-scale"
+      max="0.744"
+      min="0.422"
+      step="0.001"
       type="range"
-      value="0.5582"
+      value="0.0353"
     />
     <span
       class="c3"
     >
       <output
-        for="test-input"
+        for="test-subject-scale"
       >
-        0.5582
+        0.0353
       </output>
       <span
         class="c4"
       >
          
-        x
+        rad
       </span>
     </span>
     <span
       class="c5"
     >
-      0
+      0.422
     </span>
     <span
       class="c6"
     >
-      10
+      0.744
     </span>
   </div>
 </div>

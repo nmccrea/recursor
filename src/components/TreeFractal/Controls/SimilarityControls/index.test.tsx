@@ -15,7 +15,7 @@ describe("`<SimilarityControls />`", () => {
             id: "test/subject",
             translation: 0.4663,
             scale: 0.7791,
-            angle: 0.1385,
+            angle: Math.PI / 4,
             depth: 3,
             color: "gray",
           },

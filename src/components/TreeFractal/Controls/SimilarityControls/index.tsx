@@ -1,5 +1,6 @@
 import React from "react"
-import { formatNumber, formatAngle } from "utils/valueFormatter"
+import { degreesFromRadians, radiansFromDegrees } from "utils/unitConverters"
+import { formatNumber } from "utils/valueFormatters"
 import {
   getTranslationSetterFor,
   getScaleSetterFor,
@@ -31,14 +32,18 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
       <SliderInput
         label="Angle"
         htmlId={`${similarityId}-angle`}
-        // `min` and `max` must both be multiples of `step`
-        min={-Math.round((2 * Math.PI) / 0.0001) * 0.0001}
-        max={Math.round((2 * Math.PI) / 0.0001) * 0.0001}
-        step={0.0001}
+        min={-360}
+        max={360}
+        step={1}
         selector={getAngleSelectorFor(similarityId)}
         actionCreator={getAngleSetterFor(similarityId)}
-        valueFormatter={formatAngle}
-        unit="rad"
+        valueFormatter={(value) => formatNumber(value)}
+        unit="°"
+        // Convert input to radians internally.
+        valueConverters={{
+          convertInput: radiansFromDegrees,
+          convertOutput: degreesFromRadians,
+        }}
       />
     </ControlElement>
 
