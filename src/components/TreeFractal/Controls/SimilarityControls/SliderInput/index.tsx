@@ -10,6 +10,11 @@ import { Container, Label, Input, Value, Min, Max, Unit } from "./styled"
 import identity from "utils/identity"
 
 type ValueConverter = (value: number) => number
+
+/**
+ * A pair of functions for converting input values to a different representation for storage. Each
+ * function must take and return a numeric value, and the functions must be inverse of each other.
+ */
 interface ValueConverters {
   convertInput: ValueConverter
   convertOutput: ValueConverter

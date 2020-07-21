@@ -34,12 +34,12 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         htmlId={`${similarityId}-angle`}
         min={-360}
         max={360}
-        step={1}
+        step={5}
         selector={getAngleSelectorFor(similarityId)}
         actionCreator={getAngleSetterFor(similarityId)}
         valueFormatter={(value) => formatNumber(value)}
         unit="°"
-        // Convert input to radians internally.
+        // Store inputs in radians.
         valueConverters={{
           convertInput: radiansFromDegrees,
           convertOutput: degreesFromRadians,
@@ -52,7 +52,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         label="Scale"
         htmlId={`${similarityId}-scale`}
         min={0}
-        max={2}
+        max={1.5}
         step={0.05}
         selector={getScaleSelectorFor(similarityId)}
         actionCreator={getScaleSetterFor(similarityId)}
@@ -66,7 +66,7 @@ const SimilarityControls = ({ similarityId }: SimilarityControlsProps) => (
         label="Translation"
         htmlId={`${similarityId}-translation`}
         min={0}
-        max={1.5}
+        max={2}
         step={0.05}
         selector={getTranslationSelectorFor(similarityId)}
         actionCreator={getTranslationSetterFor(similarityId)}

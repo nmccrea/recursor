@@ -240,7 +240,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               id="test/a-angle"
               max="360"
               min="-360"
-              step="1"
+              step="5"
               type="range"
               value="180"
             />
@@ -286,7 +286,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <input
               class="c9"
               id="test/a-scale"
-              max="2"
+              max="1.5"
               min="0"
               step="0.05"
               type="range"
@@ -315,7 +315,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <span
               class="c13"
             >
-              2.00
+              1.50
             </span>
           </div>
         </div>
@@ -334,7 +334,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <input
               class="c9"
               id="test/a-translation"
-              max="1.5"
+              max="2"
               min="0"
               step="0.05"
               type="range"
@@ -363,7 +363,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <span
               class="c13"
             >
-              1.50
+              2.00
             </span>
           </div>
         </div>
@@ -443,7 +443,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               id="test/b-angle"
               max="360"
               min="-360"
-              step="1"
+              step="5"
               type="range"
               value="-180"
             />
@@ -489,7 +489,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <input
               class="c9"
               id="test/b-scale"
-              max="2"
+              max="1.5"
               min="0"
               step="0.05"
               type="range"
@@ -518,7 +518,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <span
               class="c13"
             >
-              2.00
+              1.50
             </span>
           </div>
         </div>
@@ -537,7 +537,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <input
               class="c9"
               id="test/b-translation"
-              max="1.5"
+              max="2"
               min="0"
               step="0.05"
               type="range"
@@ -566,7 +566,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
             <span
               class="c13"
             >
-              1.50
+              2.00
             </span>
           </div>
         </div>
@@ -962,7 +962,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               id="test/subject-angle"
               max="360"
               min="-360"
-              step="1"
+              step="5"
               type="range"
               value="90"
             />
@@ -1008,7 +1008,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
             <input
               class="c9"
               id="test/subject-scale"
-              max="2"
+              max="1.5"
               min="0"
               step="0.05"
               type="range"
@@ -1037,7 +1037,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
             <span
               class="c13"
             >
-              2.00
+              1.50
             </span>
           </div>
         </div>
@@ -1056,7 +1056,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
             <input
               class="c9"
               id="test/subject-translation"
-              max="1.5"
+              max="2"
               min="0"
               step="0.05"
               type="range"
@@ -1085,7 +1085,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
             <span
               class="c13"
             >
-              1.50
+              2.00
             </span>
           </div>
         </div>

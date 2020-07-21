@@ -148,7 +148,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
           id="test/subject-angle"
           max="360"
           min="-360"
-          step="1"
+          step="5"
           type="range"
           value="45"
         />
@@ -194,7 +194,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
         <input
           class="c5"
           id="test/subject-scale"
-          max="2"
+          max="1.5"
           min="0"
           step="0.05"
           type="range"
@@ -223,7 +223,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
         <span
           class="c9"
         >
-          2.00
+          1.50
         </span>
       </div>
     </div>
@@ -242,7 +242,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
         <input
           class="c5"
           id="test/subject-translation"
-          max="1.5"
+          max="2"
           min="0"
           step="0.05"
           type="range"
@@ -271,7 +271,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
         <span
           class="c9"
         >
-          1.50
+          2.00
         </span>
       </div>
     </div>
