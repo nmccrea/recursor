@@ -1,32 +1,26 @@
-import { createReducer, nanoid, PayloadAction } from "@reduxjs/toolkit"
+import { createReducer, nanoid } from "@reduxjs/toolkit"
 import similarities, { Similarities } from "./similarities"
 import {
-  addOne,
+  createOne,
   removeOne,
   setTranslation,
   setScale,
   setAngle,
   setDepth,
 } from "./actions"
-import { SimilarityInputs } from "./types"
+import createSimilarity from "./utils/createSimilarity"
 
 /**
- * A case reducer which creates a similarity out of the given similarity inputs and adds it to the list.
+ * A case reducer which creates a new similarity with a unique ID and adds it to the list.
  */
-const addOneWithUniqueId = (
-  previousState: Similarities,
-  action: PayloadAction<SimilarityInputs>
-): Similarities => {
-  const similarity = action.payload
-  return similarities.addOne(previousState, {
-    ...similarity,
-    id: nanoid(),
-  })
+const createOneWithUniqueId = (previousState: Similarities): Similarities => {
+  const id = nanoid()
+  return similarities.addOne(previousState, createSimilarity(id))
 }
 
 const reducer = createReducer(similarities.getInitialState(), (builder) =>
   builder
-    .addCase(addOne, addOneWithUniqueId)
+    .addCase(createOne, createOneWithUniqueId)
     .addCase(removeOne, similarities.removeOne)
     .addCase(setTranslation, similarities.updateOne)
     .addCase(setScale, similarities.updateOne)

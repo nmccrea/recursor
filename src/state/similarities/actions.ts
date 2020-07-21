@@ -29,13 +29,11 @@ export type SimilarityInputActionCreator<Key extends SimilarityInputKey> = (
 ) => SimilarityInputAction<Key>
 
 /**
- * Creates an action containing new similarity inputs to be added to the list of similarities.
+ * Creates an action representing the creation of a new similarity to be added to the list of similarities.
  *
- * @param similarity - The new similarity inputs.
- *
- * @returns A payload action whose payload is the new similarity inputs to add.
+ * @returns A payload action with an empty payload.
  */
-const addOne = createAction<SimilarityInputs>("similarities/ADD_ONE")
+const createOne = createAction<undefined>("similarities/CREATE_ONE")
 
 /**
  * Creates an action identifying an existing similarity to be destroyed.
@@ -163,7 +161,7 @@ const getDepthSetterFor = (
   id: SimilarityId
 ): SimilarityInputActionCreator<"depth"> => (depth) => setDepth(id, depth)
 
-export type AddOneAction = ReturnType<typeof addOne>
+export type CreateOneAction = ReturnType<typeof createOne>
 export type RemoveOneAction = ReturnType<typeof removeOne>
 export type SetTranslationAction = ReturnType<typeof setTranslation>
 export type SetScaleAction = ReturnType<typeof setScale>
@@ -171,7 +169,7 @@ export type SetAngleAction = ReturnType<typeof setAngle>
 export type SetDepthAction = ReturnType<typeof setDepth>
 
 export {
-  addOne,
+  createOne,
   removeOne,
   setTranslation,
   getTranslationSetterFor,

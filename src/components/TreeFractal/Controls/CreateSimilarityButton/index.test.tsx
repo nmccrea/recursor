@@ -3,18 +3,18 @@ import "jest-styled-components"
 import { Provider } from "react-redux"
 import { render, fireEvent, getByRole } from "@testing-library/react"
 import { createStore, RootState } from "state/store"
-import AddSimilarityButton from "."
+import CreateSimilarityButton from "."
 
 jest.mock("@reduxjs/toolkit", () => ({
   ...jest.requireActual("@reduxjs/toolkit"),
   nanoid: () => "fake-nanoid-unique-id",
 }))
 
-describe("`<AddSimilarityButton />`", () => {
+describe("`<CreateSimilarityButton />`", () => {
   it("renders correctly", () => {
     const { container } = render(
       <Provider store={createStore()}>
-        <AddSimilarityButton />
+        <CreateSimilarityButton />
       </Provider>
     )
 
@@ -26,7 +26,7 @@ describe("`<AddSimilarityButton />`", () => {
     const store = createStore(state)
     const { container } = render(
       <Provider store={store}>
-        <AddSimilarityButton />
+        <CreateSimilarityButton />
       </Provider>
     )
 

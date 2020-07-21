@@ -2,7 +2,7 @@ import React from "react"
 import { useSelector } from "react-redux"
 import { selectIds } from "state/similarities/selectors"
 import { Container, GlobalControlsArea, SimilarityControlsArea } from "./styled"
-import AddSimilarityButton from "./AddSimilarityButton"
+import CreateSimilarityButton from "./CreateSimilarityButton"
 import SimilarityControls from "./SimilarityControls"
 
 const Controls = () => {
@@ -10,7 +10,7 @@ const Controls = () => {
   return (
     <Container>
       <GlobalControlsArea>
-        <AddSimilarityButton />
+        <CreateSimilarityButton />
       </GlobalControlsArea>
 
       <SimilarityControlsArea>

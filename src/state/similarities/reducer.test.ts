@@ -1,7 +1,7 @@
 import reducer from "./reducer"
 import { Similarities } from "./similarities"
 import {
-  addOne,
+  createOne,
   removeOne,
   setTranslation,
   setScale,
@@ -21,7 +21,7 @@ describe("reducer", () => {
     expect(initialState).toEqual<Similarities>({ ids: [], entities: {} })
   })
 
-  describe("`addOne` action", () => {
+  describe("`createOne` action", () => {
     it("creates a unique id for the given similarity and adds it to the list", () => {
       const previousState: Similarities = {
         ids: ["test/control"],
@@ -36,13 +36,7 @@ describe("reducer", () => {
           },
         },
       }
-      const action = addOne({
-        color: "blue",
-        translation: 0.234,
-        scale: 0.623,
-        angle: 2.622 * Math.PI,
-        depth: 4,
-      })
+      const action = createOne()
 
       const nextState = reducer(previousState, action)
 
@@ -59,11 +53,11 @@ describe("reducer", () => {
           },
           "fake-nanoid-unique-id": {
             id: "fake-nanoid-unique-id",
-            color: "blue",
-            translation: 0.234,
-            scale: 0.623,
-            angle: 2.622 * Math.PI,
-            depth: 4,
+            color: "black",
+            translation: 1,
+            scale: 0.75,
+            angle: 0,
+            depth: 5,
           },
         },
       })

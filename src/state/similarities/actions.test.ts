@@ -1,6 +1,6 @@
 import {
-  addOne,
-  AddOneAction,
+  createOne,
+  CreateOneAction,
   removeOne,
   RemoveOneAction,
   setTranslation,
@@ -17,25 +17,13 @@ import {
   getDepthSetterFor,
 } from "./actions"
 
-describe("`addOne()`", () => {
-  it("returns an action object for adding new similarity inputs", () => {
-    const action = addOne({
-      color: "blue",
-      translation: 0.891,
-      scale: 0.687,
-      angle: 0.343 * Math.PI,
-      depth: 5,
-    })
+describe("`createOne()`", () => {
+  it("returns an action object for creating a new similarity", () => {
+    const action = createOne()
 
-    expect(action).toEqual<AddOneAction>({
-      type: "similarities/ADD_ONE",
-      payload: {
-        color: "blue",
-        translation: 0.891,
-        scale: 0.687,
-        angle: 0.343 * Math.PI,
-        depth: 5,
-      },
+    expect(action).toEqual<CreateOneAction>({
+      type: "similarities/CREATE_ONE",
+      payload: undefined,
     })
   })
 })
