@@ -22,7 +22,7 @@ describe("reducer", () => {
   })
 
   describe("`createOne` action", () => {
-    it("creates a unique id for the given similarity and adds it to the list", () => {
+    it("creates a similarity with a unique ID and adds it to the list", () => {
       const previousState: Similarities = {
         ids: ["test/control"],
         entities: {
@@ -61,6 +61,42 @@ describe("reducer", () => {
           },
         },
       })
+    })
+
+    it("does nothing if there are already three similarities", () => {
+      const previousState: Similarities = {
+        ids: ["test/a", "test/b", "test/c"],
+        entities: {
+          "test/a": {
+            id: "test/a",
+            color: "red",
+            translation: 0.8,
+            scale: 0.5,
+            angle: -Math.PI / 4,
+            depth: 7,
+          },
+          "test/b": {
+            id: "test/b",
+            color: "green",
+            translation: 1.2,
+            scale: 0.6,
+            angle: Math.PI / 6,
+            depth: 3,
+          },
+          "test/c": {
+            id: "test/c",
+            color: "blue",
+            translation: 0.1,
+            scale: 0.9,
+            angle: -Math.PI,
+            depth: 5,
+          },
+        },
+      }
+
+      const nextState = reducer(previousState, createOne())
+
+      expect(nextState).toBe(previousState)
     })
   })
 
