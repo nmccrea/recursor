@@ -40,7 +40,7 @@ const createOne = createAction<undefined>("similarities/CREATE_ONE")
  *
  * @param similarityId - The ID of the similarity to remove.
  *
- * @returns A payload action whose payload conforms to `@reduxjs/toolkit`'s `entityAdapter.removeOne()` API.
+ * @returns A payload action containing the given ID.
  */
 const removeOne = createAction<SimilarityId>("similarities/REMOVE_ONE")
 
