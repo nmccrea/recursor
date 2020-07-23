@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`<Head />\` renders with the correct \`react-helmet\` state 1`] = `
+Object {
+  "baseTag": Array [],
+  "bodyAttributes": Object {},
+  "defer": true,
+  "encode": true,
+  "htmlAttributes": Object {
+    "lang": "en",
+  },
+  "linkTags": Array [
+    Object {
+      "href": "https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto+Mono:wght@500&display=swap",
+      "rel": "stylesheet",
+    },
+  ],
+  "metaTags": Array [
+    Object {
+      "content": "A mock description.",
+      "name": "description",
+    },
+    Object {
+      "content": "Test Title",
+      "property": "og:title",
+    },
+    Object {
+      "content": "A mock description.",
+      "property": "og:description",
+    },
+    Object {
+      "content": "website",
+      "property": "og:type",
+    },
+    Object {
+      "content": "summary",
+      "name": "twitter:card",
+    },
+    Object {
+      "content": "Mockie McGee",
+      "name": "twitter:creator",
+    },
+    Object {
+      "content": "Test Title",
+      "name": "twitter:title",
+    },
+    Object {
+      "content": "A mock description.",
+      "name": "twitter:description",
+    },
+  ],
+  "noscriptTags": Array [],
+  "onChangeClientState": [Function],
+  "scriptTags": Array [],
+  "styleTags": Array [],
+  "title": "Test Title | Mock Site Name",
+  "titleAttributes": Object {},
+}
+`;

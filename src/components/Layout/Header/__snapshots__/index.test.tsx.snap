@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`\`<Layout />\` renders correctly 1`] = `
+exports[`\`<Header />\` renders correctly 1`] = `
 .c1 {
   font-family: "Audiowide",system-ui,-apple-system,BlinkMacSystemFont, "Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif, "Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
   color: cornflowerblue;
@@ -21,9 +21,6 @@ exports[`\`<Layout />\` renders correctly 1`] = `
 }
 
 <div>
-  <p>
-    Test Content
-  </p>
   <div
     class="sc-AxjAm c0"
   >
