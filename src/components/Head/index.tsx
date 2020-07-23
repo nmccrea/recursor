@@ -1,5 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
+import { typography } from "styles/utilities"
 import { Helmet } from "react-helmet"
 
 interface Props {
@@ -28,47 +29,21 @@ const Head = ({ description = ``, lang = `en`, meta = [], title }: Props) => {
 
   return (
     <Helmet
-      htmlAttributes={{
-        lang,
-      }}
-      title={title}
+      htmlAttributes={{ lang }}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
-      meta={[
-        {
-          name: `description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:title`,
-          content: title,
-        },
-        {
-          property: `og:description`,
-          content: metaDescription,
-        },
-        {
-          property: `og:type`,
-          content: `website`,
-        },
-        {
-          name: `twitter:card`,
-          content: `summary`,
-        },
-        {
-          name: `twitter:creator`,
-          content: site.siteMetadata.author,
-        },
-        {
-          name: `twitter:title`,
-          content: title,
-        },
-        {
-          name: `twitter:description`,
-          content: metaDescription,
-        },
-        ...meta,
-      ]}
-    />
+      meta={meta}
+    >
+      <title>{title}</title>
+      <meta name={`description`} content={metaDescription} />
+      <meta property={`og:title`} content={title} />
+      <meta property={`og:description`} content={metaDescription} />
+      <meta property={`og:type`} content={`website`} />
+      <meta name={`twitter:card`} content={`summary`} />
+      <meta name={`twitter:creator`} content={site.siteMetadata.author} />
+      <meta name={`twitter:title`} content={title} />
+      <meta name={`twitter:description`} content={metaDescription} />
+      <link href={typography.googleFontsUrl} rel="stylesheet" />
+    </Helmet>
   )
 }
 
