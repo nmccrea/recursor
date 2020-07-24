@@ -3,10 +3,9 @@ import styled from "styled-components"
 import Recursion from "../Recursion"
 
 const RootGeometry = styled.div`
-  width: 6px;
-  height: 120px;
+  width: 1vh;
+  height: 15vh;
   position: relative;
-  transform: translateY(100%);
 `
 
 const FractalRoot = () => (

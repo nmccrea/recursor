@@ -2,8 +2,11 @@
 
 exports[`\`<Controls />\` renders correctly when there are multiple existing similarities. 1`] = `
 .c0 {
-  padding: 0.5rem;
-  box-shadow: 0 -3px 5px 2px #bbb;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  height: 30%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -19,12 +22,44 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 }
 
 .c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
 }
 
 .c3 {
-  display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+.c4 {
+  background-image: url(-- MOCK FILE EXPORT VALUE --);
+  background-size: 1.6rem 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+
+.c4:hover {
+  opacity: 0.8;
 }
 
 .c2 {
@@ -54,7 +89,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
   filter: brightness(100%);
 }
 
-.c5 {
+.c7 {
   border-radius: 0.5rem;
   box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
   padding: 6px 16px;
@@ -69,19 +104,19 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
   background-color: lightsalmon;
 }
 
-.c5:hover {
+.c7:hover {
   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
   -webkit-filter: brightness(95%);
   filter: brightness(95%);
 }
 
-.c5:active {
+.c7:active {
   box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
   -webkit-filter: brightness(100%);
   filter: brightness(100%);
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -92,15 +127,15 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
   padding-right: 1rem;
 }
 
-.c6 {
+.c8 {
   padding: 0.5rem 0;
 }
 
-.c6 + div {
+.c8 + div {
   border-top: 1px solid lightgray;
 }
 
-.c7 {
+.c9 {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
   -webkit-align-items: stretch;
@@ -109,56 +144,57 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
   align-items: stretch;
 }
 
-.c8 {
+.c10 {
   grid-column: span 3 / span 3;
-  font-size: 0.9em;
+  font-size: 0.75em;
+  text-transform: uppercase;
 }
 
-.c9 {
+.c11 {
   grid-column: span 2 / span 2;
 }
 
-.c10 {
+.c12 {
   margin-left: 0.25rem;
   font-size: 0.9em;
   justify-self: flex-end;
   white-space: nowrap;
 }
 
-.c12 {
+.c14 {
   justify-self: flex-start;
   font-size: 0.7em;
   color: gray;
   white-space: nowrap;
 }
 
-.c13 {
+.c15 {
   justify-self: flex-end;
   font-size: 0.7em;
   color: gray;
   white-space: nowrap;
 }
 
-.c11 {
+.c13 {
   font-size: 0.8em;
   font-style: italic;
   color: gray;
 }
 
 @media (min-width:640px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(3,minmax(0,1fr));
   }
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c5 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -170,7 +206,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 }
 
 @media (min-width:1024px) {
-  .c4 {
+  .c6 {
     padding: 0.5rem 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -187,11 +223,11 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 }
 
 @media (min-width:1024px) {
-  .c6 {
-    padding: 0 0.5rem;
+  .c8 {
+    padding: 0 1rem;
   }
 
-  .c6 + div {
+  .c8 + div {
     border-top: unset;
     border-left: 1px solid lightgray;
   }
@@ -199,44 +235,57 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 
 <div>
   <div
-    class="c0"
+    class="sc-AxjAm c0"
   >
     <div
       class="c1"
     >
       <button
-        class="sc-AxhCb c2"
+        class="sc-AxheI c2"
       >
         Add
       </button>
+      <span
+        class="c3"
+      >
+        &lt; Add up to 3 similarities
+      </span>
+      <a
+        href="https://github.com/mockiemcgee/test"
+        target="blank"
+      >
+        <div
+          class="c4"
+        />
+      </a>
     </div>
     <div
-      class="c3"
+      class="c5"
     >
       <div
-        class="c4"
+        class="c6"
       >
         <div>
           <button
-            class="sc-AxhCb c5"
+            class="sc-AxheI c7"
           >
             Remove
           </button>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/a-angle"
             >
               Angle
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/a-angle"
               max="360"
               min="-360"
@@ -245,7 +294,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="180"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/a-angle"
@@ -253,38 +302,38 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 180
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 °
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               -360
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               360
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/a-scale"
             >
               Scale
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/a-scale"
               max="1.5"
               min="0"
@@ -293,7 +342,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.7791"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/a-scale"
@@ -301,38 +350,38 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 0.78
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0.00
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               1.50
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/a-translation"
             >
               Translation
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/a-translation"
               max="2"
               min="0"
@@ -341,7 +390,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.4663"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/a-translation"
@@ -349,38 +398,38 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 0.47
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0.00
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               2.00
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/a-depth"
             >
               Depth
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/a-depth"
               max="8"
               min="0"
@@ -389,7 +438,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="3"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/a-depth"
@@ -397,19 +446,19 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 3
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               8
             </span>
@@ -417,29 +466,29 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
         </div>
       </div>
       <div
-        class="c4"
+        class="c6"
       >
         <div>
           <button
-            class="sc-AxhCb c5"
+            class="sc-AxheI c7"
           >
             Remove
           </button>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/b-angle"
             >
               Angle
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/b-angle"
               max="360"
               min="-360"
@@ -448,7 +497,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="-180"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/b-angle"
@@ -456,38 +505,38 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 -180
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 °
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               -360
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               360
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/b-scale"
             >
               Scale
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/b-scale"
               max="1.5"
               min="0"
@@ -496,7 +545,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.7202"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/b-scale"
@@ -504,38 +553,38 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 0.72
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0.00
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               1.50
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/b-translation"
             >
               Translation
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/b-translation"
               max="2"
               min="0"
@@ -544,7 +593,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="0.7432"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/b-translation"
@@ -552,38 +601,38 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 0.74
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0.00
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               2.00
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/b-depth"
             >
               Depth
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/b-depth"
               max="8"
               min="0"
@@ -592,7 +641,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
               value="7"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/b-depth"
@@ -600,19 +649,19 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
                 7
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               8
             </span>
@@ -626,8 +675,11 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
 
 exports[`\`<Controls />\` renders correctly when there are no existing similarities 1`] = `
 .c0 {
-  padding: 0.5rem;
-  box-shadow: 0 -3px 5px 2px #bbb;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  height: 30%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -643,12 +695,44 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
 }
 
 .c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
 }
 
 .c3 {
-  display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+.c4 {
+  background-image: url(-- MOCK FILE EXPORT VALUE --);
+  background-size: 1.6rem 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+
+.c4:hover {
+  opacity: 0.8;
 }
 
 .c2 {
@@ -679,19 +763,19 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
 }
 
 @media (min-width:640px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(3,minmax(0,1fr));
   }
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c5 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -704,19 +788,32 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
 
 <div>
   <div
-    class="c0"
+    class="sc-AxjAm c0"
   >
     <div
       class="c1"
     >
       <button
-        class="sc-AxhCb c2"
+        class="sc-AxheI c2"
       >
         Add
       </button>
+      <span
+        class="c3"
+      >
+        &lt; Add up to 3 similarities
+      </span>
+      <a
+        href="https://github.com/mockiemcgee/test"
+        target="blank"
+      >
+        <div
+          class="c4"
+        />
+      </a>
     </div>
     <div
-      class="c3"
+      class="c5"
     />
   </div>
 </div>
@@ -724,8 +821,11 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
 
 exports[`\`<Controls />\` renders correctly when there is one existing similarity 1`] = `
 .c0 {
-  padding: 0.5rem;
-  box-shadow: 0 -3px 5px 2px #bbb;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  height: 30%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -741,12 +841,44 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
 }
 
 .c1 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c5 {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
 }
 
 .c3 {
-  display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+.c4 {
+  background-image: url(-- MOCK FILE EXPORT VALUE --);
+  background-size: 1.6rem 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+
+.c4:hover {
+  opacity: 0.8;
 }
 
 .c2 {
@@ -776,7 +908,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
   filter: brightness(100%);
 }
 
-.c5 {
+.c7 {
   border-radius: 0.5rem;
   box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
   padding: 6px 16px;
@@ -791,19 +923,19 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
   background-color: lightsalmon;
 }
 
-.c5:hover {
+.c7:hover {
   box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2), 0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12);
   -webkit-filter: brightness(95%);
   filter: brightness(95%);
 }
 
-.c5:active {
+.c7:active {
   box-shadow: 0px 5px 5px -3px rgba(0,0,0,0.2), 0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12);
   -webkit-filter: brightness(100%);
   filter: brightness(100%);
 }
 
-.c4 {
+.c6 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -814,15 +946,15 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
   padding-right: 1rem;
 }
 
-.c6 {
+.c8 {
   padding: 0.5rem 0;
 }
 
-.c6 + div {
+.c8 + div {
   border-top: 1px solid lightgray;
 }
 
-.c7 {
+.c9 {
   display: grid;
   grid-template-columns: repeat(3,minmax(0,1fr));
   -webkit-align-items: stretch;
@@ -831,56 +963,57 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
   align-items: stretch;
 }
 
-.c8 {
+.c10 {
   grid-column: span 3 / span 3;
-  font-size: 0.9em;
+  font-size: 0.75em;
+  text-transform: uppercase;
 }
 
-.c9 {
+.c11 {
   grid-column: span 2 / span 2;
 }
 
-.c10 {
+.c12 {
   margin-left: 0.25rem;
   font-size: 0.9em;
   justify-self: flex-end;
   white-space: nowrap;
 }
 
-.c12 {
+.c14 {
   justify-self: flex-start;
   font-size: 0.7em;
   color: gray;
   white-space: nowrap;
 }
 
-.c13 {
+.c15 {
   justify-self: flex-end;
   font-size: 0.7em;
   color: gray;
   white-space: nowrap;
 }
 
-.c11 {
+.c13 {
   font-size: 0.8em;
   font-style: italic;
   color: gray;
 }
 
 @media (min-width:640px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
 
 @media (min-width:768px) {
-  .c3 {
+  .c5 {
     grid-template-columns: repeat(3,minmax(0,1fr));
   }
 }
 
 @media (min-width:1024px) {
-  .c3 {
+  .c5 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -892,7 +1025,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
 }
 
 @media (min-width:1024px) {
-  .c4 {
+  .c6 {
     padding: 0.5rem 0;
     -webkit-flex-direction: row;
     -ms-flex-direction: row;
@@ -909,11 +1042,11 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
 }
 
 @media (min-width:1024px) {
-  .c6 {
-    padding: 0 0.5rem;
+  .c8 {
+    padding: 0 1rem;
   }
 
-  .c6 + div {
+  .c8 + div {
     border-top: unset;
     border-left: 1px solid lightgray;
   }
@@ -921,44 +1054,57 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
 
 <div>
   <div
-    class="c0"
+    class="sc-AxjAm c0"
   >
     <div
       class="c1"
     >
       <button
-        class="sc-AxhCb c2"
+        class="sc-AxheI c2"
       >
         Add
       </button>
+      <span
+        class="c3"
+      >
+        &lt; Add up to 3 similarities
+      </span>
+      <a
+        href="https://github.com/mockiemcgee/test"
+        target="blank"
+      >
+        <div
+          class="c4"
+        />
+      </a>
     </div>
     <div
-      class="c3"
+      class="c5"
     >
       <div
-        class="c4"
+        class="c6"
       >
         <div>
           <button
-            class="sc-AxhCb c5"
+            class="sc-AxheI c7"
           >
             Remove
           </button>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/subject-angle"
             >
               Angle
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/subject-angle"
               max="360"
               min="-360"
@@ -967,7 +1113,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="90"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/subject-angle"
@@ -975,38 +1121,38 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
                 90
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 °
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               -360
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               360
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/subject-scale"
             >
               Scale
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/subject-scale"
               max="1.5"
               min="0"
@@ -1015,7 +1161,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="0.7791"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/subject-scale"
@@ -1023,38 +1169,38 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
                 0.78
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0.00
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               1.50
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/subject-translation"
             >
               Translation
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/subject-translation"
               max="2"
               min="0"
@@ -1063,7 +1209,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="0.4663"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/subject-translation"
@@ -1071,38 +1217,38 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
                 0.47
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0.00
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               2.00
             </span>
           </div>
         </div>
         <div
-          class="c6"
+          class="c8"
         >
           <div
-            class="c7"
+            class="c9"
           >
             <label
-              class="c8"
+              class="c10"
               for="test/subject-depth"
             >
               Depth
             </label>
             <input
-              class="c9"
+              class="c11"
               id="test/subject-depth"
               max="8"
               min="0"
@@ -1111,7 +1257,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
               value="3"
             />
             <span
-              class="c10"
+              class="c12"
             >
               <output
                 for="test/subject-depth"
@@ -1119,19 +1265,19 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
                 3
               </output>
               <span
-                class="c11"
+                class="c13"
               >
                  
                 x
               </span>
             </span>
             <span
-              class="c12"
+              class="c14"
             >
               0
             </span>
             <span
-              class="c13"
+              class="c15"
             >
               8
             </span>

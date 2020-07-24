@@ -2,6 +2,11 @@
 
 exports[`\`<FractalView />\` renders correctly 1`] = `
 .c0 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -29,12 +34,9 @@ exports[`\`<FractalView />\` renders correctly 1`] = `
 }
 
 .c1 {
-  width: 6px;
-  height: 120px;
+  width: 1vh;
+  height: 15vh;
   position: relative;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
 }
 
 <div>

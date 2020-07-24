@@ -9,7 +9,8 @@ const Container = styled.div`
 
 const Label = styled.label`
   ${grid.columnSpan(3)}
-  font-size: 0.9em;
+  font-size: 0.75em;
+  text-transform: uppercase;
 `
 
 const Input = styled.input`

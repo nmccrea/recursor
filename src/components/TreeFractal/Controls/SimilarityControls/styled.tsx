@@ -22,7 +22,7 @@ const ControlElement = styled.div`
   }
 
   ${screen.large} {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
 
     & + div {
       border-top: unset;

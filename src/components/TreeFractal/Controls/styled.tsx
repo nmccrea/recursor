@@ -1,10 +1,9 @@
 import styled from "styled-components"
 import { grid, screen } from "styles/utilities"
+import { Panel as PanelComponent } from "components/parts/Panel"
 
-const Container = styled.div`
-  padding: 0.5rem;
-  box-shadow: 0 -3px 5px 2px #bbb;
-
+const Panel = styled(PanelComponent)`
+  height: 30%;
   display: flex;
   flex-direction: column;
   align-items: stretch;
@@ -12,7 +11,10 @@ const Container = styled.div`
 `
 
 const GlobalControlsArea = styled.div`
+  flex-shrink: 0;
   padding-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
 `
 
 const SimilarityControlsArea = styled.div`
@@ -33,4 +35,10 @@ const SimilarityControlsArea = styled.div`
   }
 `
 
-export { Container, GlobalControlsArea, SimilarityControlsArea }
+const Instructions = styled.span`
+  flex: 1 0 0;
+  margin-left: 1em;
+  margin-right: auto;
+`
+
+export { Panel, GlobalControlsArea, SimilarityControlsArea, Instructions }

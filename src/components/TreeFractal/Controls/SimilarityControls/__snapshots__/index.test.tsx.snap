@@ -58,7 +58,8 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
 
 .c4 {
   grid-column: span 3 / span 3;
-  font-size: 0.9em;
+  font-size: 0.75em;
+  text-transform: uppercase;
 }
 
 .c5 {
@@ -111,7 +112,7 @@ exports[`\`<SimilarityControls />\` renders correctly 1`] = `
 
 @media (min-width:1024px) {
   .c2 {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
   }
 
   .c2 + div {

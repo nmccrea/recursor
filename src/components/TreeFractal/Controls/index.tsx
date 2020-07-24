@@ -1,16 +1,24 @@
 import React from "react"
 import { useSelector } from "react-redux"
 import { selectIds } from "state/similarities/selectors"
-import { Container, GlobalControlsArea, SimilarityControlsArea } from "./styled"
+import {
+  Panel,
+  GlobalControlsArea,
+  SimilarityControlsArea,
+  Instructions,
+} from "./styled"
+import GithubLink from "./GithubLink"
 import CreateSimilarityButton from "./CreateSimilarityButton"
 import SimilarityControls from "./SimilarityControls"
 
 const Controls = () => {
   const similarityIds = useSelector(selectIds)
   return (
-    <Container>
+    <Panel>
       <GlobalControlsArea>
         <CreateSimilarityButton />
+        <Instructions>{"< Add up to 3 similarities"}</Instructions>
+        <GithubLink />
       </GlobalControlsArea>
 
       <SimilarityControlsArea>
@@ -18,7 +26,7 @@ const Controls = () => {
           <SimilarityControls similarityId={similarityId} key={similarityId} />
         ))}
       </SimilarityControlsArea>
-    </Container>
+    </Panel>
   )
 }
 

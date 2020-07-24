@@ -1,18 +1,37 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`\`<TreeFractal />\` renders correctly 1`] = `
-.c0 {
-  position: absolute;
+.c3 {
+  position: fixed;
   top: 0px;
   left: 0px;
   width: 100vw;
   height: 100vh;
-  display: grid;
-  grid-template-rows: 2fr 1fr;
-  grid-template-columns: 1fr;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-align-items: stretch;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  box-sizing: border-box;
+  padding: 1rem;
 }
 
-.c1 {
+.c0 {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -28,7 +47,7 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
   overflow: hidden;
 }
 
-.c3 {
+.c2 {
   -webkit-transform-origin: center bottom;
   -ms-transform-origin: center bottom;
   transform-origin: center bottom;
@@ -39,18 +58,18 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
   right: 0px;
 }
 
-.c2 {
-  width: 6px;
-  height: 120px;
+.c1 {
+  width: 1vh;
+  height: 15vh;
   position: relative;
-  -webkit-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
 }
 
 .c4 {
-  padding: 0.5rem;
-  box-shadow: 0 -3px 5px 2px #bbb;
+  padding: 1rem;
+  background-color: rgba(255,255,255,0.7);
+  border-radius: 0.5rem;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,0.2), 0px 2px 2px 0px rgba(0,0,0,0.14),0px 1px 5px 0px rgba(0,0,0,0.12);
+  height: 30%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -66,12 +85,44 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
 }
 
 .c5 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
   padding-bottom: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c9 {
+  display: grid;
+  grid-template-columns: repeat(1,minmax(0,1fr));
 }
 
 .c7 {
-  display: grid;
-  grid-template-columns: repeat(1,minmax(0,1fr));
+  -webkit-flex: 1 0 0;
+  -ms-flex: 1 0 0;
+  flex: 1 0 0;
+  margin-left: 1em;
+  margin-right: auto;
+}
+
+.c8 {
+  background-image: url(-- MOCK FILE EXPORT VALUE --);
+  background-size: 1.6rem 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+
+.c8:hover {
+  opacity: 0.8;
 }
 
 .c6 {
@@ -102,19 +153,19 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
 }
 
 @media (min-width:640px) {
-  .c7 {
+  .c9 {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
 
 @media (min-width:768px) {
-  .c7 {
+  .c9 {
     grid-template-columns: repeat(3,minmax(0,1fr));
   }
 }
 
 @media (min-width:1024px) {
-  .c7 {
+  .c9 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -133,28 +184,41 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
       class="c1"
     >
       <div
-        class="c2"
-      >
-        <div
-          class="c3 similarity-root depth-0"
-          style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
-        />
-      </div>
+        class="c2 similarity-root depth-0"
+        style="background-color: black; transform: translateY(-0%) scale(1) rotate(0rad);"
+      />
     </div>
+  </div>
+  <div
+    class="c3"
+  >
     <div
-      class="c4"
+      class="sc-AxhUy c4"
     >
       <div
         class="c5"
       >
         <button
-          class="sc-Axmtr c6"
+          class="sc-fzoLsD c6"
         >
           Add
         </button>
+        <span
+          class="c7"
+        >
+          &lt; Add up to 3 similarities
+        </span>
+        <a
+          href="https://github.com/mockiemcgee/test"
+          target="blank"
+        >
+          <div
+            class="c8"
+          />
+        </a>
       </div>
       <div
-        class="c7"
+        class="c9"
       />
     </div>
   </div>
