@@ -17,7 +17,7 @@ const Controls = () => {
     <Panel>
       <GlobalControlsArea>
         <CreateSimilarityButton />
-        <Instructions>{"< Add up to 3 similarities"}</Instructions>
+        <Instructions>{"< Add up to 3 self-similarities"}</Instructions>
         <GithubLink />
       </GlobalControlsArea>
 

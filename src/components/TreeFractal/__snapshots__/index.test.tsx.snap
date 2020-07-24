@@ -206,7 +206,7 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
         <span
           class="c7"
         >
-          &lt; Add up to 3 similarities
+          &lt; Add up to 3 self-similarities
         </span>
         <a
           href="https://github.com/mockiemcgee/test"

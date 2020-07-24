@@ -248,7 +248,7 @@ exports[`\`<Controls />\` renders correctly when there are multiple existing sim
       <span
         class="c3"
       >
-        &lt; Add up to 3 similarities
+        &lt; Add up to 3 self-similarities
       </span>
       <a
         href="https://github.com/mockiemcgee/test"
@@ -801,7 +801,7 @@ exports[`\`<Controls />\` renders correctly when there are no existing similarit
       <span
         class="c3"
       >
-        &lt; Add up to 3 similarities
+        &lt; Add up to 3 self-similarities
       </span>
       <a
         href="https://github.com/mockiemcgee/test"
@@ -1067,7 +1067,7 @@ exports[`\`<Controls />\` renders correctly when there is one existing similarit
       <span
         class="c3"
       >
-        &lt; Add up to 3 similarities
+        &lt; Add up to 3 self-similarities
       </span>
       <a
         href="https://github.com/mockiemcgee/test"
