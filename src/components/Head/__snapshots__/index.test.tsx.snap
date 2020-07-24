@@ -21,7 +21,7 @@ Object {
       "name": "description",
     },
     Object {
-      "content": "Test Title",
+      "content": "Mock Site Name",
       "property": "og:title",
     },
     Object {
@@ -41,7 +41,7 @@ Object {
       "name": "twitter:creator",
     },
     Object {
-      "content": "Test Title",
+      "content": "Mock Site Name",
       "name": "twitter:title",
     },
     Object {
