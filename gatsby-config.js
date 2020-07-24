@@ -5,6 +5,7 @@ module.exports = {
     title: `Recursor`,
     description: `A tree fractal creator.`,
     author: `Nick McCrea`,
+    githubUrl: `https://github.com/nmccrea/recursor`,
   },
   plugins: [
     // Enable TypeScript.

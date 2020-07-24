@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`\`<GithubLink />\` renders correctly 1`] = `
+.c0 {
+  background-image: url(-- MOCK FILE EXPORT VALUE --);
+  background-size: 1.6rem 1.6rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  opacity: 0.6;
+  margin-right: 0.5rem;
+}
+
+.c0:hover {
+  opacity: 0.8;
+}
+
+<div>
+  <a
+    href="https://github.com/mockiemcgee/test"
+    target="blank"
+  >
+    <div
+      class="c0"
+    />
+  </a>
+</div>
+`;
