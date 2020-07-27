@@ -8,7 +8,7 @@ import {
   setAngle,
   setDepth,
 } from "./actions"
-import createSimilarity from "./utils/createSimilarity"
+import similarity from "models/similarity"
 
 /**
  * A case reducer which creates a new similarity with a unique ID and adds it to the list.
@@ -19,7 +19,7 @@ const createOneWithUniqueId = (previousState: Similarities): Similarities => {
   if (previousState?.ids.length >= 3) return previousState
 
   const id = nanoid()
-  return similaritiesAdapter.addOne(previousState, createSimilarity(id))
+  return similaritiesAdapter.addOne(previousState, similarity.create(id))
 }
 
 const reducer = createReducer(

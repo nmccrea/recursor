@@ -1,8 +1,8 @@
-import createSimilarity from "./createSimilarity"
+import similarity from "./similarity"
 
-describe("`createSimilarity()`", () => {
+describe("`create()`", () => {
   it("creates a new similarity object with the given ID and the expected values", () => {
-    const result = createSimilarity("test-id")
+    const result = similarity.create("test-id")
 
     expect(result).toEqual({
       id: "test-id",
@@ -15,8 +15,8 @@ describe("`createSimilarity()`", () => {
   })
 
   it("returns a new object each time it is called", () => {
-    const firstResult = createSimilarity("test-id")
-    const secondResult = createSimilarity("test-id")
+    const firstResult = similarity.create("test-id")
+    const secondResult = similarity.create("test-id")
 
     expect(firstResult).not.toBe(secondResult)
   })
