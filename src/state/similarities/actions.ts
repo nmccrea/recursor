@@ -7,7 +7,7 @@ import {
   Scale,
   Angle,
   Depth,
-} from "./types"
+} from "models/similarity"
 
 /**
  * A payload action representing a change to a similarity input.

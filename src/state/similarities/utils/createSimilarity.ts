@@ -1,4 +1,4 @@
-import { Similarity, SimilarityInputs, SimilarityId } from "../types"
+import { Similarity, SimilarityInputs, SimilarityId } from "models/similarity"
 
 const DEFAULT_SIMILARITY_INPUTS: SimilarityInputs = {
   translation: 1,

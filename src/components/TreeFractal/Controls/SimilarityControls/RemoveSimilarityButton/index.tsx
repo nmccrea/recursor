@@ -1,7 +1,7 @@
 import React from "react"
 import { useDispatch } from "react-redux"
 import { removeOne } from "state/similarities/actions"
-import { SimilarityId } from "state/similarities/types"
+import { SimilarityId } from "models/similarity"
 import { ButtonDanger } from "components/parts/Button"
 
 interface RemoveSimilarityButtonProps {

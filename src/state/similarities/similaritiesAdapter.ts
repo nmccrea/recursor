@@ -1,5 +1,5 @@
 import { createEntityAdapter } from "@reduxjs/toolkit"
-import { Similarity } from "./types"
+import { Similarity } from "models/similarity"
 
 const similaritiesAdapter = createEntityAdapter<Similarity>()
 export default similaritiesAdapter

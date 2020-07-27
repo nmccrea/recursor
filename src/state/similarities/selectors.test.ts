@@ -6,7 +6,7 @@ import {
   Scale,
   Angle,
   Depth,
-} from "./types"
+} from "models/similarity"
 import {
   selectAll,
   selectIds,

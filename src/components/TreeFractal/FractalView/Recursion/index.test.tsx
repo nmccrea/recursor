@@ -3,7 +3,7 @@ import "jest-styled-components"
 import { Provider } from "react-redux"
 import { render } from "@testing-library/react"
 import { createStore, RootState } from "state/store"
-import { Similarity } from "state/similarities/types"
+import { Similarity } from "models/similarity"
 import Recursion from "."
 
 const SIMILARITY_A: Similarity = {

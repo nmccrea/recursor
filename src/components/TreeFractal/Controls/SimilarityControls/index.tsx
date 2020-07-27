@@ -13,7 +13,7 @@ import {
   getAngleSelectorFor,
   getDepthSelectorFor,
 } from "state/similarities/selectors"
-import { SimilarityId } from "state/similarities/types"
+import { SimilarityId } from "models/similarity"
 import { Container, ControlElement } from "./styled"
 import RemoveSimilarityButton from "./RemoveSimilarityButton"
 import SliderInput from "./SliderInput"

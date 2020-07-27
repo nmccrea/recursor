@@ -9,7 +9,7 @@ import {
   Angle,
   Depth,
   Color,
-} from "state/similarities/types"
+} from "models/similarity"
 
 interface RecursionGeometryProps {
   $translation: Translation

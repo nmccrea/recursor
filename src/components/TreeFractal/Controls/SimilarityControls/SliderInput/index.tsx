@@ -5,7 +5,7 @@ import { SimilarityInputActionCreator } from "state/similarities/actions"
 import {
   SimilarityNumericInputs,
   SimilarityNumericInputKey,
-} from "state/similarities/types"
+} from "models/similarity"
 import { Container, Label, Input, Value, Min, Max, Unit } from "./styled"
 import identity from "utils/identity"
 

@@ -1,6 +1,10 @@
 import { RootState, Selector } from "state/store"
 import similaritiesAdapter from "./similaritiesAdapter"
-import { SimilarityId, SimilarityInputs, SimilarityInputKey } from "./types"
+import {
+  SimilarityId,
+  SimilarityInputs,
+  SimilarityInputKey,
+} from "models/similarity"
 
 /**
  * A selector for getting a similarity input value. The function will already be bound to a particular similarity ID.
