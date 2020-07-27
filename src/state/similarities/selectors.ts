@@ -1,5 +1,5 @@
 import { RootState, Selector } from "state/store"
-import similarities from "./similarities"
+import similaritiesAdapter from "./similaritiesAdapter"
 import { SimilarityId, SimilarityInputs, SimilarityInputKey } from "./types"
 
 /**
@@ -18,12 +18,12 @@ const selectSimilarities = (state: RootState) => state.similarities
  * Selects a list containing all of the existing similarities.
  * Results are ordered according to the entity adaptor's `ids` field.
  */
-const selectAll = similarities.getSelectors(selectSimilarities).selectAll
+const selectAll = similaritiesAdapter.getSelectors(selectSimilarities).selectAll
 
 /**
  * Selects the ordered list of similarity IDs.
  */
-const selectIds = similarities.getSelectors(selectSimilarities).selectIds
+const selectIds = similaritiesAdapter.getSelectors(selectSimilarities).selectIds
 
 /**
  * Returns a selector for the identified similarity.
@@ -33,7 +33,7 @@ const selectIds = similarities.getSelectors(selectSimilarities).selectIds
  * @returns A selector which selects the identified similarity when called.
  */
 const getSimilaritySelectorFor = (id: SimilarityId) => (state: RootState) =>
-  similarities.getSelectors(selectSimilarities).selectById(state, id)
+  similaritiesAdapter.getSelectors(selectSimilarities).selectById(state, id)
 
 /**
  * Returns a selector for the identified similarity's translation.
@@ -45,7 +45,7 @@ const getSimilaritySelectorFor = (id: SimilarityId) => (state: RootState) =>
 const getTranslationSelectorFor = (
   id: SimilarityId
 ): SimilarityInputSelector<"translation"> => (state) => {
-  const similarity = similarities
+  const similarity = similaritiesAdapter
     .getSelectors(selectSimilarities)
     .selectById(state, id)
   return similarity?.translation
@@ -61,7 +61,7 @@ const getTranslationSelectorFor = (
 const getScaleSelectorFor = (
   id: SimilarityId
 ): SimilarityInputSelector<"scale"> => (state) => {
-  const similarity = similarities
+  const similarity = similaritiesAdapter
     .getSelectors(selectSimilarities)
     .selectById(state, id)
   return similarity?.scale
@@ -77,7 +77,7 @@ const getScaleSelectorFor = (
 const getAngleSelectorFor = (
   id: SimilarityId
 ): SimilarityInputSelector<"angle"> => (state) => {
-  const similarity = similarities
+  const similarity = similaritiesAdapter
     .getSelectors(selectSimilarities)
     .selectById(state, id)
   return similarity?.angle
@@ -93,7 +93,7 @@ const getAngleSelectorFor = (
 const getDepthSelectorFor = (
   id: SimilarityId
 ): SimilarityInputSelector<"depth"> => (state) => {
-  const similarity = similarities
+  const similarity = similaritiesAdapter
     .getSelectors(selectSimilarities)
     .selectById(state, id)
   return similarity?.depth

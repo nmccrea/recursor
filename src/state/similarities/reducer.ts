@@ -1,5 +1,5 @@
 import { createReducer, nanoid } from "@reduxjs/toolkit"
-import similarities, { Similarities } from "./similarities"
+import similaritiesAdapter, { Similarities } from "./similaritiesAdapter"
 import {
   createOne,
   removeOne,
@@ -19,17 +19,19 @@ const createOneWithUniqueId = (previousState: Similarities): Similarities => {
   if (previousState?.ids.length >= 3) return previousState
 
   const id = nanoid()
-  return similarities.addOne(previousState, createSimilarity(id))
+  return similaritiesAdapter.addOne(previousState, createSimilarity(id))
 }
 
-const reducer = createReducer(similarities.getInitialState(), (builder) =>
-  builder
-    .addCase(createOne, createOneWithUniqueId)
-    .addCase(removeOne, similarities.removeOne)
-    .addCase(setTranslation, similarities.updateOne)
-    .addCase(setScale, similarities.updateOne)
-    .addCase(setAngle, similarities.updateOne)
-    .addCase(setDepth, similarities.updateOne)
+const reducer = createReducer(
+  similaritiesAdapter.getInitialState(),
+  (builder) =>
+    builder
+      .addCase(createOne, createOneWithUniqueId)
+      .addCase(removeOne, similaritiesAdapter.removeOne)
+      .addCase(setTranslation, similaritiesAdapter.updateOne)
+      .addCase(setScale, similaritiesAdapter.updateOne)
+      .addCase(setAngle, similaritiesAdapter.updateOne)
+      .addCase(setDepth, similaritiesAdapter.updateOne)
 )
 
 export default reducer

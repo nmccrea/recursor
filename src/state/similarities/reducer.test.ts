@@ -1,5 +1,5 @@
 import reducer from "./reducer"
-import { Similarities } from "./similarities"
+import { Similarities } from "./similaritiesAdapter"
 import {
   createOne,
   removeOne,
