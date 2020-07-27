@@ -36,7 +36,6 @@ const SimilarityControlsArea = styled.div`
 `
 
 const Instructions = styled.span`
-  flex: 1 0 0;
   margin-left: 1em;
   margin-right: auto;
 `

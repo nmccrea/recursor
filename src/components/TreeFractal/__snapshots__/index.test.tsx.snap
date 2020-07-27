@@ -99,30 +99,14 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
   align-items: center;
 }
 
-.c9 {
+.c8 {
   display: grid;
   grid-template-columns: repeat(1,minmax(0,1fr));
 }
 
 .c7 {
-  -webkit-flex: 1 0 0;
-  -ms-flex: 1 0 0;
-  flex: 1 0 0;
   margin-left: 1em;
   margin-right: auto;
-}
-
-.c8 {
-  background-image: url(-- MOCK FILE EXPORT VALUE --);
-  background-size: 1.6rem 1.6rem;
-  width: 1.6rem;
-  height: 1.6rem;
-  opacity: 0.6;
-  margin-right: 0.5rem;
-}
-
-.c8:hover {
-  opacity: 0.8;
 }
 
 .c6 {
@@ -153,19 +137,19 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
 }
 
 @media (min-width:640px) {
-  .c9 {
+  .c8 {
     grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
 
 @media (min-width:768px) {
-  .c9 {
+  .c8 {
     grid-template-columns: repeat(3,minmax(0,1fr));
   }
 }
 
 @media (min-width:1024px) {
-  .c9 {
+  .c8 {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -199,7 +183,7 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
         class="c5"
       >
         <button
-          class="sc-fzoLsD c6"
+          class="sc-fzozJi c6"
         >
           Add
         </button>
@@ -208,17 +192,9 @@ exports[`\`<TreeFractal />\` renders correctly 1`] = `
         >
           &lt; Add up to 3 self-similarities
         </span>
-        <a
-          href="https://github.com/mockiemcgee/test"
-          target="blank"
-        >
-          <div
-            class="c8"
-          />
-        </a>
       </div>
       <div
-        class="c9"
+        class="c8"
       />
     </div>
   </div>

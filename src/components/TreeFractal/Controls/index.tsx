@@ -7,7 +7,6 @@ import {
   SimilarityControlsArea,
   Instructions,
 } from "./styled"
-import GithubLink from "./GithubLink"
 import CreateSimilarityButton from "./CreateSimilarityButton"
 import SimilarityControls from "./SimilarityControls"
 
@@ -18,7 +17,6 @@ const Controls = () => {
       <GlobalControlsArea>
         <CreateSimilarityButton />
         <Instructions>{"< Add up to 3 self-similarities"}</Instructions>
-        <GithubLink />
       </GlobalControlsArea>
 
       <SimilarityControlsArea>
