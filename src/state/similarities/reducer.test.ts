@@ -1,5 +1,5 @@
 import reducer from "./reducer"
-import { Similarities } from "./similaritiesAdapter"
+import { SimilaritiesState } from "./types"
 import {
   createOne,
   removeOne,
@@ -18,12 +18,12 @@ describe("reducer", () => {
   it("has the correct initial state", () => {
     const initialState = reducer(undefined, { type: "" })
 
-    expect(initialState).toEqual<Similarities>({ ids: [], entities: {} })
+    expect(initialState).toEqual<SimilaritiesState>({ ids: [], entities: {} })
   })
 
   describe("`createOne` action", () => {
     it("creates a similarity with a unique ID and adds it to the list", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/control"],
         entities: {
           "test/control": {
@@ -40,7 +40,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual<Similarities>({
+      expect(nextState).toEqual<SimilaritiesState>({
         ids: ["test/control", "fake-nanoid-unique-id"],
         entities: {
           "test/control": {
@@ -64,7 +64,7 @@ describe("reducer", () => {
     })
 
     it("does nothing if there are already three similarities", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/a", "test/b", "test/c"],
         entities: {
           "test/a": {
@@ -102,7 +102,7 @@ describe("reducer", () => {
 
   describe("`removeOne` action", () => {
     it("removes the identified similarity from the list", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -127,7 +127,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual<Similarities>({
+      expect(nextState).toEqual<SimilaritiesState>({
         ids: ["test/control"],
         entities: {
           "test/control": {
@@ -145,7 +145,7 @@ describe("reducer", () => {
 
   describe("`setTranslation` action", () => {
     it("updates the translation for the identified similarity", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -170,7 +170,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual<Similarities>({
+      expect(nextState).toEqual<SimilaritiesState>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -196,7 +196,7 @@ describe("reducer", () => {
 
   describe("`setScale` action", () => {
     it("updates the scale for the identified similarity", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -221,7 +221,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual<Similarities>({
+      expect(nextState).toEqual<SimilaritiesState>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -247,7 +247,7 @@ describe("reducer", () => {
 
   describe("`setAngle` action", () => {
     it("updates the angle for the identified similarity", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -272,7 +272,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual<Similarities>({
+      expect(nextState).toEqual<SimilaritiesState>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -298,7 +298,7 @@ describe("reducer", () => {
 
   describe("`setDepth` action", () => {
     it("updates the depth for the identified similarity", () => {
-      const previousState: Similarities = {
+      const previousState: SimilaritiesState = {
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {
@@ -323,7 +323,7 @@ describe("reducer", () => {
 
       const nextState = reducer(previousState, action)
 
-      expect(nextState).toEqual<Similarities>({
+      expect(nextState).toEqual<SimilaritiesState>({
         ids: ["test/subject", "test/control"],
         entities: {
           "test/subject": {

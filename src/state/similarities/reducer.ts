@@ -1,5 +1,6 @@
 import { createReducer, nanoid } from "@reduxjs/toolkit"
-import similaritiesAdapter, { Similarities } from "./similaritiesAdapter"
+import { SimilaritiesState } from "./types"
+import similaritiesAdapter from "./similaritiesAdapter"
 import {
   createOne,
   removeOne,
@@ -13,7 +14,9 @@ import similarity from "models/similarity"
 /**
  * A case reducer which creates a new similarity with a unique ID and adds it to the list.
  */
-const createOneWithUniqueId = (previousState: Similarities): Similarities => {
+const createOneWithUniqueId = (
+  previousState: SimilaritiesState
+): SimilaritiesState => {
   // Limit the number of similarities that can be added:
   // This is an un-subtle performance safeguard that should be improved on somehow.
   if (previousState?.ids.length >= 3) return previousState
