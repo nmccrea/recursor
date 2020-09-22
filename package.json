@@ -1,8 +1,8 @@
 {
   "name": "recursor",
   "private": true,
-  "description": "A project by Nick McCrea.",
-  "version": "0.1.0",
+  "description": "A tree fractal creator.",
+  "version": "1.0.1",
   "author": "Nick McCrea <nick@nickmccrea.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
