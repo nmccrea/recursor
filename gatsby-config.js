@@ -8,9 +8,8 @@ module.exports = {
     githubUrl: `https://github.com/nmccrea/recursor`,
   },
   plugins: [
-    // Enable TypeScript.
     `gatsby-plugin-typescript`,
-    // Allow aboslute imports.
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-react-helmet`,
     {
