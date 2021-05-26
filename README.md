@@ -1,6 +1,6 @@
-# [Recursor](https://recursor.nickmccrea.com)
+# Recursor
 
-A fractal creator. It looks something like this:
+A fractal creator. Try it [here](https://recursor.nickmccrea.com).
 
 ![Recursor Tree Fractal Creator](docs/images/v1.0-demo.gif)
 
