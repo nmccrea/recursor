@@ -6,7 +6,7 @@
   "author": "Nick McCrea <nick@nickmccrea.com>",
   "dependencies": {
     "babel-plugin-styled-components": "^1.11.1",
-    "gatsby": "^2.24.11",
+    "gatsby": "^4.25.7",
     "gatsby-image": "^2.4.13",
     "gatsby-plugin-manifest": "^2.4.21",
     "gatsby-plugin-offline": "^3.2.21",
